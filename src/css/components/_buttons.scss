@@ -1,0 +1,100 @@
+//Main screen buttons
+.bttn{
+  transition: all 0.2s;
+}
+
+//Beer and drink IDs and Classes are switched in the html/css
+//This needs to be fixed
+.beer-bttn{
+  width: 50px;
+  height: 50px;
+
+  bottom: 10vh;
+  right: 2.5rem;
+
+  background-color: $primary-green;
+
+  border-radius: 50%;
+
+  position: fixed;
+
+  .fa-beer{
+    width: 20px;
+    height: 20px;
+
+    margin: 15px 16px;
+
+    color: white;
+  }
+}
+
+.cross-bttn{
+  width: 50px;
+  height: 50px;
+
+
+  bottom: 10vh;
+  right: 2.5rem;
+
+  background-color: rgb(208, 208, 208);
+
+  border-radius: 50%;
+
+  position: fixed;
+
+  .fa-times{
+    width: 20px;
+    height: 20px;
+
+    margin: 15px;
+
+    color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+.add-bttn{
+  width: 50px;
+  height: 50px;
+
+  bottom: 10vh;
+  right: 2.5rem;
+
+  background-color: $primary-green;
+
+  border-radius: 50%;
+
+  position: fixed;
+
+  .fa-plus{
+    width: 20px;
+    height: 20px;
+
+    margin: 15px 15px;
+
+    color: white;
+  }
+}
+
+.drink-bttn{
+  width: 50px;
+  height: 50px;
+
+  bottom: 10vh;
+  right: 2.5rem;
+
+  background-color: $primary-green;
+  transition: display 2s;
+
+  border-radius: 50%;
+
+  position: fixed;
+
+  .fa-beer{
+    width: 20px;
+    height: 20px;
+
+    margin: 15px 16px;
+
+    color: white;
+  }
+}

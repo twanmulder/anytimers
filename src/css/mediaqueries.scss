@@ -1,0 +1,13 @@
+@media screen and (min-width: 456px){
+  .app{
+    width: 360px;
+    height: 640px;
+  }
+  .header{
+    .group{
+      .groupSelected{
+        width: 0;
+      }
+    }
+  }
+}

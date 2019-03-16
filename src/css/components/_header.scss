@@ -1,0 +1,69 @@
+.header{
+  display: flex;
+  justify-content: space-between;
+
+  .group{
+
+    .groupSelected{
+      width: 40vw;
+
+      display: flex;
+      align-items: center;
+      align-self: flex-end;
+    }
+
+    .groupList{
+      display: none;
+      position: absolute;
+
+      margin-top: 0.5rem;
+      padding:  1rem;
+      padding-top: 0;
+
+      max-width: 55vw;
+
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+
+      background-color: white;
+
+      .groupInfo{
+        margin: 1rem 0;
+        color: $font-light;
+      }
+
+      .groupItem{
+        margin-top: 0.6rem;
+        width: 100%;
+        word-break: break-all;
+      }
+
+      .active{
+        color: $font-light;
+      }
+    }
+    h2{
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+    svg{
+      margin-left: 10px;
+    }
+  }
+
+  #profile{
+    color: $primary-green;
+  }
+
+  .profile{
+    position: relative;
+
+    .fa-user-circle{
+      width: 24px;
+      height: 24px;
+    }
+    path{
+      // color: $primary-green;
+    }
+  }
+}
