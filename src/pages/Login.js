@@ -12,8 +12,9 @@ class Login extends React.PureComponent {
     return (
       <div>
         {hasCookie && <Redirect to="/overview" />}
-        <h1><i className="fas fa-chevron-left"></i> Log in</h1>
-
+        <h1>
+          <i className="fas fa-chevron-left"></i> Log in
+        </h1>
         <form>
           <div className="wrapper">
             <div className="sign-in-text">
