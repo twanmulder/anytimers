@@ -250,11 +250,18 @@ form {
 .sign-in-text{
   margin: 8rem 0 2rem 0;
 }
+
 .forgot-password{
-  color: #aaacad;
-  font-size: 0.875rem;
   text-align: right;
+
+  a{
+    text-decoration: none;
+    color: #aaacad;
+    font-size: 0.875rem;
+    text-align: right;
+  }
 }
+
 .forgot-password-text{
   margin: 8rem 0 2rem 0;
 }
