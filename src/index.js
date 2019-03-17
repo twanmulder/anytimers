@@ -6,14 +6,23 @@ import './css/css.css'
 
 import Login from "./pages/Login";
 import Overview from "./pages/Overview";
+import Landing from "./pages/Landing";
+import Register from "./pages/Register";
+import Forgotpassword from "./pages/Forgotpassword";
+import Fournulfour from "./pages/Fournulfour";
 
 const Index = () => {
   return (
     <BrowserRouter>
     <div className="app" id="app">
       <Switch>
+        <Route path="/landing" component={Landing}/>
         <Route path="/login" component={Login}/>
-        <Route path="/overview" component={Overview}/>
+        <Route path="/forgotpassword" component={Forgotpassword}/>
+        <Route path="/register" component={Register}/>
+        <Route exact path="/" component={Overview}/>
+
+        <Route path="/" component={Fournulfour}/>
       </Switch>
       </div>
     </BrowserRouter>

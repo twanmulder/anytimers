@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 class Login extends React.PureComponent {
   setCookie = () => {
@@ -11,9 +11,12 @@ class Login extends React.PureComponent {
     const hasCookie = document.cookie.indexOf("signed_in") > -1;
     return (
       <div>
-        {hasCookie && <Redirect to="/overview" />}
+        {hasCookie && <Redirect to="/" />}
         <h1>
-          <i className="fas fa-chevron-left"></i> Log in
+          <Link to="landing">
+            <i className="fas fa-chevron-left"></i>
+          </Link>
+          Log in
         </h1>
         <form>
           <div className="wrapper">
@@ -26,9 +29,11 @@ class Login extends React.PureComponent {
             </div>
             <div className="input-type">
               <label htmlFor="password">Password</label>
-              <input type="password" placeholder="•••••••••" id="password" type="text"></input>
+              <input type="password" placeholder="•••••••••" id="password"></input>
               <div className="forgot-password">
-                <b>Forgot</b> your password?
+                <Link to="forgotpassword">
+                  <b>Forgot</b> your password?
+                </Link>
               </div>
             </div>
 
