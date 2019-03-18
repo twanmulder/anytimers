@@ -339,23 +339,20 @@ form {
   display: block;
   margin: 150px auto 100px auto; }
 .tutorial .tuttext {
-  text-align: center; }
+  text-align: center;
+  margin: 0 auto;
+  width: 80%; }
 
-.dots {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 2.5rem;
-  left: 2.5rem;
-  right: 2.5rem; }
-  .dots .dot {
-    margin: 0 11px;
-    color: #e4e4e4; }
-    .dots .dot svg {
-      width: 14px;
-      height: 14px; }
-  .dots .active {
-    color: #4dd38b; }
+.tut4 a {
+  color: #fff;
+  text-decoration: none; }
+.tut4 .tuttext4 {
+  padding: 8px;
+  background-color: #31b16c;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 28px 91px -26px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 28px 91px -26px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 28px 91px -26px rgba(0, 0, 0, 0.75); }
 
 #anytimers {
   margin-top: 60px; }

@@ -284,29 +284,23 @@ form {
   }
   .tuttext{
     text-align: center;
+    margin: 0 auto;
+    width: 80%;
   }
 }
 
-.dots{
-  display: flex;
-  justify-content: center;
-
-  position: absolute;
-  bottom: 2.5rem;
-  left: 2.5rem;
-  right: 2.5rem;
-
-  .dot{
-    margin: 0 11px;
-    color: #e4e4e4;
-
-    svg{
-      width: 14px;
-      height: 14px;
-    }
+.tut4{
+  a{
+    color: #fff;
+    text-decoration: none;
   }
-  .active{
-    color:$light-green;
+  .tuttext4{
+    padding: 8px;
+    background-color: $primary-green;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 28px 91px -26px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 28px 91px -26px rgba(0,0,0,0.75);
+    box-shadow: 0px 28px 91px -26px rgba(0,0,0,0.75);
   }
 }
 

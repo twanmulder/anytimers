@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 class Register extends React.PureComponent {
+  setCookie = () => {
+    document.cookie = "signed_in=true";
+  };
+
   render() {
     return (
       <div>
@@ -31,7 +35,9 @@ class Register extends React.PureComponent {
   					<input type="password" placeholder="•••••••" id="password"></input>
   				</div>
 
-  				<input value="Sign Up" type="submit" className="submit-button"></input>
+          <Link to="/tutorial">
+            <input value="Sign Up" type="submit" className="submit-button" onClick={this.setCookie}></input>
+          </Link>
   			</div>
   		</form>
 
