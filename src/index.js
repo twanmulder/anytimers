@@ -4,11 +4,12 @@ import { BrowserRouter, Route, Switch} from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
 import './css/css.css'
 
-import Login from "./pages/Login";
 import Overview from "./pages/Overview";
 import Landing from "./pages/Landing";
-import Register from "./pages/Register";
+import Login from "./pages/Login";
 import Forgotpassword from "./pages/Forgotpassword";
+import Register from "./pages/Register";
+import Tutorial from "./pages/Tutorial";
 import Fournulfour from "./pages/Fournulfour";
 
 const Index = () => {
@@ -20,6 +21,7 @@ const Index = () => {
         <Route path="/login" component={Login}/>
         <Route path="/forgotpassword" component={Forgotpassword}/>
         <Route path="/register" component={Register}/>
+        <Route path="/tutorial" component={Tutorial}/>
         <Route exact path="/" component={Overview}/>
 
         <Route path="/" component={Fournulfour}/>

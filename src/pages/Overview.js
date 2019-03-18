@@ -1,6 +1,8 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 
+import Sidebar from "../components/Sidebar";
+
 class Overview extends React.PureComponent {
   render() {
     const hasCookie = document.cookie.indexOf("signed_in") > -1;
