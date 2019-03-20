@@ -204,7 +204,8 @@ body {
     vertical-align: middle; }
     .app h1 .fa-chevron-left {
       font-size: 16px;
-      margin-right: 1.5rem; }
+      margin-right: 1.5rem;
+      color: #213A46; }
   .app::-webkit-scrollbar {
     display: none; }
   .app ::-webkit-scrollbar-track {
