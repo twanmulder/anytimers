@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "../css/slick/slick.min.css";
 import "../css/slick/slick-theme.min.css";
 
-class Tutorial extends React.PureComponent {
+class Tutorial extends React.Component {
   render() {
     var settings = {
       dots: true,

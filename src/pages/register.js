@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class Register extends React.PureComponent {
+class Register extends React.Component {
   setCookie = () => {
     document.cookie = "signed_in=true";
   };

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-class Forgotpassword extends React.PureComponent {
+class Forgotpassword extends React.Component {
   render() {
     return (
       <div>
