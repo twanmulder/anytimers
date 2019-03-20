@@ -6,7 +6,7 @@ class Fournulfour extends React.Component {
     return (
       <div id="fournulfour">
         <div className="veralign">
-          <h1>OOPSIE WOOPIE YOU MADE A FUCKY WUCKY <br /></h1>
+          <h1>OOPSIE WOOPSIE YOU MADE A FUCKY WUCKY <br /></h1>
           <Link to="/">
             <h1 className="fournulfourbutton">CLICK ME TO GO BACK</h1>
           </Link>
