@@ -2,6 +2,7 @@ import React from "react";
 import { Redirect } from "react-router-dom";
 
 import Sidebar from "../components/Sidebar";
+import BeerButtons from "../components/beerButtons";
 
 class Overview extends React.PureComponent {
   render() {
@@ -11,9 +12,6 @@ class Overview extends React.PureComponent {
       <div>
         {!hasCookie && <Redirect to="/landing" />}
         <div className="wrapper">
-          <div id="overlay" className="overlay">
-
-          </div>
           <div className="header">
             <div className="group">
               <div className="groupSelected">
@@ -45,18 +43,7 @@ class Overview extends React.PureComponent {
             </div>
           </div>
 
-          <div id="cross-bttn" className="cross-bttn bttn">
-            <i className="fas fa-times"></i>
-          </div>
-          <div id="add-bttn" className="add-bttn bttn">
-            <i className="fas fa-plus"></i>
-          </div>
-          <div id="drink-bttn" className="beer-bttn bttn">
-            <i className="fas fa-beer"></i>
-          </div>
-          <div id="beer-bttn" className="drink-bttn bttn">
-            <i className="fas fa-beer"></i>
-          </div>
+          <BeerButtons />
 
 
           <div id="anytimers" className="anytimers">

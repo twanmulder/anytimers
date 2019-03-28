@@ -11,6 +11,8 @@ import Forgotpassword from "./pages/Forgotpassword";
 import Register from "./pages/Register";
 import Tutorial from "./pages/Tutorial";
 import Fournulfour from "./pages/Fournulfour";
+import Add from "./pages/Add";
+import Drink from "./pages/Drink";
 
 const Index = () => {
   return (
@@ -22,6 +24,8 @@ const Index = () => {
         <Route path="/forgotpassword" component={Forgotpassword}/>
         <Route path="/register" component={Register}/>
         <Route path="/tutorial" component={Tutorial}/>
+        <Route path="/add" component={Add}/>
+        <Route path="/drink" component={Drink}/>
         <Route exact path="/" component={Overview}/>
 
         <Route path="/" component={Fournulfour}/>

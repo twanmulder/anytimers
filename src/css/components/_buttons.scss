@@ -3,8 +3,6 @@
   transition: all 0.2s;
 }
 
-//Beer and drink IDs and Classes are switched in the html/css
-//This needs to be fixed
 .beer-bttn{
   width: 50px;
   height: 50px;
@@ -25,6 +23,9 @@
     margin: 15px 16px;
 
     color: white;
+  }
+  &.toggled{
+    display: none;
   }
 }
 
@@ -73,6 +74,9 @@
 
     color: white;
   }
+  &.toggled{
+    transform: translate(-30px, -60px);
+  }
 }
 
 .drink-bttn{
@@ -83,7 +87,6 @@
   right: 2.5rem;
 
   background-color: $primary-green;
-  transition: display 2s;
 
   border-radius: 50%;
 
@@ -96,5 +99,9 @@
     margin: 15px 16px;
 
     color: white;
+  }
+  &.toggled{
+    transform: translate(-65px, -10px);
+    background-color: red;
   }
 }

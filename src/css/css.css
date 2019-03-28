@@ -61,6 +61,8 @@ table {
     height: 20px;
     margin: 15px 16px;
     color: white; }
+  .beer-bttn.toggled {
+    display: none; }
 
 .cross-bttn {
   width: 50px;
@@ -89,6 +91,8 @@ table {
     height: 20px;
     margin: 15px 15px;
     color: white; }
+  .add-bttn.toggled {
+    transform: translate(-30px, -60px); }
 
 .drink-bttn {
   width: 50px;
@@ -96,7 +100,6 @@ table {
   bottom: 10vh;
   right: 2.5rem;
   background-color: #31b16c;
-  transition: display 2s;
   border-radius: 50%;
   position: fixed; }
   .drink-bttn .fa-beer {
@@ -104,6 +107,9 @@ table {
     height: 20px;
     margin: 15px 16px;
     color: white; }
+  .drink-bttn.toggled {
+    transform: translate(-65px, -10px);
+    background-color: red; }
 
 .header {
   display: flex;
@@ -168,6 +174,26 @@ table {
     color: white;
     width: calc(100vw - 7rem);
     display: inline-block; }
+
+.overlay {
+  position: fixed;
+  /* Sit on top of the page content */
+  visibility: hidden;
+  /* Hidden by default */
+  opacity: 0;
+  width: 100vw;
+  /* Full width (cover the whole page) */
+  height: 100vh;
+  /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  /* Black background with opacity */
+  transition: all 0.2s; }
+  .overlay.toggled {
+    visibility: visible;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5); }
 
 body {
   margin: 0;
@@ -418,21 +444,6 @@ form {
     box-shadow: 0px 20px 20px -20px rgba(0, 0, 0, 0.2); }
   .userdetail h5 {
     font-size: 80%; }
-
-#overlay {
-  position: absolute;
-  /* Sit on top of the page content */
-  display: none;
-  /* Hidden by default */
-  width: 100vw;
-  /* Full width (cover the whole page) */
-  height: 960px;
-  /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  background-color: transparent;
-  /* Black background with opacity */
-  transition: background-color 0.5s; }
 
 .update {
   width: 100%; }
