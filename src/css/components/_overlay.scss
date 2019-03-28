@@ -1,0 +1,17 @@
+.overlay {
+  position: fixed; /* Sit on top of the page content */
+  visibility: hidden;/* Hidden by default */
+  opacity: 0;
+  width: 100vw; /* Full width (cover the whole page) */
+  height: 100vh; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  background-color: transparent; /* Black background with opacity */
+  transition: all 0.2s;
+
+  &.toggled{
+    visibility: visible;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}

@@ -3,6 +3,7 @@
 @import 'components/_buttons.scss';
 @import 'components/_header.scss';
 @import 'components/_fournulfour.scss';
+@import 'components/_overlay.scss';
 
 
 body {
@@ -372,16 +373,16 @@ form {
   }
 }
 
-#overlay {
-  position: absolute; /* Sit on top of the page content */
-  display: none; /* Hidden by default */
-  width: 100vw; /* Full width (cover the whole page) */
-  height: 960px; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  background-color: transparent; /* Black background with opacity */
-  transition: background-color 0.5s;
-}
+// #overlay {
+//   position: absolute; /* Sit on top of the page content */
+//   display: none; /* Hidden by default */
+//   width: 100vw; /* Full width (cover the whole page) */
+//   height: 960px; /* Full height (cover the whole page) */
+//   top: 0;
+//   left: 0;
+//   background-color: transparent; /* Black background with opacity */
+//   transition: background-color 0.5s;
+// }
 
 .update{
   width: 100%;
