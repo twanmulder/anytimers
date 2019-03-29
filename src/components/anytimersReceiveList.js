@@ -1,6 +1,6 @@
 import React from "react";
 
-class anytimersReceive extends React.Component {
+class anytimersReceiveList extends React.Component {
   render() {
     return(
       <div className="anytimers receive">
@@ -27,4 +27,4 @@ class anytimersReceive extends React.Component {
   }
 }
 
-export default anytimersReceive;
+export default anytimersReceiveList;

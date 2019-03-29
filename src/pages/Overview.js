@@ -4,7 +4,7 @@ import { Redirect } from "react-router-dom";
 import Sidebar from "../components/Sidebar";
 import BeerButtons from "../components/beerButtons";
 import AnytimersGiveList from "../components/anytimersGiveList";
-import AnytimersReceive from "../components/anytimersReceive";
+import AnytimersReceiveList from "../components/anytimersReceiveList";
 import Header from "../components/header";
 
 import anytimers from "../content/anytimers";
@@ -22,7 +22,7 @@ class Overview extends React.PureComponent {
           <BeerButtons />
           <div id="anytimers" className="anytimers">
             <AnytimersGiveList anytimers={anytimers}/>
-            <AnytimersReceive />
+            <AnytimersReceiveList />
           </div>
 
         </div>
