@@ -491,8 +491,12 @@ form {
 #description_form {
   margin: 15px 0 15px 0; }
 
-#testadd, #testdrink {
-  display: none; }
+.cookies {
+  font-size: 10px;
+  color: #96a9b1;
+  position: fixed;
+  bottom: 8px;
+  margin-right: 1.25rem; }
 
 @media screen and (min-width: 456px) {
   .app {

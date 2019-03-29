@@ -421,9 +421,14 @@ form {
   margin: 15px 0 15px 0;
 }
 
-// TEST css
-#testadd, #testdrink{
-  display: none;
+.cookies{
+  font-size: 10px;
+  color: $font-light;
+
+  position: fixed;
+  bottom: 8px;
+
+  margin-right: 1.25rem;
 }
 
 

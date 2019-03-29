@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 class Landing extends React.Component {
   render() {
+
     return (
-      <div>
       <div className="wrapper">
         <img className="imglanding" src="https://origin-assets.the-sub.com/cdn/redesign/shared/image/birra-moretti-glass.png" alt="beer glass" />
         <div className="welcome">
@@ -22,7 +22,9 @@ class Landing extends React.Component {
             </Link>
           </div>
         </div>
-      </div>
+        <div className="cookies">
+          <p>You agree to using cookies by continuing to use this website.</p>
+        </div>
       </div>
     );
   }
