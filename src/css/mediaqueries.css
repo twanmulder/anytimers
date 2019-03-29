@@ -4,6 +4,11 @@
     height: 640px; }
 
   .header .group .groupSelected {
-    width: 0; } }
+    width: 0; }
+
+  .bttn {
+    margin: 30rem 2.5rem 0 14.5rem;
+    bottom: inherit;
+    right: inherit; } }
 
 /*# sourceMappingURL=mediaqueries.css.map */

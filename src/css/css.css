@@ -46,13 +46,13 @@ table {
   border-spacing: 0; }
 
 .bttn {
-  transition: all 0.2s; }
+  transition: all 0.2s;
+  bottom: 10vh;
+  right: 2.5rem; }
 
 .beer-bttn {
   width: 50px;
   height: 50px;
-  bottom: 10vh;
-  right: 2.5rem;
   background-color: #31b16c;
   border-radius: 50%;
   position: fixed; }
@@ -67,8 +67,6 @@ table {
 .cross-bttn {
   width: 50px;
   height: 50px;
-  bottom: 10vh;
-  right: 2.5rem;
   background-color: #d0d0d0;
   border-radius: 50%;
   position: fixed; }
@@ -81,8 +79,6 @@ table {
 .add-bttn {
   width: 50px;
   height: 50px;
-  bottom: 10vh;
-  right: 2.5rem;
   background-color: #31b16c;
   border-radius: 50%;
   position: fixed; }
@@ -97,8 +93,6 @@ table {
 .drink-bttn {
   width: 50px;
   height: 50px;
-  bottom: 10vh;
-  right: 2.5rem;
   background-color: #31b16c;
   border-radius: 50%;
   position: fixed; }
@@ -506,6 +500,11 @@ form {
     height: 640px; }
 
   .header .group .groupSelected {
-    width: 0; } }
+    width: 0; }
+
+  .bttn {
+    margin: 30rem 2.5rem 0 14.5rem;
+    bottom: inherit;
+    right: inherit; } }
 
 /*# sourceMappingURL=css.css.map */

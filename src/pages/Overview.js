@@ -6,13 +6,8 @@ import BeerButtons from "../components/beerButtons";
 
 class Overview extends React.PureComponent {
 
-  state = {
-    isSidebarToggle: false,
-  }
-
   render() {
     const hasCookie = document.cookie.indexOf("signed_in") > -1;
-    const isToggled = this.state.isSidebarToggle;
 
     return (
       <div>
@@ -44,7 +39,7 @@ class Overview extends React.PureComponent {
 
             </div>
 
-            <div id="profile" className="profile" onClick={ () => this.setState({isSidebarToggle: !isToggled})}>
+            <div id="profile" className="profile">
               <i className="fas fa-user-circle"></i>
             </div>
           </div>

@@ -2,14 +2,9 @@ import React from 'react';
 
 class Sidebar extends React.PureComponent {
 
-  state = {
-    isSidebarToggle: false,
-  }
-
   render() {
-    const isToggled = this.state.isSidebarToggle;
     return (
-        <div className={ isToggled ? "profileAside toggled" : "profileAside"}>
+        <div className="profileAside">
           <div className="profileDetail">
             <div className="profileAvatar">
               <i className="fas fa-user-circle"></i>
