@@ -5,8 +5,14 @@ import Sidebar from "../components/Sidebar";
 import BeerButtons from "../components/beerButtons";
 
 class Overview extends React.PureComponent {
+
+  state = {
+    isSidebarToggle: false,
+  }
+
   render() {
     const hasCookie = document.cookie.indexOf("signed_in") > -1;
+    const isToggled = this.state.isSidebarToggle;
 
     return (
       <div>
@@ -38,7 +44,7 @@ class Overview extends React.PureComponent {
 
             </div>
 
-            <div id="profile" className="profile">
+            <div id="profile" className="profile" onClick={ () => this.setState({isSidebarToggle: !isToggled})}>
               <i className="fas fa-user-circle"></i>
             </div>
           </div>
@@ -100,22 +106,9 @@ class Overview extends React.PureComponent {
           </div>
 
         </div>
-        <div id="profileAside" className="profileAside">
-          <div className="profileDetail">
-            <div className="profileAvatar">
-              <i className="fas fa-user-circle"></i>
-            </div>
-            <div className="profileName">
-              <p>Twan Mulder</p>
-            </div>
-            <ul>
-              <li>Add friends</li>
-              <li>Join group</li>
-              <li>Create group</li>
-              <li>Settings</li>
-            </ul>
-          </div>
-        </div>
+
+        <Sidebar />
+
       </div>
     )
   }

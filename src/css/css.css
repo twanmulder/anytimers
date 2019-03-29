@@ -109,7 +109,7 @@ table {
     color: white; }
   .drink-bttn.toggled {
     transform: translate(-65px, -10px);
-    background-color: red; }
+    background-color: #fc5555; }
 
 .header {
   display: flex;
@@ -195,6 +195,38 @@ table {
     opacity: 1;
     background-color: rgba(0, 0, 0, 0.5); }
 
+.wrapperAside {
+  position: relative; }
+
+.profileAside {
+  position: absolute;
+  top: 0;
+  right: -15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s;
+  background-color: white;
+  width: 12.5rem;
+  height: 100%;
+  padding: 1rem; }
+  .profileAside .profileDetail {
+    text-align: center; }
+    .profileAside .profileDetail .profileAvatar {
+      margin-top: 1rem; }
+      .profileAside .profileDetail .profileAvatar svg {
+        width: 80px;
+        height: 80px; }
+    .profileAside .profileDetail .profileName {
+      margin-top: 0.5rem;
+      font-weight: bold; }
+    .profileAside .profileDetail ul {
+      margin-top: 1rem; }
+      .profileAside .profileDetail ul li {
+        margin: 0.5rem 0; }
+  .profileAside.toggled {
+    right: 0; }
+
 body {
   margin: 0;
   font-family: Open Sans;
@@ -219,32 +251,6 @@ body {
   overflow-y: scroll; }
   .app form:nth-child(2) {
     margin-top: 2rem; }
-  .app .profileAside {
-    position: absolute;
-    top: 0;
-    right: -15rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s;
-    background-color: white;
-    width: 12.5rem;
-    height: 100%;
-    padding: 1rem; }
-    .app .profileAside .profileDetail {
-      text-align: center; }
-      .app .profileAside .profileDetail .profileAvatar {
-        margin-top: 1rem; }
-        .app .profileAside .profileDetail .profileAvatar svg {
-          width: 80px;
-          height: 80px; }
-      .app .profileAside .profileDetail .profileName {
-        margin-top: 0.5rem;
-        font-weight: bold; }
-      .app .profileAside .profileDetail ul {
-        margin-top: 1rem; }
-        .app .profileAside .profileDetail ul li {
-          margin: 0.5rem 0; }
   .app h1 {
     margin-top: 0;
     font-weight: 300;

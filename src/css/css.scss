@@ -4,6 +4,7 @@
 @import 'components/_header.scss';
 @import 'components/_fournulfour.scss';
 @import 'components/_overlay.scss';
+@import 'components/_sidebar.scss';
 
 
 body {
@@ -40,49 +41,6 @@ body {
 
   form:nth-child(2){
     margin-top: 2rem;
-  }
-
-  .profileAside{
-    position: absolute;
-    top: 0;
-    right: -15rem;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s;
-
-    background-color: white;
-    width: 12.5rem;
-    height: 100%;
-
-    padding: 1rem;
-
-    .profileDetail{
-      text-align: center;
-
-      .profileAvatar{
-        margin-top: 1rem;
-
-        svg{
-          width: 80px;
-          height: 80px;
-        }
-      }
-      .profileName{
-        margin-top: 0.5rem;
-        font-weight: bold;
-      }
-
-      ul{
-        margin-top: 1rem;
-
-        li{
-          margin: 0.5rem 0;
-        }
-      }
-    }
   }
 
   h1 {
