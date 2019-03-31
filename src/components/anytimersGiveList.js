@@ -2,12 +2,22 @@ import React from "react";
 
 class AnytimersGive extends React.PureComponent {
   render() {
-    const { from, to, description, amount, drunk } = this.props;
     return(
-      <div className="user">
-        <i className="fas fa-circle"></i>
-        <h4 className="username" dangerouslySetInnerHTML={{__html: to }} />
-        <h4 className="number" dangerouslySetInnerHTML={{__html: amount }} />
+      <div>
+
+        <div className="user">
+          <i className="fas fa-circle"></i>
+          <h4 className="username">{this.props.to}</h4>
+          <h4 className="number">{this.props.amount}</h4>
+        </div>
+
+        <div className="userList">
+          <div className="userdetail">
+            <h5>{this.props.description}</h5>
+            <h5 className="number">{this.props.amount}</h5>
+          </div>
+        </div>
+
       </div>
     )
   }
@@ -24,6 +34,7 @@ class anytimersGiveList extends React.Component{
             <AnytimersGive
               to={any.to}
               amount={any.amount}
+              description={any.description}
               key={any.description}
             />
           ))}

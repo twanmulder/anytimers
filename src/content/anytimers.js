@@ -13,4 +13,11 @@ export default [
     amount: 15,
     drunk: 0,
   },
+  {
+    from: 'Twan Mulder',
+    to: 'Tijs Ots',
+    description: 'Test3',
+    amount: 9,
+    drunk: 0,
+  },
 ]

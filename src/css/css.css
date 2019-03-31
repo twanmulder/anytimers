@@ -429,8 +429,8 @@ form {
       .anytimers .users .user .username {
         flex-grow: 3; }
 
-#userList {
-  display: none; }
+.userList {
+  display: block; }
 
 .userdetail {
   display: flex;
