@@ -1,23 +1,21 @@
 import React from "react";
 
+import AnytimersDetailList from "./anytimersDetailList";
+
 class AnytimersGive extends React.PureComponent {
   render() {
     return(
       <div>
-
         <div className="user">
           <i className="fas fa-circle"></i>
           <h4 className="username">{this.props.to}</h4>
           <h4 className="number">{this.props.amount}</h4>
         </div>
-
-        <div className="userList">
-          <div className="userdetail">
-            <h5>{this.props.description}</h5>
-            <h5 className="number">{this.props.amount}</h5>
-          </div>
-        </div>
-
+        <AnytimersDetailList
+          to={this.props.to}
+          description={this.props.description}
+          amount={this.props.amount}
+        />
       </div>
     )
   }
