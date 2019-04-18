@@ -235,7 +235,6 @@ body {
 .app {
   width: 100vw;
   height: 100vh;
-  border-radius: 4px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
   overflow: hidden;
   background-color: #F9FDFB;
@@ -450,6 +449,8 @@ form {
   .update img {
     display: block;
     margin: 60px auto 55px auto; }
+  .update a {
+    color: #213A46; }
   .update .amount {
     display: flex;
     justify-content: space-between;

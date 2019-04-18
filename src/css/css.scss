@@ -26,7 +26,6 @@ body {
   width: 100vw;
   height: 100vh;
 
-  border-radius: 4px;
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
 
   overflow:hidden;
@@ -347,6 +346,9 @@ form {
   img{
     display: block;
     margin: 60px auto 55px auto;
+  }
+  a{
+    color:$font-main;
   }
 
   .amount{
