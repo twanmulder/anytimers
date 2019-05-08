@@ -6,25 +6,29 @@ class Landing extends React.Component {
 
     return (
       <div className="wrapper">
-        <img className="imglanding" src="https://origin-assets.the-sub.com/cdn/redesign/shared/image/birra-moretti-glass.png" alt="beer glass" />
-        <div className="welcome">
-          <b>Welcome</b> to Anytimes.nl! THE website to track all your anytimers between you and your friends.
-        </div>
-        <div className="log-in-register">
-          <div className="log-in">
-            <Link to="/login">
-              <input value="Log in" type="submit" className="login-button"></input>
-            </Link>
+        <div className="landing-wrapper">
+          {/* <img className="imglanding" src="https://origin-assets.the-sub.com/cdn/redesign/shared/image/birra-moretti-glass.png" alt="beer glass" /> */}
+          <div className="welcome">
+            <span>Welcome</span> to <span>Anytimers.nl</span>! THE website to track all your anytimers between you and your friends.
           </div>
           <div className="register">
             <Link to="/register">
-              <input value="Register" type="submit" className="register-button"></input>
+              <input value="Register" type="submit" className="register-button"/>
             </Link>
           </div>
-        </div>
-        <div className="cookies">
-          <p>You agree to using cookies by continuing to use this website.</p>
-        </div>
+          <div className="log-in">
+              <span>
+                Already have an account?
+                <Link to="/login">
+                  &nbsp;Log-in.
+                </Link>
+              </span>
+              
+            </div>
+          <div className="cookies">
+            <p>This site uses cookies!</p>
+          </div>
+        </div>       
       </div>
     );
   }

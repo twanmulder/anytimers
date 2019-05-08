@@ -14,14 +14,15 @@ class Login extends React.PureComponent {
         {hasCookie && <Redirect to="/" />}
         <h1>
           <Link to="landing">
-            <i className="fas fa-chevron-left"></i>
+            <i className="fas fa-times"></i>
           </Link>
-          Log in
         </h1>
         <form>
           <div className="wrapper">
             <div className="sign-in-text">
-              <b>Welcome back!</b> <br /> Nice to see you again.
+              <span>Welcome back!</span> 
+              <br /> 
+              <span>Nice to see you again.</span>
             </div>
             <div className="input-type">
               <label htmlFor="email">E-mail</label>

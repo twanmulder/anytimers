@@ -45,6 +45,71 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+@font-face {
+  font-family: 'Inter-Regular';
+  src: url("../fonts/Inter-Regular.woff2") format("woff2"), url("../fonts/Inter-Regular.woff") format("woff"); }
+@font-face {
+  font-family: 'Inter-Bold';
+  src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff"); }
+.landing-wrapper {
+  position: absolute;
+  bottom: 4px;
+  font-size: 14px; }
+
+.imglanding {
+  width: 100%;
+  height: auto;
+  margin: 1.5rem 0 2rem 0; }
+
+.welcome {
+  line-height: 1.3rem; }
+  .welcome span {
+    font-family: "Inter-Bold"; }
+
+.register {
+  width: 100%;
+  margin-top: 33px; }
+
+.register-button {
+  width: 100%;
+  border: 0;
+  border-radius: 3px;
+  background-color: #C8C8C8;
+  padding: 1rem;
+  font-size: 14px; }
+
+.log-in {
+  width: 100%;
+  margin-top: 11px;
+  color: #C8C8C8;
+  font-size: 12px;
+  text-align: right; }
+  .log-in a {
+    color: #333;
+    text-decoration: none; }
+
+.cookies {
+  font-size: 9px;
+  color: #C8C8C8;
+  position: absolute;
+  text-align: center;
+  bottom: -45px;
+  width: 100%; }
+
+.sign-in-text {
+  margin: 8rem 0 2rem 0; }
+
+.forgot-password {
+  text-align: right; }
+  .forgot-password a {
+    text-decoration: none;
+    color: #aaacad;
+    font-size: 0.875rem;
+    text-align: right; }
+
+.forgot-password-text {
+  margin: 8rem 0 2rem 0; }
+
 .bttn {
   transition: all 0.2s;
   bottom: 10vh;
@@ -155,7 +220,7 @@ table {
     transform: translateY(-50%);
     top: 50%; }
   #fournulfour h1 {
-    color: #213A46;
+    color: #333;
     padding: 1rem;
     font-size: 1.3rem;
     text-align: center; }
@@ -221,47 +286,6 @@ table {
   .profileAside.toggled {
     right: 0; }
 
-body {
-  margin: 0;
-  font-family: Open Sans;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ddd;
-  color: #213A46;
-  letter-spacing: 0.05em;
-  line-height: 1.4; }
-
-.app {
-  width: 100vw;
-  height: 100vh;
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
-  overflow: hidden;
-  background-color: #F9FDFB;
-  padding: 2.5rem;
-  box-sizing: border-box;
-  position: relative;
-  overflow-y: scroll; }
-  .app form:nth-child(2) {
-    margin-top: 2rem; }
-  .app h1 {
-    margin-top: 0;
-    font-weight: 300;
-    font-size: 1.5rem;
-    display: flex;
-    align-items: center;
-    vertical-align: middle; }
-    .app h1 .fa-chevron-left {
-      font-size: 16px;
-      margin-right: 1.5rem;
-      color: #213A46; }
-  .app::-webkit-scrollbar {
-    display: none; }
-  .app ::-webkit-scrollbar-track {
-    display: none; }
-  .app ::-webkit-scrollbar-thumb {
-    display: none; }
-
 form {
   display: flex;
   flex-direction: column;
@@ -292,11 +316,55 @@ form {
       border-radius: 2px;
       padding: 0.25rem;
       padding-left: 0;
-      background-color: #F9FDFB; }
+      background-color: white; }
       form .input-type input::-webkit-input-placeholder {
         color: #edeeef; }
       form .input-type input:focus {
         border-bottom-color: #bbb; }
+
+body {
+  margin: 0;
+  font-family: "Inter-Regular";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ddd;
+  color: #333;
+  letter-spacing: 0.82px;
+  line-height: 17px; }
+
+.app {
+  width: 100vw;
+  height: 100vh;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background-color: white;
+  padding: 2.5rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow-y: scroll; }
+  .app .wrapper {
+    height: 100%;
+    position: relative; }
+  .app form:nth-child(2) {
+    margin-top: 2rem; }
+  .app h1 {
+    margin-top: 0;
+    font-weight: 300;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    vertical-align: middle; }
+    .app h1 .fa-chevron-left {
+      font-size: 16px;
+      margin-right: 1.5rem;
+      color: #333; }
+  .app::-webkit-scrollbar {
+    display: none; }
+  .app ::-webkit-scrollbar-track {
+    display: none; }
+  .app ::-webkit-scrollbar-thumb {
+    display: none; }
 
 .sign-up {
   margin-bottom: 10px;
@@ -324,58 +392,6 @@ form {
   #social input {
     margin: 0 0.25rem 0 0.25rem;
     width: 50%; }
-
-.welcome {
-  font-size: 0.875rem;
-  line-height: 2rem;
-  margin-bottom: 1rem; }
-
-.log-in-register {
-  display: flex;
-  justify-content: center; }
-
-.log-in {
-  width: 50%; }
-
-.register {
-  width: 50%; }
-
-.login-button {
-  width: 100%;
-  border: 0;
-  background-color: #4dd38b;
-  padding: 1rem;
-  color: white;
-  border-radius: 4px 0 0 4px;
-  font-size: 1rem; }
-
-.register-button {
-  width: 100%;
-  border: 0;
-  background-color: #31b16c;
-  padding: 1rem;
-  color: white;
-  border-radius: 0 4px 4px 0;
-  font-size: 1rem; }
-
-.imglanding {
-  width: 100%;
-  height: auto;
-  margin: 4.5rem 0 2rem 0; }
-
-.sign-in-text {
-  margin: 8rem 0 2rem 0; }
-
-.forgot-password {
-  text-align: right; }
-  .forgot-password a {
-    text-decoration: none;
-    color: #aaacad;
-    font-size: 0.875rem;
-    text-align: right; }
-
-.forgot-password-text {
-  margin: 8rem 0 2rem 0; }
 
 .cross {
   position: relative;
@@ -450,7 +466,7 @@ form {
     display: block;
     margin: 60px auto 55px auto; }
   .update a {
-    color: #213A46; }
+    color: #333; }
   .update .amount {
     display: flex;
     justify-content: space-between;
@@ -491,13 +507,6 @@ form {
 
 #description_form {
   margin: 15px 0 15px 0; }
-
-.cookies {
-  font-size: 10px;
-  color: #96a9b1;
-  position: fixed;
-  bottom: 8px;
-  margin-right: 2.5rem; }
 
 @media screen and (min-width: 456px) {
   .app {

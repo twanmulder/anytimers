@@ -1,0 +1,59 @@
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .wrapper {
+      width: 300px;
+  
+      margin-bottom: 1rem;
+    }
+  
+    label {
+      display: block;
+    }
+  
+    .input-type {
+      margin-bottom: 2rem;
+  
+      label {
+        margin-bottom: 0.5rem;
+        font-size: 0.875rem;
+      }
+  
+      input {
+        transition: 0.3s ease border-color;
+  
+        width: 100%;
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+        padding-bottom: 0.25rem;
+  
+        margin-left: -1px;
+  
+        border: 1px solid transparent;
+        border-bottom-color: #eceeef;
+  
+        outline: 0;
+        border-radius: 2px;
+  
+        padding: 0.25rem;
+        padding-left: 0;
+  
+        background-color: $app-bg;
+  
+        &::-webkit-input-placeholder {
+          color: #edeeef;
+        }
+  
+        &:focus {
+          border-bottom-color: #bbb;
+        }
+      }
+    }
+  }

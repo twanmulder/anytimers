@@ -1,15 +1,21 @@
 @import 'reset';
 @import 'colours';
+@import 'typography';
+
+@import 'pages/_landing.scss';
+@import 'pages/_login.scss';
+
 @import 'components/_buttons.scss';
 @import 'components/_header.scss';
 @import 'components/_fournulfour.scss';
 @import 'components/_overlay.scss';
 @import 'components/_sidebar.scss';
+@import 'components/_form.scss';
 
 
 body {
   margin: 0;
-  font-family: Open Sans;
+  font-family: $main-type-face;
 
   display: flex;
   justify-content: center;
@@ -18,8 +24,8 @@ body {
   background-color: #ddd;
 
   color: $font-main;
-  letter-spacing: 0.05em;
-  line-height: 1.4;
+  letter-spacing: $letter-spacing;
+  line-height: $line-height;
 }
 
 .app {
@@ -37,6 +43,11 @@ body {
   position: relative;
 
   overflow-y: scroll;
+
+  .wrapper{
+    height: 100%;
+    position: relative;
+  }
 
   form:nth-child(2){
     margin-top: 2rem;
@@ -71,65 +82,7 @@ body {
   }
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  .wrapper {
-    width: 300px;
-
-    margin-bottom: 1rem;
-  }
-
-  label {
-    display: block;
-  }
-
-  .input-type {
-    margin-bottom: 2rem;
-
-    label {
-      margin-bottom: 0.5rem;
-      font-size: 0.875rem;
-    }
-
-    input {
-      transition: 0.3s ease border-color;
-
-      width: 100%;
-      font-size: 1rem;
-      margin-bottom: 0.25rem;
-      padding-bottom: 0.25rem;
-
-      margin-left: -1px;
-
-      border: 1px solid transparent;
-      border-bottom-color: #eceeef;
-
-      outline: 0;
-      border-radius: 2px;
-
-      padding: 0.25rem;
-      padding-left: 0;
-
-      background-color: $app-bg;
-
-      &::-webkit-input-placeholder {
-        color: #edeeef;
-      }
-
-      &:focus {
-        border-bottom-color: #bbb;
-      }
-    }
-  }
-}
 
 .sign-up {
   margin-bottom: 10px;
@@ -160,70 +113,6 @@ form {
     margin: 0 0.25rem 0 0.25rem;
     width: 50%;
   }
-}
-
-.welcome{
-  font-size: 0.875rem;
-  line-height: 2rem;
-  margin-bottom: 1rem;
-}
-
-.log-in-register{
-  display: flex;
-  justify-content: center;
-}
-
-.log-in{
-  width: 50%;
-}
-.register{
-  width: 50%;
-}
-
-.login-button{
-  width: 100%;
-  border: 0;
-  background-color: $light-green;
-
-  padding: 1rem;
-  color: white;
-  border-radius: 4px 0 0 4px;
-  font-size: 1rem;
-}
-
-.register-button{
-  width: 100%;
-  border: 0;
-  background-color: #31b16c;
-
-  padding: 1rem;
-  color: white;
-  border-radius: 0 4px 4px 0;
-  font-size: 1rem;
-}
-.imglanding{
-  width: 100%;
-  height:auto;
-  margin: 4.5rem 0 2rem 0;
-}
-
-.sign-in-text{
-  margin: 8rem 0 2rem 0;
-}
-
-.forgot-password{
-  text-align: right;
-
-  a{
-    text-decoration: none;
-    color: #aaacad;
-    font-size: 0.875rem;
-    text-align: right;
-  }
-}
-
-.forgot-password-text{
-  margin: 8rem 0 2rem 0;
 }
 
 .cross{
@@ -423,15 +312,7 @@ form {
   margin: 15px 0 15px 0;
 }
 
-.cookies{
-  font-size: 10px;
-  color: $font-light;
 
-  position: fixed;
-  bottom: 8px;
-
-  margin-right: 2.5rem;
-}
 
 
 @import 'mediaqueries';

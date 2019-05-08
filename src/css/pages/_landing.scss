@@ -1,0 +1,47 @@
+.landing-wrapper{
+    position: absolute;
+    bottom: 4px;
+    font-size: $medium-text;
+}
+.imglanding{
+    width: 100%;
+    height:auto;
+    margin: 1.5rem 0 2rem 0;
+}
+.welcome{
+    line-height: 1.3rem;
+    span{
+      font-family: $bold-type-face;
+    }
+  }
+.register{
+    width: 100%;
+    margin-top: 33px;
+}
+.register-button{
+    width: 100%;
+    border: 0;
+    border-radius: 3px;
+    background-color: $light-grey;
+    padding: 1rem;
+    font-size: $medium-text;
+}
+.log-in{
+    width: 100%;
+    margin-top: 11px;
+    color: $light-grey;
+    font-size: $small-text;
+    text-align: right;
+    a{
+        color: $font-main;
+        text-decoration: none;
+    }
+}
+.cookies{
+    font-size: $vsmall-text;
+    color: $light-grey;
+    position: absolute;
+    text-align: center;
+    bottom: -45px;
+    width: 100%;
+  }
