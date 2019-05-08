@@ -20,7 +20,13 @@ $font-light: #96a9b1;
 $vsmall-text: 9px;
 $small-text: 12px;
 $medium-text: 14px;
-$large-text: 1rem;
+$large-text: 17px;
 
 $letter-spacing: 0.82px;
 $line-height: 17px;
+
+// This may slow performance, WATCH OUT
+body{
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

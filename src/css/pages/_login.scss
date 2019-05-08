@@ -1,18 +1,29 @@
 .sign-in-text{
-    margin: 8rem 0 2rem 0;
-  }
-  
-  .forgot-password{
-    text-align: right;
-  
-    a{
-      text-decoration: none;
-      color: #aaacad;
-      font-size: 0.875rem;
-      text-align: right;
+    margin: 62px 0;
+    font-size: $large-text;
+    span:nth-child(1){
+        font-family: $bold-type-face;
     }
   }
+  
+.forgot-password{
+    text-align: right;
+    margin-top: 6px;
+    a{
+        text-decoration: none;
+        color: #aaacad;
+        font-size: $small-text;
+        text-align: right;
+    }
+}
 
-  .forgot-password-text{
-    margin: 8rem 0 2rem 0;
+.login-button {
+    width: 100%;
+    border: 0;
+    background-color: $light-grey;
+  
+    padding: 16px;
+    color: $font-main;
+    border-radius: 3px;
+    font-size: $medium-text;
   }

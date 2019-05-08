@@ -12,18 +12,17 @@ class Login extends React.PureComponent {
     return (
       <div>
         {hasCookie && <Redirect to="/" />}
-        <h1>
-          <Link to="landing">
-            <i className="fas fa-times"></i>
-          </Link>
-        </h1>
-        <form>
-          <div className="wrapper">
-            <div className="sign-in-text">
+        <div className="cross">
+            <Link to="/">
+              <i className="fas fa-times"></i>
+            </Link>
+          </div>
+        <div className="sign-in-text">
               <span>Welcome back!</span> 
               <br /> 
               <span>Nice to see you again.</span>
             </div>
+        <form>
             <div className="input-type">
               <label htmlFor="email">E-mail</label>
               <input placeholder="JohnDoe@Hotmale.com" id="email" type="text"></input>
@@ -38,8 +37,7 @@ class Login extends React.PureComponent {
               </div>
             </div>
 
-            <input value="Sign in" type="submit" className="submit-button" onClick={this.setCookie}></input>
-          </div>
+            <input value="Sign in" type="submit" className="login-button" onClick={this.setCookie}></input>
         </form>
       </div>
     );

@@ -51,6 +51,10 @@ table {
 @font-face {
   font-family: 'Inter-Bold';
   src: url("../fonts/Inter-Bold.woff2") format("woff2"), url("../fonts/Inter-Bold.woff") format("woff"); }
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 .landing-wrapper {
   position: absolute;
   bottom: 4px;
@@ -97,18 +101,28 @@ table {
   width: 100%; }
 
 .sign-in-text {
-  margin: 8rem 0 2rem 0; }
+  margin: 62px 0;
+  font-size: 17px; }
+  .sign-in-text span:nth-child(1) {
+    font-family: "Inter-Bold"; }
 
 .forgot-password {
-  text-align: right; }
+  text-align: right;
+  margin-top: 6px; }
   .forgot-password a {
     text-decoration: none;
     color: #aaacad;
-    font-size: 0.875rem;
+    font-size: 12px;
     text-align: right; }
 
-.forgot-password-text {
-  margin: 8rem 0 2rem 0; }
+.login-button {
+  width: 100%;
+  border: 0;
+  background-color: #C8C8C8;
+  padding: 16px;
+  color: #333;
+  border-radius: 3px;
+  font-size: 14px; }
 
 .bttn {
   transition: all 0.2s;
@@ -287,40 +301,38 @@ table {
     right: 0; }
 
 form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
+  width: 100%; }
   form::-webkit-scrollbar {
     display: none; }
-  form .wrapper {
-    width: 300px;
-    margin-bottom: 1rem; }
-  form label {
-    display: block; }
   form .input-type {
-    margin-bottom: 2rem; }
+    margin-bottom: 32px; }
     form .input-type label {
-      margin-bottom: 0.5rem;
-      font-size: 0.875rem; }
+      font-size: 14px; }
     form .input-type input {
-      transition: 0.3s ease border-color;
       width: 100%;
-      font-size: 1rem;
-      margin-bottom: 0.25rem;
-      padding-bottom: 0.25rem;
+      font-size: 14px;
       margin-left: -1px;
+      outline: 0;
+      padding: 12px 0 4px 0;
+      background-color: white;
       border: 1px solid transparent;
       border-bottom-color: #eceeef;
-      outline: 0;
       border-radius: 2px;
-      padding: 0.25rem;
-      padding-left: 0;
-      background-color: white; }
+      transition: 0.3s ease border-color; }
       form .input-type input::-webkit-input-placeholder {
         color: #edeeef; }
       form .input-type input:focus {
         border-bottom-color: #bbb; }
+
+.cross {
+  position: relative;
+  height: 16px;
+  display: flex; }
+  .cross a {
+    color: #333; }
+  .cross svg {
+    position: absolute;
+    right: 0; }
 
 body {
   margin: 0;
@@ -331,7 +343,8 @@ body {
   background-color: #ddd;
   color: #333;
   letter-spacing: 0.82px;
-  line-height: 17px; }
+  line-height: 17px;
+  font-size: 14px; }
 
 .app {
   width: 100vw;
@@ -374,10 +387,10 @@ body {
 .submit-button {
   width: 100%;
   border: 0;
-  background-color: #4dd38b;
+  background-color: #C8C8C8;
   padding: 1rem;
-  color: white;
-  border-radius: 4px;
+  color: #333;
+  border-radius: 3px;
   font-size: 1rem; }
 
 #facebook {
@@ -392,14 +405,6 @@ body {
   #social input {
     margin: 0 0.25rem 0 0.25rem;
     width: 50%; }
-
-.cross {
-  position: relative;
-  height: 16px;
-  display: flex; }
-  .cross svg {
-    position: absolute;
-    right: 0; }
 
 .tutorial img {
   display: block;
@@ -465,8 +470,6 @@ body {
   .update img {
     display: block;
     margin: 60px auto 55px auto; }
-  .update a {
-    color: #333; }
   .update .amount {
     display: flex;
     justify-content: space-between;

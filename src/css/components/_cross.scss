@@ -1,0 +1,14 @@
+.cross{
+    position: relative;
+    height: 16px;
+    display: flex;
+
+    a{
+        color: $font-main;
+    }
+  
+    svg{
+      position: absolute;
+      right: 0;
+    }
+  }
