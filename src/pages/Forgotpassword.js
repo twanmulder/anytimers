@@ -15,7 +15,8 @@ class Forgotpassword extends React.Component {
   		<form>
   			<div className="wrapper">
           <div className="forgot-password-text">
-            Forgot your password? <br /> <br /> Fill in your email address to receive a link to reset your password.
+            <p>Forgot your password?</p>
+            <p>Fill in your email address to receive a link to reset your password.</p>
           </div>
   				<div className="input-type">
   					<label htmlFor="email">E-mail</label>

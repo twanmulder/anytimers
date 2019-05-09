@@ -1,8 +1,9 @@
 .sign-in-text{
     margin: 62px 0;
     font-size: $large-text;
-    span:nth-child(1){
+    p:nth-child(1){
         font-family: $bold-type-face;
+        margin-bottom: 6px;
     }
   }
   

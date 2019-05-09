@@ -18,9 +18,8 @@ class Login extends React.PureComponent {
             </Link>
           </div>
         <div className="sign-in-text">
-              <span>Welcome back!</span> 
-              <br /> 
-              <span>Nice to see you again.</span>
+              <p>Welcome back!</p>
+              <p>Nice to see you again.</p>
             </div>
         <form>
             <div className="input-type">
