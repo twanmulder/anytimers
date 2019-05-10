@@ -6,10 +6,11 @@
 @import 'pages/_register.scss';
 @import 'pages/_login.scss';
 @import 'pages/_forgotPassword.scss';
+@import 'pages/_tutorial.scss';
+@import 'pages/_fournulfour.scss';
 
 @import 'components/_buttons.scss';
 @import 'components/_header.scss';
-@import 'components/_fournulfour.scss';
 @import 'components/_overlay.scss';
 @import 'components/_sidebar.scss';
 @import 'components/_form.scss';
@@ -97,33 +98,6 @@ body {
   color: $font-main;
   border-radius: 3px;
   font-size: $medium-text;
-}
-
-.tutorial{
-  img{
-    display: block;
-    margin: 150px auto 100px auto;
-  }
-  .tuttext{
-    text-align: center;
-    margin: 0 auto;
-    width: 80%;
-  }
-}
-
-.tut4{
-  a{
-    color: #fff;
-    text-decoration: none;
-  }
-  .tuttext4{
-    padding: 8px;
-    background-color: $primary-green;
-    border-radius: 20px;
-    -webkit-box-shadow: 0px 28px 91px -26px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 28px 91px -26px rgba(0,0,0,0.75);
-    box-shadow: 0px 28px 91px -26px rgba(0,0,0,0.75);
-  }
 }
 
 #anytimers{
