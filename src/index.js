@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter, Route, Switch} from "react-router-dom";
 import * as serviceWorker from './serviceWorker';
-import './css/css.css'
+import './css/css.scss'
 
 import Overview from "./pages/Overview";
 import Landing from "./pages/Landing";
