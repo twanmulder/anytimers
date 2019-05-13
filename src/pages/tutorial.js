@@ -10,7 +10,8 @@ class Tutorial extends React.Component {
     var settings = {
       dots: true,
       arrows: false,
-      infinite: false
+      infinite: false,
+      adaptiveHeight: true
     };
     return(
         <div className="wrapper">

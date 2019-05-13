@@ -106,12 +106,12 @@
 }
 
 .slick-dots {
-	bottom: 30px;
+	bottom: 46px;
 	width: 100%;
 	margin: 0;
 	transform: translateY(3rem);
 	list-style: none;
-	text-align: center
+	text-align: center;
 }
 
 .slick-dots li {
