@@ -22,9 +22,19 @@
     width: 100%;
     border: 0;
     background-color: $light-grey;
-  
+
     padding: 16px;
     color: $font-main;
     border-radius: 3px;
     font-size: $medium-text;
-  }
+}
+
+.password-input{
+    position: relative;
+    svg{
+        position: absolute;
+        bottom: 5px;
+        right: 5px;
+        color: $light-grey;
+    }
+}

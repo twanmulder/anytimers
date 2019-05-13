@@ -16,4 +16,14 @@
     bottom: inherit;
     right: inherit;
   }
+  .slider-wrapper{
+    width: 360px;
+  }
+  .tutorial{
+    height: calc(640px - 5rem);
+    .tuttext{
+      width: calc(360px - 8rem);
+    }
+  }
 }
+
