@@ -8,7 +8,7 @@ import Overview from "./pages/Overview";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Forgotpassword from "./pages/Forgotpassword";
-import Register from "./pages/Register.js";
+import Register from "./pages/Register";
 import Tutorial from "./pages/Tutorial";
 import Fournulfour from "./pages/Fournulfour";
 import Add from "./pages/Add";
