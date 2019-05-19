@@ -1,26 +1,49 @@
 import React from "react";
+import Expand from "react-expand-animated";
 
 import AnytimersDetailList from "./anytimersDetailList";
 
+
 class AnytimersGive extends React.PureComponent {
+  state = { open: false };
+
+  // Toggle function to toggle AnytimersDetailList elements
+  toggle = () => {
+    this.setState(prevState => ({ open: !prevState.open }));
+  };
+
   render() {
+    // transition const for expand element
+    const transitions = ["height", "opacity"];
+
     return(
       <div>
-        <div className="user">
+        <div className="user" onClick={this.toggle}>
           <i className="fas fa-circle"></i>
           <h4 className="username">{this.props.to}</h4>
           <h4 className="number">{this.props.amount}</h4>
         </div>
-        <AnytimersDetailList
-          to={this.props.to}
-          description={this.props.description}
-          amount={this.props.amount}
-        />
+
+        <Expand 
+          open={this.state.open}
+          duration={ 175 }
+          easing={ "ease-out" }
+          transitions={transitions}
+          >
+
+          <AnytimersDetailList
+            to={this.props.to}
+            description={this.props.description}
+            amount={this.props.amount}
+          />
+        </Expand>
       </div>
     )
   }
 }
 
+// Create an element called anytimersGiveList, 
+// which includes an ES6 map function that genereates an AnytimersGive for every user
 class anytimersGiveList extends React.Component{
   render() {
     const { anytimers } = this.props;

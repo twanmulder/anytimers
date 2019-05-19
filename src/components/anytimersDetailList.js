@@ -13,6 +13,9 @@ class AnytimerDetail extends React.Component{
   }
 }
 
+// Create an element called AnytrimersDetailList, 
+// which includes an ES6 map function that genereates an AnytimerDetail for every anytimer
+
 class AnytimersDetailList extends React.Component {
   render() {
     return(
