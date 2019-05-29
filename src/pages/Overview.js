@@ -1,11 +1,10 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 
-import Sidebar from "../components/Sidebar";
 import BeerButtons from "../components/beerButtons";
 import AnytimersGiveList from "../components/anytimersGiveList";
 import AnytimersReceiveList from "../components/anytimersReceiveList";
-import Header from "../components/header";
+import Header from "../components/Header";
 
 import anytimers from "../content/anytimers";
 
@@ -26,7 +25,6 @@ class Overview extends React.PureComponent {
           </div>
 
         </div>
-        <Sidebar />
       </div>
     )
   }

@@ -1,39 +1,32 @@
 import React from "react"
+import Sidebar from "../components/Sidebar"
 
-class header extends React.Component {
+class Header extends React.Component {
+  constructor (props) {
+    super(props)
+    this.state = {
+      isAsideToggle: false,
+    }
+  }
   render() {
+    const isAsideToggled = this.state.isAsideToggle
     return(
       <div className="header">
-        <div className="group">
-          <div className="groupSelected">
-            <h2>All</h2>
-            <i className="fas fa-chevron-down"></i>
-          </div>
-          <div className="groupList">
-            <div className="groupInfo">
-              <h4>Select group (or all)</h4>
-            </div>
-            <div className="groupItem active">
-              <h3>All</h3>
-            </div>
-            <div className="groupItem">
-              <h3>Fashion Bois</h3>
-            </div>
-            <div className="groupItem">
-              <h3>Mannenavond</h3>
-            </div>
-            <div className="groupItem">
-              <h3>Redactiecommissie</h3>
-            </div>
-          </div>
+        <div className="header-title">
+          <h1>My any's</h1>
         </div>
 
-        <div id="profile" className="profile">
-          <i className="fas fa-user-circle"></i>
+        <div id="header-profile" className="header-profile"
+             onClick={ () => this.setState({isAsideToggle: !isAsideToggled}) }>
+          <div className="header-profile-circle"></div>
         </div>
+        <div className={ isAsideToggled? "overlay toggled" : "overlay" }
+             onClick={ () => this.setState({isAsideToggle: !isAsideToggled}) }>
+        </div>
+        <Sidebar isAsideToggled={this.state.isAsideToggle}/>
       </div>
     )
   }
 }
 
-export default header;
+export default Header;

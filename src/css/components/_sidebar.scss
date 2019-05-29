@@ -1,50 +1,54 @@
-.wrapperAside{
-  position: relative;
-}
-
 .profileAside{
   position: absolute;
-  top: 0;
-  right: -15rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  top: -2.5rem;
+  right: -19rem;
+  z-index: 1;
 
   transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s;
 
   background-color: white;
   width: 12.5rem;
-  height: 100%;
+  height: 100vh;
 
-  padding: 1rem;
+  padding: 0 2rem;
 
   .profileDetail{
-    text-align: center;
+    margin-top: 1rem;
 
     .profileAvatar{
-      margin-top: 1rem;
-
-      svg{
+      .profileAvatarCircle{
         width: 80px;
         height: 80px;
+        margin: 0 auto;
+        border-radius: 50%;
+        background: $primary-green;
       }
     }
     .profileName{
-      margin-top: 0.5rem;
+      margin-top: .9rem;
+      font-size: $large-text;
       font-weight: bold;
+      text-align: center;
     }
 
     ul{
-      margin-top: 1rem;
+      margin-top: 3rem;
 
       li{
-        margin: 0.5rem 0;
+        font-size: $large-text;
+        margin: 1.2rem 0;
       }
+    }
+    .profileAsideLogOut{
+      position: absolute;
+      bottom: 2.5rem;
+      right: 2.5rem;
+      color: #CCC;
+      font-size: $medium-text;
     }
   }
 
   &.toggled{
-    right: 0;
+    right: -2.5rem;
   }
 }

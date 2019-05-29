@@ -9,35 +9,35 @@ class BeerButtons extends React.Component {
 
 
   render() {
-    const isToggled = this.state.isButtonToggle;
+    const isOverlayToggled = this.state.isButtonToggle;
     return (
       <div>
         <div
-        className={ isToggled ? "overlay toggled" : "overlay"}
-        onClick={ () => this.setState({isButtonToggle: !isToggled}) }
+        className={ isOverlayToggled ? "overlay toggled" : "overlay"}
+        onClick={ () => this.setState({isButtonToggle: !isOverlayToggled}) }
         ></div>
 
         <div
-          className={ isToggled ? "cross-bttn toggled bttn" : "cross-bttn bttn"}
-          onClick={ () => this.setState({isButtonToggle: !isToggled}) }>
+          className={ isOverlayToggled ? "cross-bttn toggled bttn" : "cross-bttn bttn"}
+          onClick={ () => this.setState({isButtonToggle: !isOverlayToggled}) }>
           <i className="fas fa-times"></i>
         </div>
 
         <Link to="/add">
-          <div className={ isToggled ? "add-bttn toggled bttn" : "add-bttn bttn"}>
+          <div className={ isOverlayToggled ? "add-bttn toggled bttn" : "add-bttn bttn"}>
             <i className="fas fa-plus"></i>
           </div>
         </Link>
 
         <Link to="/drink">
-          <div className={ isToggled ? "drink-bttn toggled bttn" : "drink-bttn bttn"}>
+          <div className={ isOverlayToggled ? "drink-bttn toggled bttn" : "drink-bttn bttn"}>
             <i className="fas fa-beer"></i>
           </div>
         </Link>
 
         <div
-          className={ isToggled ? "beer-bttn toggled bttn" : "beer-bttn bttn"}
-          onClick={ () => this.setState({isButtonToggle: !isToggled}) }>
+          className={ isOverlayToggled ? "beer-bttn toggled bttn" : "beer-bttn bttn"}
+          onClick={ () => this.setState({isButtonToggle: !isOverlayToggled}) }>
           <i className="fas fa-beer"></i>
         </div>
 
