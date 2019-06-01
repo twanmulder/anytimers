@@ -1,0 +1,22 @@
+.search-subtext{
+    color: $light-grey;
+}
+
+.search-wrapper{
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    .search-icon{
+        margin-right: 1.5rem;
+        color: $light-grey;
+    }
+    .search-input{
+        width: 100%;
+        input{
+            padding: 0 0 10px 0;
+            &::placeholder{
+                color:$font-main;
+            }
+        }
+    }
+}

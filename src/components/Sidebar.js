@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 class Sidebar extends React.PureComponent {
 
@@ -13,7 +14,9 @@ class Sidebar extends React.PureComponent {
               <p>Twan Mulder</p>
             </div>
             <ul>
-              <li>Add friends</li>
+              <Link to="/addfriends">
+                <li>Add friends</li>
+              </Link>
               <li>Profile</li>
               <li>Settings</li>
             </ul>

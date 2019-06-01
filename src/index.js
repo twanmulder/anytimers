@@ -13,6 +13,7 @@ import Tutorial from "./pages/Tutorial";
 import Fournulfour from "./pages/Fournulfour";
 import Add from "./pages/Add";
 import Drink from "./pages/Drink";
+import AddFriends from "./pages/addFriends";
 
 const Index = () => {
   return (
@@ -26,6 +27,7 @@ const Index = () => {
         <Route path="/tutorial" component={Tutorial}/>
         <Route path="/add" component={Add}/>
         <Route path="/drink" component={Drink}/>
+        <Route path="/addfriends" component={AddFriends}/>
         <Route exact path="/" component={Overview}/>
 
         <Route path="/" component={Fournulfour}/>
