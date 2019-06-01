@@ -1,17 +1,19 @@
 @font-face {
     font-family: 'Inter-Regular';
+    font-display: auto;
     src:    url('../fonts/Inter-Regular.woff2') format('woff2'),
             url('../fonts/Inter-Regular.woff') format('woff');
   }
 @font-face {
     font-family: 'Inter-Bold';
+    font-display: auto;
     src:    url('../fonts/Inter-Bold.woff2') format('woff2'),
             url('../fonts/Inter-Bold.woff') format('woff');
 
 }
 
-$main-type-face: 'Inter-Regular';
-$bold-type-face: 'Inter-Bold';
+$main-type-face: 'Inter-Regular', Times;
+$bold-type-face: 'Inter-Bold', Times;
 
 // $font-main: #213A46;
 $font-main: #333;
