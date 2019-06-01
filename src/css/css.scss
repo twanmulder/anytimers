@@ -8,6 +8,8 @@
 @import 'pages/_forgotPassword.scss';
 @import 'pages/_tutorial.scss';
 @import 'pages/_fournulfour.scss';
+@import 'pages/_update.scss';
+@import 'pages/_addFriends.scss';
 
 @import 'components/_buttons.scss';
 @import 'components/_header.scss';
@@ -53,10 +55,6 @@ body {
   .wrapper{
     height: 100%;
     position: relative;
-  }
-
-  form:nth-child(2){
-    margin-top: 2rem;
   }
 
   h1 {
@@ -166,97 +164,5 @@ body {
   }
 }
 
-// #overlay {
-//   position: absolute; /* Sit on top of the page content */
-//   display: none; /* Hidden by default */
-//   width: 100vw; /* Full width (cover the whole page) */
-//   height: 960px; /* Full height (cover the whole page) */
-//   top: 0;
-//   left: 0;
-//   background-color: transparent; /* Black background with opacity */
-//   transition: background-color 0.5s;
-// }
-
-.update{
-  width: 100%;
-  img{
-    display: block;
-    margin: 60px auto 55px auto;
-  }
-
-  .amount{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-
-    padding: 0 4rem;
-    margin-bottom: 15px;
-
-    .number{
-      height: 2rem;
-      width: 2rem;
-
-      background-color: white;
-
-      border-radius: 4px;
-
-      p{
-        height: 100%;
-
-        text-align:center;
-        top: 6px;
-        position: relative;
-
-        font-size: 1.2rem;
-      }
-    }
-
-    .minus, .plus{
-
-    }
-  }
-}
-
-.add, .drink{
-  width: 100%;
-
-  select{
-    margin-bottom: 25px;
-
-    border-color: transparent;
-    width: 100%;
-  }
-}
-
-.anytime_from, .anytime_to{
-  margin-bottom: 15px;
-}
-
-.description{
-  form{
-    margin-top: 15px;
-  }
-
-  input:first-child{
-    width: 100%;
-
-    border-color: transparent;
-
-    &::placeholder{
-      color: $font-light;
-    }
-  }
-
-  input:nth-child(2){
-    margin-top: 10px;
-  }
-}
-
-#description_form{
-  margin: 15px 0 15px 0;
-}
-
-
-
-
+// IMPORT LAST MEDIAQUERIES TO OVERWRITE DESKTOP CSS
 @import 'mediaqueries';

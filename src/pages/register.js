@@ -16,7 +16,7 @@ class Register extends React.Component {
         Register
       </h1>
 
-  		<form>
+  		<form className="register-form">
   			<div className="wrapper">
   				<div className="input-type">
   					<label htmlFor="full-name">Full name</label>
