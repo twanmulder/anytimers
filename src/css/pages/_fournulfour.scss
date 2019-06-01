@@ -1,30 +1,27 @@
 #fournulfour{
     position: relative;
-    height: calc(100vh - 5rem);
+    height: 100%;
     a{
       text-decoration: none;
     }
     .veralign{
-      position: absolute;
+      position: relative;
       transform: translateY(-50%);
       top:50%;
     }
     h1{
       color:$font-main;
-      padding: 1rem;
-      font-size: 1.3rem;
+      padding: 1rem 0;
+      font-size: $large-text;
       text-align: center;
     }
     .fournulfourbutton{
-      -webkit-box-shadow: 0px 28px 91px -26px rgba(0,0,0,0.75);
-      -moz-box-shadow: 0px 28px 91px -26px rgba(0,0,0,0.75);
-      box-shadow: 0px 28px 91px -26px rgba(0,0,0,0.75);
-  
       border-radius: 4px;
       background-color: $primary-green;
       color: white;
-      width: calc(100vw - 7rem);
+      width: 100%;
       display: inline-block;
+      box-shadow: 0 3px 6px rgba(0,150,0,0.10), 0 3px 6px rgba(0,150,0,0.17);
     }
   }
   
