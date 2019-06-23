@@ -1,4 +1,5 @@
 import React from "react";
+import anytimers from "../content/anytimers";
 
 class AnytimerDetail extends React.Component{
   render() {

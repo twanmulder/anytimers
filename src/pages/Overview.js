@@ -19,7 +19,7 @@ class Overview extends React.PureComponent {
         <div className="wrapper">
           <Header />
           <BeerButtons />
-          <div id="anytimers" className="anytimers">
+          <div id="anytimers">
             <AnytimersGiveList anytimers={anytimers}/>
             <AnytimersReceiveList />
           </div>

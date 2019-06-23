@@ -17,7 +17,7 @@ class AnytimersGive extends React.PureComponent {
     const transitions = ["height", "opacity"];
 
     return(
-      <div>
+      <div className="user-wrapper">
         <div className="user" onClick={this.toggle}>
           <i className="fas fa-circle"></i>
           <h4 className="username">{this.props.to}</h4>
