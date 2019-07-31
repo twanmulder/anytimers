@@ -6,7 +6,7 @@
 
   transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.4s;
 
-  background-color: white;
+  background-color: $app-bg;
   width: 12.5rem;
   height: 100vh;
 
@@ -21,7 +21,7 @@
         height: 80px;
         margin: 0 auto;
         border-radius: 50%;
-        background: $primary-green;
+        background-color: $light-grey;
       }
     }
     .profileName{
@@ -40,8 +40,11 @@
       }
 
       li{
-        font-size: $large-text;
-        margin: 1.2rem 0;
+        font-size: $medium-text;
+        margin-bottom: 10px;
+        background: #fff;
+        border-radius: $border-radius;
+        padding: 10px 15px;
       }
     }
     .profileAsideLogOut{

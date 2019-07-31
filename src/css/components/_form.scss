@@ -1,5 +1,5 @@
 form {
-    width: 100%; 
+    width: 100%;
     &::-webkit-scrollbar {
       display: none;
     }
@@ -23,10 +23,10 @@ form {
         border-radius: 2px;
         transition: 0.3s ease border-color;
         &::-webkit-input-placeholder {
-          color: #edeeef;
+          color: $light-grey;
         }
         &:focus {
-          border-bottom-color: #bbb;
+          border-bottom-color: $light-grey;
         }
       }
     }
