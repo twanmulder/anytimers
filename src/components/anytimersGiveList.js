@@ -5,11 +5,12 @@ import AnytimersDetailList from "./anytimersDetailList";
 
 
 class AnytimersGive extends React.PureComponent {
-  state = { open: false };
+  state = { open: false, boxshadow: false };
 
   // Toggle function to toggle AnytimersDetailList elements
   toggle = () => {
     this.setState(prevState => ({ open: !prevState.open }));
+    this.setState(prevState => ({ boxshadow: !prevState.boxshadow }));
   };
 
   render() {
@@ -17,9 +18,8 @@ class AnytimersGive extends React.PureComponent {
     const transitions = ["height", "opacity"];
 
     return(
-      <div className="user-wrapper">
+      <div className={this.state.boxshadow ? "user-wrapper box-shadow" : "user-wrapper"}>
         <div className="user" onClick={this.toggle}>
-          <i className="fas fa-circle"></i>
           <h4 className="username">{this.props.to}</h4>
           <h4 className="number">{this.props.amount}</h4>
         </div>
