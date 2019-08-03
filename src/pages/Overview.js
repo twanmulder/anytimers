@@ -9,25 +9,21 @@ import Header from "../components/Header";
 import anytimers from "../content/anytimers";
 
 class Overview extends React.PureComponent {
+	render() {
+		const hasCookie = document.cookie.indexOf("signed_in") > -1;
 
-  render() {
-    const hasCookie = document.cookie.indexOf("signed_in") > -1;
-
-    return (
-      <div>
-        {!hasCookie && <Redirect to="/landing" />}
-        <div className="wrapper">
-          <Header />
-          <BeerButtons />
-          <div id="anytimers">
-            <AnytimersGiveList anytimers={anytimers}/>
-            <AnytimersReceiveList />
-          </div>
-
-        </div>
-      </div>
-    )
-  }
+		return (
+			<div className="wrapper">
+				{!hasCookie && <Redirect to="/landing" />}
+				<Header />
+				<BeerButtons />
+				<div id="anytimers">
+					<AnytimersGiveList anytimers={anytimers} />
+					<AnytimersReceiveList />
+				</div>
+			</div>
+		);
+	}
 }
 
 export default Overview;

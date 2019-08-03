@@ -58,9 +58,9 @@
 	bottom: 1rem;
 
 	select {
-		margin-bottom: 25px;
+		margin-bottom: 28px;
 		padding: 4px;
-		border-radius: 4px;
+		border-radius: $border-radius;
 		border-color: transparent;
 		width: 100%;
 		background: #fff;
@@ -83,7 +83,7 @@
 		border-color: transparent;
 		box-sizing: border-box;
 		padding: 4px;
-		border-radius: 4px;
+		border-radius: $border-radius;
 
 		&::placeholder {
 			color: $font-light;
