@@ -12,7 +12,7 @@ class updateData extends React.Component {
 			<div className="add update-data">
 				<form>
 					<Counter />
-					<div className="anytime_from">
+					<div className="update-data-text">
 						<p>Anytimer from</p>
 					</div>
 					<select className="dropdown" name="">
@@ -21,7 +21,7 @@ class updateData extends React.Component {
 						<option value="$USER">Daan Heijnen</option>
 						<option value="$USER">Tijs Ots</option>
 					</select>
-					<div className="anytime_to">
+					<div className="update-data-text">
 						<p>Anytimer to</p>
 					</div>
 					<select className="dropdown" name="">

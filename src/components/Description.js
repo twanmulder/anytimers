@@ -4,7 +4,9 @@ class Description extends React.Component {
 	render() {
 		return (
 			<div className="description">
-				<p>Description</p>
+				<div className="update-data-text">
+					<p>Description</p>
+				</div>
 				<input placeholder="Type here" type="text" name="" />
 			</div>
 		);

@@ -59,15 +59,17 @@
 
 	select {
 		margin-bottom: 25px;
-
+		padding: 4px;
+		border-radius: 4px;
 		border-color: transparent;
 		width: 100%;
+		background: #fff;
+		color: $font-main;
 	}
 }
 
-.anytime_from,
-.anytime_to {
-	margin-bottom: 15px;
+.update-data-text {
+	margin-bottom: 4px;
 }
 
 .description {
@@ -75,17 +77,16 @@
 		margin-top: 15px;
 	}
 
-	input:first-child {
+	input {
 		width: 100%;
 		margin-bottom: 10px;
 		border-color: transparent;
+		box-sizing: border-box;
+		padding: 4px;
+		border-radius: 4px;
 
 		&::placeholder {
 			color: $font-light;
 		}
 	}
-}
-
-#description_form {
-	margin: 15px 0 15px 0;
 }
