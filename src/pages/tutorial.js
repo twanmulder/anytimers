@@ -1,5 +1,5 @@
 import React from "react";
-import { Redirect, Link } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 
 class Tutorial extends React.Component {
 	constructor(props) {
@@ -18,16 +18,19 @@ class Tutorial extends React.Component {
 		};
 	}
 	handleClick = () => {
+		// If the button is clicked on final frame, redirect to overview page
 		if (this.state.frame === 2) {
 			this.setState({ toOverview: true });
 			return;
 		}
+		// Toggle active dot class
 		document
 			.querySelectorAll(".onBoarding-dot")
 			[this.state.frame].classList.toggle("active");
 		document
 			.querySelectorAll(".onBoarding-dot")
 			[this.state.frame + 1].classList.toggle("active");
+		// Increase the state frame to frame++
 		this.setState(prevState => {
 			return { frame: prevState.frame + 1 };
 		});
