@@ -1,59 +1,75 @@
 import React from "react";
-import Slider from "react-slick";
-import { Link } from "react-router-dom";
-
-import "../css/slick/slick.min.css";
-import "../css/slick/slick-theme.min.css";
+import { Redirect, Link } from "react-router-dom";
 
 class Tutorial extends React.Component {
-	render() {
-		var settings = {
-			dots: true,
-			arrows: false,
-			infinite: false,
-			adaptiveHeight: true
+	constructor(props) {
+		super(props);
+		this.state = {
+			frame: 1,
+			toOverview: false
 		};
+	}
+	handleClick = () => {
+		// This function is really shity, please fix it sometime
+		// The redirection is pretty okay, but the text changes really suck
+		if (this.state.frame === 1) {
+			document
+				.querySelector(".onBoarding-text")
+				.getElementsByTagName("h2")[0].innerHTML = "Add Anytimers";
+			document
+				.querySelector(".onBoarding-text")
+				.getElementsByTagName("p")[0].innerHTML =
+				"Add anytimers using the 'beer' button.";
+			document
+				.querySelectorAll(".onBoarding-dot")[0]
+				.classList.toggle("active");
+			document
+				.querySelectorAll(".onBoarding-dot")[1]
+				.classList.toggle("active");
+			this.setState(prevState => {
+				return { frame: prevState.frame + 1 };
+			});
+		} else if (this.state.frame === 2) {
+			document
+				.querySelector(".onBoarding-text")
+				.getElementsByTagName("h2")[0].innerHTML = "Drink Anytimers";
+			document
+				.querySelector(".onBoarding-text")
+				.getElementsByTagName("p")[0].innerHTML =
+				"Drink anytimers and have fun!";
+			document
+				.querySelectorAll(".onBoarding-dot")[1]
+				.classList.toggle("active");
+			document
+				.querySelectorAll(".onBoarding-dot")[2]
+				.classList.toggle("active");
+			this.setState(prevState => {
+				return { frame: prevState.frame + 1 };
+			});
+		} else if (this.state.frame === 3) {
+			this.setState({ toOverview: true });
+		}
+	};
+	render() {
+		if (this.state.toOverview === true) {
+			return <Redirect to="/" />;
+		}
 		return (
-			<div className="wrapper">
-				<div className="cross">
-					<Link to="/">
-						<i className="fas fa-times"></i>
-					</Link>
+			<div className="onBoarding">
+				<div className="onBoarding-image"></div>
+				<div className="onBoarding-text">
+					<h2>Add Friends</h2>
+					<p>Search and add your friends to start tracking your anytimers.</p>
 				</div>
-
-				<div className="slider-wrapper">
-					<Slider {...settings}>
-						<div>
-							<div className="tutorial tut1">
-								<div className="tuttext">
-									Add your friends to start tracking anytimers!
-								</div>
-							</div>
-						</div>
-						<div>
-							<div className="tutorial tut1">
-								<div className="tuttext">
-									Create (or join) a group to keep track of your friends.
-								</div>
-							</div>
-						</div>
-						<div>
-							<div className="tutorial tut1">
-								<div className="tuttext">
-									Add or drink anytimers bij pressing the beer button.
-								</div>
-							</div>
-						</div>
-						<div>
-							<div className="tutorial tut4">
-								<Link to="/">
-									<div className="tuttext tuttext4">
-										That's it! Click me to start tracking those anytimers!
-									</div>
-								</Link>
-							</div>
-						</div>
-					</Slider>
+				<div className="onBoarding-controls">
+					<button className="onBoarding-button" onClick={this.handleClick}>
+						Next
+					</button>
+					<div className="onBoarding-dots">
+						<div className="onBoarding-dot active"></div>
+						<div className="onBoarding-dot"></div>
+						<div className="onBoarding-dot"></div>
+					</div>
 				</div>
 			</div>
 		);

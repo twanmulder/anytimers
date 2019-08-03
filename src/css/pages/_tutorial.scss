@@ -1,43 +1,43 @@
-.tutorial{
-  height: calc(100vh - 5rem);
-  position: relative;
-  font-size: $medium-text;
-  img{
-    display: block;
-    margin: 150px auto 100px auto;
-  }
-  .tuttext{
-    text-align: center;
-    margin: 0 auto;
-    width: calc(100vw - 8rem);
-    position: absolute;
-    bottom: 64px;
-    left: 4rem;
-  }
+.onBoarding {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	.onBoarding-image {
+		height: 70%;
+	}
+	.onBoarding-text {
+		text-align: center;
+		padding: 0 20px;
+		h2 {
+			font-size: $large-text;
+			font-family: $bold-type-face;
+			margin-bottom: 8px;
+		}
+	}
+	.onBoarding-controls {
+		position: absolute;
+		bottom: 0;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		.onBoarding-button {
+			font-size: $large-text;
+			font-family: $bold-type-face;
+			padding: 0;
+		}
+		.onBoarding-dots {
+			display: flex;
+			.onBoarding-dot {
+				width: 8px;
+				height: 8px;
+				margin-left: 4px;
+				border-radius: 50%;
+				border: 2px solid $light-grey;
+				&.active {
+					background: $light-grey;
+				}
+			}
+		}
+	}
 }
-  
-  .tut4{
-    a{
-      color: #fff;
-      text-decoration: none;
-    }
-    .tuttext4{
-        padding: 10px 0;
-        color: #333;
-        font-size: $medium-text;
-        background-color: $light-grey;
-        border-radius: 3px;
-        bottom: 54px;
-        -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-    }
-  }
-
-  .slider-wrapper{
-      position: absolute;
-      bottom: 0;
-      width: 100vw;
-      height: calc(100% - 16px);
-      left: -2.5rem;
-  }
