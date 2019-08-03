@@ -1,22 +1,21 @@
 @font-face {
-    font-family: 'Inter-Regular';
-    font-display: auto;
-    src:    url('../fonts/Inter-Regular.woff2') format('woff2'),
-            url('../fonts/Inter-Regular.woff') format('woff');
-  }
+	font-family: "Inter-Regular";
+	font-display: auto;
+	src: url("../fonts/Inter-Regular.woff2") format("woff2"),
+		url("../fonts/Inter-Regular.woff") format("woff");
+}
 @font-face {
-    font-family: 'Inter-Bold';
-    font-display: auto;
-    src:    url('../fonts/Inter-Bold.woff2') format('woff2'),
-            url('../fonts/Inter-Bold.woff') format('woff');
-
+	font-family: "Inter-Bold";
+	font-display: auto;
+	src: url("../fonts/Inter-Bold.woff2") format("woff2"),
+		url("../fonts/Inter-Bold.woff") format("woff");
 }
 
-$main-type-face: 'Inter-Regular', Times;
-$bold-type-face: 'Inter-Bold', Times;
+$main-type-face: "Inter-Regular", Times;
+$bold-type-face: "Inter-Bold", Times;
 
 // $font-main: #213A46;
-$font-main: #333;
+$font-main: #222;
 $font-contrast: #fff;
 $font-light: #96a9b1;
 
@@ -25,12 +24,13 @@ $small-text: 12px;
 $medium-text: 14px;
 $large-text: 17px;
 $huge-text: 20px;
+$gigantic-text: 24px;
 
 $letter-spacing: 0.82px;
 $line-height: 17px;
 
 // This may slow performance, WATCH OUT
-body{
-  -webkit-font-smoothing: antialiased;
+body {
+	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
