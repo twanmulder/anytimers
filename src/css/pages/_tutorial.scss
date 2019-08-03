@@ -34,6 +34,7 @@
 				margin-left: 4px;
 				border-radius: 50%;
 				border: 2px solid $light-grey;
+				transition: background 0.3s ease-in-out;
 				&.active {
 					background: $light-grey;
 				}
