@@ -21,3 +21,5 @@ export default [
 		drunk: 0
 	}
 ];
+
+// export default [];
