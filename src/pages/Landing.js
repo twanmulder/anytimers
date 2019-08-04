@@ -1,10 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 
 class Landing extends React.Component {
 	render() {
+		const hasCookie = document.cookie.indexOf("signed_in") > -1;
+
 		return (
 			<div className="wrapper">
+				{hasCookie && <Redirect to="/" />}
 				<div className="landing-wrapper">
 					{/* <img className="imglanding" src="https://origin-assets.the-sub.com/cdn/redesign/shared/image/birra-moretti-glass.png" alt="beer glass" /> */}
 					<div className="welcome">
