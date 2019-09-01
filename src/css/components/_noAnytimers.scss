@@ -1,0 +1,22 @@
+.noAnytimers {
+	margin-top: 214px;
+	text-align: center;
+	height: 100%;
+    position: relative;
+    a{
+        text-decoration: none;
+        cursor: pointer;
+    }
+	h2 {
+		font-family: $bold-type-face;
+		color: $dark-grey;
+		font-size: $large-text;
+	}
+	svg {
+		color: $dark-grey;
+	}
+	p {
+		margin-top: 4px;
+		color: $light-grey;
+	}
+}
