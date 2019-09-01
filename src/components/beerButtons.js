@@ -15,42 +15,44 @@ class BeerButtons extends React.Component {
 					onClick={() => this.setState({ isButtonToggle: !isOverlayToggled })}
 				></div>
 
-				<div
-					className={
-						isOverlayToggled ? "cross-bttn toggled bttn" : "cross-bttn bttn"
-					}
-					onClick={() => this.setState({ isButtonToggle: !isOverlayToggled })}
-				>
-					<i className="fas fa-times"></i>
-				</div>
-
-				<Link to="/add">
+				<div className="bttns">
 					<div
 						className={
-							isOverlayToggled ? "add-bttn toggled bttn" : "add-bttn bttn"
+							isOverlayToggled ? "cross-bttn toggled bttn" : "cross-bttn bttn"
 						}
+						onClick={() => this.setState({ isButtonToggle: !isOverlayToggled })}
 					>
-						<i className="fas fa-plus"></i>
+						<i className="fas fa-times"></i>
 					</div>
-				</Link>
 
-				<Link to="/drink">
+					<Link to="/add">
+						<div
+							className={
+								isOverlayToggled ? "add-bttn toggled bttn" : "add-bttn bttn"
+							}
+						>
+							<i className="fas fa-plus"></i>
+						</div>
+					</Link>
+
+					<Link to="/drink">
+						<div
+							className={
+								isOverlayToggled ? "drink-bttn toggled bttn" : "drink-bttn bttn"
+							}
+						>
+							<i className="fas fa-beer"></i>
+						</div>
+					</Link>
+
 					<div
 						className={
-							isOverlayToggled ? "drink-bttn toggled bttn" : "drink-bttn bttn"
+							isOverlayToggled ? "beer-bttn toggled bttn" : "beer-bttn bttn"
 						}
+						onClick={() => this.setState({ isButtonToggle: !isOverlayToggled })}
 					>
 						<i className="fas fa-beer"></i>
 					</div>
-				</Link>
-
-				<div
-					className={
-						isOverlayToggled ? "beer-bttn toggled bttn" : "beer-bttn bttn"
-					}
-					onClick={() => this.setState({ isButtonToggle: !isOverlayToggled })}
-				>
-					<i className="fas fa-beer"></i>
 				</div>
 			</div>
 		);
