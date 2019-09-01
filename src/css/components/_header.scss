@@ -20,4 +20,8 @@
 
     }
   }
+  // Overlay inside header has z-index: 1, so it covers the drink buttons
+  .overlay{
+    z-index: 1;
+  }
 }
