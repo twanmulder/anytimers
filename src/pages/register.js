@@ -23,10 +23,6 @@ class Register extends React.Component {
               <input placeholder="John Doe" id="full-name" type="text"></input>
             </div>
             <div className="input-type">
-              <label htmlFor="birth-date">Day of birth</label>
-              <input placeholder="Doe" id="birth-date" type="date"></input>
-            </div>
-            <div className="input-type">
               <label htmlFor="email">E-mail</label>
               <input
                 placeholder="JohnDoe@Hotmale.com"
