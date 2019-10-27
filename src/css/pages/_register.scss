@@ -7,3 +7,13 @@
   font-size: $small-text;
   color: $light-grey;
 }
+
+.input-type {
+  position: relative;
+  svg {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color: $light-grey;
+  }
+}
