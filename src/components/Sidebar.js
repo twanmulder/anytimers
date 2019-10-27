@@ -1,12 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-class Sidebar extends React.PureComponent {
-  deleteCookie = () => {
-    document.cookie = 'signed_in= ; expires = Thu, 01 Jan 1970 00:00:00 GMT'
-    document.location.reload()
-  }
+import SignOutButton from './SignOutButton'
 
+class Sidebar extends React.PureComponent {
   render() {
     return (
       <div
@@ -28,9 +25,7 @@ class Sidebar extends React.PureComponent {
             <li>Profile</li>
             <li>Settings</li>
           </ul>
-          <div className="profileAsideLogOut" onClick={this.deleteCookie}>
-            <p>Log out</p>
-          </div>
+          <SignOutButton />
         </div>
       </div>
     )
