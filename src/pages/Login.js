@@ -115,6 +115,8 @@ class SignInFormBase extends Login {
           className="login-button"
           disabled={isInvalid}
         ></input>
+
+        {error && <p className="error-message">{error.message}</p>}
       </form>
     )
   }

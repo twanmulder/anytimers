@@ -130,7 +130,7 @@ class SignUpFormBase extends Register {
             disabled={isInvalid}
           ></input>
 
-          {error && <p>{error.message}</p>}
+          {error && <p className="error-message">{error.message}</p>}
         </div>
       </form>
     )
