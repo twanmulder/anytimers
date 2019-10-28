@@ -110,7 +110,7 @@ class SignInFormBase extends Login {
         </div>
 
         <input
-          value="Sign in"
+          value="Log in"
           type="submit"
           className="login-button"
           disabled={isInvalid}

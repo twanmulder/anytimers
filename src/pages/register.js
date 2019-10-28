@@ -19,7 +19,7 @@ class Register extends React.Component {
           <Link to="landing" aria-label="Link back to landing page">
             <i className="fas fa-chevron-left"></i>
           </Link>
-          Register
+          Create account
         </h1>
         <SignUpForm />
       </div>
@@ -119,12 +119,12 @@ class SignUpFormBase extends Register {
               </div>
             </div>
             <div className="password-requirements">
-              <p>Pasword must be at least 8 charachters</p>
+              <p>Password must be at least 8 charachters</p>
             </div>
           </div>
 
           <input
-            value="Sign Up"
+            value="Create account"
             type="submit"
             className="submit-button"
             disabled={isInvalid}
