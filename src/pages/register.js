@@ -73,7 +73,7 @@ class SignUpFormBase extends Register {
 
   render() {
     const { fullname, email, password, error } = this.state
-    const isInvalid = password === '' || email === '' || fullname === ''
+    const isInvalid = email === '' || fullname === '' || password === ''
     return (
       <form
         autoComplete="off"
@@ -119,7 +119,7 @@ class SignUpFormBase extends Register {
               </div>
             </div>
             <div className="password-requirements">
-              <p>Password must be at least 8 charachters</p>
+              <p>Password must be at least 6 charachters</p>
             </div>
           </div>
 
