@@ -6,6 +6,8 @@ form {
 
   .input-type {
     margin-bottom: 32px;
+    display: inline-block;
+    width: 100%;
 
     label {
       font-size: $medium-text;
@@ -33,6 +35,11 @@ form {
   .error-message {
     margin-top: 1rem;
     color: $red;
+    font-size: $small-text;
+  }
+  .succes-message {
+    margin-top: 1rem;
+    color: $primary-green;
     font-size: $small-text;
   }
 }
