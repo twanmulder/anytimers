@@ -20,28 +20,6 @@ import Add from './pages/Add'
 import Drink from './pages/Drink'
 import AddFriends from './pages/addFriends'
 
-// const Index = () => {
-//   return (
-//     <BrowserRouter>
-//       <div className="app" id="app">
-//         <Switch>
-//           <Route path={ROUTES.LANDING} component={Landing} />
-//           <Route path={ROUTES.LOGIN} component={Login} />
-//           <Route path={ROUTES.FORGOT_PASSWORD} component={Forgotpassword} />
-//           <Route path={ROUTES.REGISTER} component={Register} />
-//           <Route path={ROUTES.TUTORIAL} component={Tutorial} />
-//           <Route path={ROUTES.ADD} component={Add} />
-//           <Route path={ROUTES.DRINK} component={Drink} />
-//           <Route path={ROUTES.ADD_FRIENDS} component={AddFriends} />
-//           <Route exact path={ROUTES.OVERVIEW} component={Overview} />
-
-//           <Route path="/" component={Fournulfour} />
-//         </Switch>
-//       </div>
-//     </BrowserRouter>
-//   )
-// }
-
 class IndexBase extends Component {
   constructor(props) {
     super(props)
@@ -67,6 +45,7 @@ class IndexBase extends Component {
             <Route path={ROUTES.LOGIN} component={Login} />
             <Route path={ROUTES.FORGOT_PASSWORD} component={Forgotpassword} />
             <Route path={ROUTES.REGISTER} component={Register} />
+
             <Route path={ROUTES.TUTORIAL} component={Tutorial} />
             <Route path={ROUTES.ADD} component={Add} />
             <Route path={ROUTES.DRINK} component={Drink} />
