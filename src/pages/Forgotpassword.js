@@ -3,7 +3,6 @@ import { Link, withRouter } from 'react-router-dom'
 import { compose } from 'recompose'
 
 import { withFirebase } from '../components/Firebase'
-import * as ROUTES from '../constants/routes'
 
 const Forgotpassword = () => (
   <div>
@@ -46,7 +45,7 @@ class ForgotpasswordFormBase extends Component {
     this.setState({ [event.target.name]: event.target.value })
   }
   render() {
-    const { email, error, succes } = this.state
+    const { email, error } = this.state
     const isInvalid = email === ''
     return (
       <form onSubmit={this.onSubmit} autoComplete="off">
