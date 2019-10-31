@@ -35,8 +35,6 @@ class IndexBase extends Component {
 
   render() {
     const { loading, authUser } = this.state
-    console.log(loading)
-    console.log(authUser)
     return (
       <React.Fragment>
         {loading ? (
