@@ -42,9 +42,7 @@ class IndexBase extends Component {
         ) : (
           <BrowserRouter>
             <div className="app" id="app">
-              <Switch>
-                {authUser ? <NavigationAuth /> : <NavigationNonAuth />}
-              </Switch>
+              {authUser ? <NavigationAuth /> : <NavigationNonAuth />}
             </div>
           </BrowserRouter>
         )}
