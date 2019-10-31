@@ -1,6 +1,6 @@
 .profileAside {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: -2.5rem;
   right: -19rem;
   z-index: 1;
 
@@ -60,6 +60,6 @@
   }
 
   &.toggled {
-    right: 0rem;
+    right: -2.5rem;
   }
 }
