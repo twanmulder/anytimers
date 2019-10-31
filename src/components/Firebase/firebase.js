@@ -1,5 +1,6 @@
 import app from 'firebase/app'
 import 'firebase/auth'
+import 'firebase/database'
 require('dotenv').config()
 
 const config = {
@@ -15,6 +16,7 @@ class Firebase {
     app.initializeApp(config)
 
     this.auth = app.auth()
+    this.db = app.database()
   }
   // *** Auth API ***
   doCreateUserWithEmailAndPassword = (email, password) =>
