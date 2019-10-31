@@ -1,35 +1,32 @@
 import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import { BrowserRouter, Switch } from 'react-router-dom'
 import * as serviceWorker from './serviceWorker'
 import './css/css.scss'
-import * as ROUTES from '../src/constants/routes'
 import { compose } from 'recompose'
 
 import Firebase, { FirebaseContext } from './components/Firebase'
 import { withFirebase } from './components/Firebase'
 
-import Overview from './pages/Overview'
-import Landing from './pages/Landing'
-import Login from './pages/Login'
-import Forgotpassword from './pages/Forgotpassword'
-import Register from './pages/Register'
-import Tutorial from './pages/Tutorial'
-import Fournulfour from './pages/Fournulfour'
-import Add from './pages/Add'
-import Drink from './pages/Drink'
-import AddFriends from './pages/addFriends'
+import Loading from './pages/Loading'
+
+import NavigationAuth from './components/NavigationAuth'
+import NavigationNonAuth from './components/NavigationNonAuth'
 
 class IndexBase extends Component {
   constructor(props) {
     super(props)
     this.state = {
       authUser: null,
+      loading: true,
     }
   }
   componentDidMount() {
+    this.setState({ loading: true })
+
     this.listener = this.props.firebase.auth.onAuthStateChanged(authUser => {
       authUser ? this.setState({ authUser }) : this.setState({ authUser: null })
+      // this.setState({ loading: false })
     })
   }
   componentWillUnmount() {
@@ -37,25 +34,23 @@ class IndexBase extends Component {
   }
 
   render() {
+    const { loading, authUser } = this.state
+    console.log(loading)
+    console.log(authUser)
     return (
-      <BrowserRouter>
-        <div className="app" id="app">
-          <Switch>
-            <Route path={ROUTES.LANDING} component={Landing} />
-            <Route path={ROUTES.LOGIN} component={Login} />
-            <Route path={ROUTES.FORGOT_PASSWORD} component={Forgotpassword} />
-            <Route path={ROUTES.REGISTER} component={Register} />
-
-            <Route path={ROUTES.TUTORIAL} component={Tutorial} />
-            <Route path={ROUTES.ADD} component={Add} />
-            <Route path={ROUTES.DRINK} component={Drink} />
-            <Route path={ROUTES.ADD_FRIENDS} component={AddFriends} />
-            <Route exact path={ROUTES.OVERVIEW} component={Overview} />
-
-            <Route path="/" component={Fournulfour} />
-          </Switch>
-        </div>
-      </BrowserRouter>
+      <React.Fragment>
+        {loading ? (
+          <Loading />
+        ) : (
+          <BrowserRouter>
+            <div className="app" id="app">
+              <Switch>
+                {authUser ? <NavigationAuth /> : <NavigationNonAuth />}
+              </Switch>
+            </div>
+          </BrowserRouter>
+        )}
+      </React.Fragment>
     )
   }
 }

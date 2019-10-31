@@ -1,5 +1,4 @@
 import React from 'react'
-import { Redirect } from 'react-router-dom'
 
 import NoAnytimers from '../components/noAnytimers'
 import BeerButtons from '../components/beerButtons'
