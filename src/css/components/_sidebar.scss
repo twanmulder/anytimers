@@ -1,4 +1,4 @@
-.profileAside{
+.profileAside {
   position: fixed;
   top: 0;
   right: -19rem;
@@ -12,11 +12,11 @@
 
   padding: 0 2rem;
 
-  .profileDetail{
+  .profileDetail {
     margin-top: 1rem;
 
-    .profileAvatar{
-      .profileAvatarCircle{
+    .profileAvatar {
+      .profileAvatarCircle {
         width: 80px;
         height: 80px;
         margin: 0 auto;
@@ -24,22 +24,22 @@
         background-color: $light-grey;
       }
     }
-    .profileName{
-      margin-top: .9rem;
+    .profileName {
+      margin-top: 0.9rem;
       font-size: $large-text;
       font-weight: bold;
       text-align: center;
     }
 
-    ul{
+    ul {
       margin-top: 3rem;
 
-      a{
+      a {
         text-decoration: none;
         color: $font-main;
       }
 
-      li{
+      li {
         font-size: $medium-text;
         margin-bottom: 10px;
         background: #fff;
@@ -47,16 +47,19 @@
         padding: 10px 15px;
       }
     }
-    .profileAsideLogOut{
+    .profileAsideLogOut {
       position: absolute;
       bottom: 2.5rem;
       right: 2.5rem;
-      color: #CCC;
+      color: $font-main;
       font-size: $medium-text;
+      border: none;
+      background: transparent;
+      font-family: inherit;
     }
   }
 
-  &.toggled{
+  &.toggled {
     right: 0rem;
   }
 }
