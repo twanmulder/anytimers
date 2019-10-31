@@ -11,7 +11,8 @@
 @import 'pages/_fournulfour.scss';
 @import 'pages/_update.scss';
 @import 'pages/_addFriends.scss';
-@import 'pages/overview.scss';
+@import 'pages/_overview.scss';
+@import 'pages/_loading.scss';
 
 @import 'components/_buttons.scss';
 @import 'components/_header.scss';
@@ -26,10 +27,6 @@ body {
   height: 100vh;
   font-family: $main-type-face;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
   background-color: #ddd;
 
   color: $font-main;
@@ -38,14 +35,20 @@ body {
   font-size: $medium-text;
 }
 
-.app {
-  width: 100vw;
-  height: 100vh;
-
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
-
+#root {
+  width: 100%;
+  height: 100%;
+  background-color: $primary-green;
   overflow: hidden;
+  position: relative;
+}
+
+.app {
+  width: 100%;
+  height: 100%;
+
   background-color: $app-bg;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.3);
 
   padding: 2.5rem;
   box-sizing: border-box;
