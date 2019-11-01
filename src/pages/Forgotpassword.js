@@ -7,7 +7,7 @@ import { withFirebase } from '../components/Firebase'
 const Forgotpassword = () => (
   <div>
     <h1>
-      <Link to="Login">
+      <Link to="/login" aria-label="Back to login page">
         <i className="fas fa-chevron-left"></i>
       </Link>
       Forgot password
