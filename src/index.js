@@ -41,9 +41,9 @@ class IndexBase extends Component {
           <Loading />
         ) : (
           <BrowserRouter>
-            <div className="app" id="app">
+            <main className="app" id="app">
               {authUser ? <NavigationAuth /> : <NavigationNonAuth />}
-            </div>
+            </main>
           </BrowserRouter>
         )}
       </React.Fragment>
