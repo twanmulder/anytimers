@@ -27,9 +27,6 @@ class Landing extends React.Component {
             </span>
           </div>
         </div>
-        <div className="cookies">
-          <p>This site uses cookies!</p>
-        </div>
       </div>
     )
   }
