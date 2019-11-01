@@ -15,7 +15,7 @@ class Login extends React.PureComponent {
     return (
       <div>
         <h1>
-          <Link to="landing">
+          <Link to="landing" aria-label="Link back to landing page">
             <i className="fas fa-chevron-left"></i>
           </Link>
           Login
@@ -105,7 +105,7 @@ class SignInFormBase extends Login {
             </div>
           </div>
           <div className="forgot-password">
-            <Link to="forgotpassword">Forgot your password?</Link>
+            <Link to="/forgotpassword">Forgot your password?</Link>
           </div>
         </div>
 
