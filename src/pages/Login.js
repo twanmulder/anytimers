@@ -4,10 +4,13 @@ import { withFirebase } from '../components/Firebase'
 import { compose } from 'recompose'
 import * as ROUTES from '../constants/routes'
 
+import GetRandomNameAndEmail from '../utils/GetRandomNameAndEmail'
+
 const INITIAL_STATE = {
   email: '',
   password: '',
   error: null,
+  randomNameAndEmail: GetRandomNameAndEmail(),
 }
 
 class Login extends React.PureComponent {
@@ -81,7 +84,7 @@ class SignInFormBase extends Login {
         <div className="input-type">
           <label htmlFor="email">E-mail</label>
           <input
-            placeholder="JohnDoe@Hotmale.com"
+            placeholder={this.state.randomNameAndEmail.randomEmail}
             id="email"
             type="text"
             name="email"

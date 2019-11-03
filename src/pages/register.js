@@ -4,11 +4,14 @@ import { withFirebase } from '../components/Firebase'
 import { compose } from 'recompose'
 import * as ROUTES from '../constants/routes'
 
+import GetRandomNameAndEmail from '../utils/GetRandomNameAndEmail'
+
 const INITIAL_STATE = {
   fullname: '',
   email: '',
   password: '',
   error: null,
+  randomNameAndEmail: GetRandomNameAndEmail(),
 }
 
 class Register extends React.Component {
@@ -84,7 +87,7 @@ class SignUpFormBase extends Register {
           <div className="input-type">
             <label htmlFor="full-name">Full name</label>
             <input
-              placeholder="John Doe"
+              placeholder={this.state.randomNameAndEmail.randomName}
               id="full-name"
               type="text"
               name="fullname"
@@ -95,7 +98,7 @@ class SignUpFormBase extends Register {
           <div className="input-type">
             <label htmlFor="email">E-mail</label>
             <input
-              placeholder="JohnDoe@Hotmale.com"
+              placeholder={this.state.randomNameAndEmail.randomEmail}
               id="email"
               type="text"
               name="email"
