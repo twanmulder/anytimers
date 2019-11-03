@@ -5,8 +5,7 @@ import * as serviceWorker from './serviceWorker'
 import './css/css.scss'
 import { compose } from 'recompose'
 
-import Firebase, { FirebaseContext } from './components/Firebase'
-import { withFirebase } from './components/Firebase'
+import Firebase, { FirebaseContext, withFirebase } from './components/Firebase'
 
 import Loading from './pages/Loading'
 
