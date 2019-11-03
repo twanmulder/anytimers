@@ -16,14 +16,16 @@ form {
     input {
       width: 100%;
       font-size: $medium-text;
-      margin-left: -1px;
       outline: 0;
       padding: 12px 0 4px 0;
       background-color: transparent;
+      transition: 0.3s ease border-color;
+
       border: 1px solid transparent;
       border-bottom-color: #eceeef;
-      border-radius: 2px;
-      transition: 0.3s ease border-color;
+      border-left-width: 0;
+      border-right-width: 0;
+      border-top-width: 0;
       &::-webkit-input-placeholder {
         color: $light-grey;
       }
