@@ -6,4 +6,7 @@ export const NAMES = [
   'Elon Gated',
   'Hanson Deck',
   'Jake Weary',
+  'Hugh Mungus',
+  'Al Coholic',
+  'Emmy Nemm',
 ]
