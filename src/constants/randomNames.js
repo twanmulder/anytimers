@@ -9,4 +9,6 @@ export const NAMES = [
   'Hugh Mungus',
   'Al Coholic',
   'Emmy Nemm',
+  'Deplo Ying',
+  'Dee Bugging',
 ]
