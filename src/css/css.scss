@@ -22,9 +22,13 @@
 @import 'components/_cross.scss';
 @import 'components/_noAnytimers.scss';
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  height: 100vh;
+  height: 100%;
   font-family: $main-type-face;
 
   background-color: #ddd;
@@ -54,6 +58,7 @@ body {
 
   position: relative;
 
+  overflow-x: hidden;
   overflow-y: scroll;
 
   .wrapper {
