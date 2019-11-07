@@ -34,32 +34,32 @@ class OverviewBase extends React.PureComponent {
     const anytimersTo = []
 
     // Get anytimers from
-    db.collection('anytimers')
-      .where('from', '==', currentUserUid)
-      .get()
-      .then(function(querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-          anytimersFrom.push(doc.data())
-        })
-      })
-      .catch(function(error) {
-        console.log('Error getting documents: ', error)
-      })
-      .then(this.setState({ anytimersFrom: anytimersFrom }))
+    // db.collection('anytimers')
+    //   .where('from', '==', currentUserUid)
+    //   .get()
+    //   .then(function(querySnapshot) {
+    //     querySnapshot.forEach(function(doc) {
+    //       anytimersFrom.push(doc.data())
+    //     })
+    //   })
+    //   .catch(function(error) {
+    //     console.log('Error getting documents: ', error)
+    //   })
+    //   .then(this.setState({ anytimersFrom: anytimersFrom }))
 
     // Get anytimers to
-    db.collection('anytimers')
-      .where('to', '==', currentUserUid)
-      .get()
-      .then(function(querySnapshot) {
-        querySnapshot.forEach(function(doc) {
-          anytimersTo.push(doc.data())
-        })
-      })
-      .catch(function(error) {
-        console.log('Error getting documents: ', error)
-      })
-      .then(this.setState({ anytimersTo: anytimersTo }))
+    // db.collection('anytimers')
+    //   .where('to', '==', currentUserUid)
+    //   .get()
+    //   .then(function(querySnapshot) {
+    //     querySnapshot.forEach(function(doc) {
+    //       anytimersTo.push(doc.data())
+    //     })
+    //   })
+    //   .catch(function(error) {
+    //     console.log('Error getting documents: ', error)
+    //   })
+    //   .then(this.setState({ anytimersTo: anytimersTo }))
   }
 
   componentDidMount() {
