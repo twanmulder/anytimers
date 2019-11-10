@@ -3,7 +3,6 @@ import { Route, Redirect, Switch } from 'react-router-dom'
 
 import * as ROUTES from '../constants/routes'
 
-import Tutorial from '../pages/Tutorial'
 import Add from '../pages/Add'
 import Drink from '../pages/Drink'
 import AddFriends from '../pages/addFriends'
@@ -14,7 +13,6 @@ class NavigationAuth extends React.Component {
     return (
       <React.Fragment>
         <Switch>
-          <Route path={ROUTES.TUTORIAL} component={Tutorial} />
           <Route path={ROUTES.ADD} component={Add} />
           <Route path={ROUTES.DRINK} component={Drink} />
           <Route path={ROUTES.ADD_FRIENDS} component={AddFriends} />
