@@ -1,0 +1,19 @@
+{
+  "name": "anytimers",
+  "version": "1.0.0",
+  "description": "anytimers landing",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/twanmulder/anytimers.git"
+  },
+  "author": "Twan Mulder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/twanmulder/anytimers/issues"
+  },
+  "homepage": "https://github.com/twanmulder/anytimers#readme"
+}
