@@ -8,6 +8,14 @@
   .hero-anytimers {
     margin-top: -96px;
     padding-top: 0;
+    .hero-inner {
+      flex-direction: column;
+      max-width: 300px;
+    }
+  }
+
+  .anytimer-subtitle {
+    margin: 0 0 8px 0;
   }
 
   .anytimer-item {

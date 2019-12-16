@@ -32,7 +32,7 @@
 
     sr.reveal('.hero-ball', {
       delay: 1000,
-      duration: 1400,
+      duration: 2200,
       distance: '40px',
       easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
       origin: 'bottom',
@@ -48,7 +48,7 @@
       interval: 150,
     })
 
-    sr.reveal('.anytimer-item', {
+    sr.reveal('.anytimer-item, .anytimer-subtitle', {
       delay: 800,
       duration: 600,
       distance: '40px',
