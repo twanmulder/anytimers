@@ -47,5 +47,14 @@
       origin: 'right',
       interval: 150,
     })
+
+    sr.reveal('.anytimer-item', {
+      delay: 800,
+      duration: 600,
+      distance: '40px',
+      easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
+      origin: 'bottom',
+      interval: 150,
+    })
   }
 })()
