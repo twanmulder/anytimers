@@ -12,7 +12,7 @@
 /design
 
 # production
-/dist
+dist/js
 
 # misc
 .DS_Store
