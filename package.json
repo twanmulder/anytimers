@@ -4,7 +4,8 @@
   "description": "anytimers landing",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch-css": "nodemon -e scss -x 'npm run build-css'",
+    "build-css": "node-sass --include-path scss src/scss/style.scss dist/css/style.css"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/twanmulder/anytimers/issues"
   },
-  "homepage": "https://github.com/twanmulder/anytimers#readme"
+  "homepage": "https://github.com/twanmulder/anytimers#readme",
+  "devDependencies": {
+    "node-sass": "^4.13.0",
+    "nodemon": "^2.0.2"
+  }
 }
