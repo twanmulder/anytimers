@@ -38,7 +38,7 @@
     }
 
     .anytimer-arrow {
-      margin: 0 8px 0 -4px;
+      margin: 0 8px 0 0;
       display: inline-block;
       color: color(primary, 3);
       vertical-align: text-top;
@@ -49,12 +49,12 @@
       }
     }
   }
-  .anytimer-description {
-    font-size: 16px;
-  }
-
   .anytimer-names,
   .anytimer-description {
     margin: 0;
+  }
+  .anytimer-description {
+    font-size: 16px;
+    margin-top: -8px;
   }
 }
