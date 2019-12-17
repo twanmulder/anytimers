@@ -56,18 +56,14 @@ class Hero extends React.Component {
                       y2="50%"
                       id="squares-1-a"
                     >
-                      <stop stop-color="#FEC105" offset="0%" />
-                      <stop
-                        stop-color="#FEC105"
-                        stop-opacity="0"
-                        offset="100%"
-                      />
+                      <stop stopColor="#FEC105" offset="0%" />
+                      <stop stopColor="#FEC105" stopOpacity="0" offset="100%" />
                     </linearGradient>
                   </defs>
                   <path
                     d="M0 0h4v4H0V0zm0 12h4v4H0v-4zm0 12h4v4H0v-4zm0 12h4v4H0v-4zm0 12h4v4H0v-4zm0 12h4v4H0v-4zM12 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zM24 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zM36 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zM48 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zM60 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zM72 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zM84 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zM96 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4z"
                     fill="url(#squares-1-a)"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                   />
                 </svg>
               </div>
@@ -86,19 +82,15 @@ class Hero extends React.Component {
                       y2="50%"
                       id="squares-2-a"
                     >
-                      <stop stop-color="#FEC105" offset="0%" />
-                      <stop
-                        stop-color="#FEC105"
-                        stop-opacity="0"
-                        offset="100%"
-                      />
+                      <stop stopColor="#FEC105" offset="0%" />
+                      <stop stopColor="#FEC105" stopOpacity="0" offset="100%" />
                     </linearGradient>
                   </defs>
                   <path
                     d="M80 574h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4z"
                     transform="rotate(90 359 279)"
                     fill="url(#squares-2-a)"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                   />
                 </svg>
               </div>
@@ -119,8 +111,8 @@ class Hero extends React.Component {
                       gradientTransform="matrix(.5626 -.82673 .8022 .54591 .026 .589)"
                       id="ball-1-a"
                     >
-                      <stop stop-color="#F8F7FF" offset="0%" />
-                      <stop stop-color="#FEC105" offset="100%" />
+                      <stop stopColor="#F8F7FF" offset="0%" />
+                      <stop stopColor="#FEC105" offset="100%" />
                     </radialGradient>
                     <filter
                       x="-500%"
@@ -152,7 +144,7 @@ class Hero extends React.Component {
                     cy="200"
                     r="200"
                     fill="#FFF"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     style={{ filter: 'url(#dropshadow-ball-1)' }}
                   />
                   <circle
@@ -160,7 +152,7 @@ class Hero extends React.Component {
                     cy="200"
                     r="200"
                     fill="url(#ball-1-a)"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                   />
                 </svg>
               </div>
@@ -181,8 +173,8 @@ class Hero extends React.Component {
                       gradientTransform="matrix(.5626 -.82673 .8022 .54591 .026 .589)"
                       id="ball-2-a"
                     >
-                      <stop stop-color="#F8F7FF" offset="0%" />
-                      <stop stop-color="#FEC105" offset="100%" />
+                      <stop stopColor="#F8F7FF" offset="0%" />
+                      <stop stopColor="#FEC105" offset="100%" />
                     </radialGradient>
                     <filter
                       x="-500%"
@@ -214,7 +206,7 @@ class Hero extends React.Component {
                     cy="100"
                     r="100"
                     fill="#FFF"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     style={{ filter: 'url(#dropshadow-ball-2)' }}
                   />
                   <circle
@@ -222,7 +214,7 @@ class Hero extends React.Component {
                     cy="100"
                     r="100"
                     fill="url(#ball-2-a)"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                   />
                 </svg>
               </div>
@@ -250,8 +242,8 @@ class Hero extends React.Component {
                       gradientTransform="matrix(.5626 -.82673 .8022 .54591 .026 .589)"
                       id="ball-3-a"
                     >
-                      <stop stop-color="#F8F7FF" offset="0%" />
-                      <stop stop-color="#FEC105" offset="100%" />
+                      <stop stopColor="#F8F7FF" offset="0%" />
+                      <stop stopColor="#FEC105" offset="100%" />
                     </radialGradient>
                     <filter
                       x="-500%"
@@ -283,7 +275,7 @@ class Hero extends React.Component {
                     cy="40"
                     r="40"
                     fill="#FFF"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     style={{ filter: 'url(#dropshadow-ball-3)' }}
                   />
                   <circle
@@ -291,7 +283,7 @@ class Hero extends React.Component {
                     cy="40"
                     r="40"
                     fill="url(#ball-3-a)"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                   />
                 </svg>
               </div>
@@ -312,8 +304,8 @@ class Hero extends React.Component {
                       gradientTransform="matrix(.5626 -.82673 .8022 .54591 .026 .589)"
                       id="ball-4-a"
                     >
-                      <stop stop-color="#F8F7FF" offset="0%" />
-                      <stop stop-color="#FEC105" offset="100%" />
+                      <stop stopColor="#F8F7FF" offset="0%" />
+                      <stop stopColor="#FEC105" offset="100%" />
                     </radialGradient>
                     <filter
                       x="-500%"
@@ -345,7 +337,7 @@ class Hero extends React.Component {
                     cy="20"
                     r="20"
                     fill="#FFF"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     style={{ filter: 'url(#dropshadow-ball-4)' }}
                   />
                   <circle
@@ -353,7 +345,7 @@ class Hero extends React.Component {
                     cy="20"
                     r="20"
                     fill="url(#ball-4-a)"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                   />
                 </svg>
               </div>
@@ -374,8 +366,8 @@ class Hero extends React.Component {
                       gradientTransform="matrix(.5626 -.82673 .8022 .54591 .026 .589)"
                       id="ball-5-a"
                     >
-                      <stop stop-color="#F8F7FF" offset="0%" />
-                      <stop stop-color="#FEC105" offset="100%" />
+                      <stop stopColor="#F8F7FF" offset="0%" />
+                      <stop stopColor="#FEC105" offset="100%" />
                     </radialGradient>
                     <filter
                       x="-500%"
@@ -407,7 +399,7 @@ class Hero extends React.Component {
                     cy="12"
                     r="12"
                     fill="#FFF"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                     style={{ filter: 'url(#dropshadow-ball-5)' }}
                   />
                   <circle
@@ -415,7 +407,7 @@ class Hero extends React.Component {
                     cy="12"
                     r="12"
                     fill="url(#ball-5-a)"
-                    fill-rule="evenodd"
+                    fillRule="evenodd"
                   />
                 </svg>
               </div>
