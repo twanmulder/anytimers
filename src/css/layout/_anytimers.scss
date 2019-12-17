@@ -1,0 +1,60 @@
+.anytimer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@include media('>large') {
+  .hero-anytimers {
+    margin-top: -96px;
+    padding-top: 0;
+    .hero-inner {
+      flex-direction: column;
+      max-width: 300px;
+    }
+  }
+
+  .anytimer-subtitle {
+    margin: 0 0 8px 0;
+  }
+
+  .anytimer-item {
+    background-color: #fff;
+    margin-bottom: 16px;
+    min-width: 300px;
+    padding: 8px 32px 8px 16px;
+    border-radius: 4px;
+    border: 2px solid transparent;
+    @include smallShadow;
+  }
+
+  .anytimer-names {
+    font-size: 18px;
+
+    .anytimer-amount {
+      font-size: 20px;
+      margin-left: 8px;
+      @include font-weight(bold);
+    }
+
+    .anytimer-arrow {
+      margin: 0 8px 0 -4px;
+      display: inline-block;
+      color: color(primary, 3);
+      vertical-align: text-top;
+
+      svg {
+        width: 18px;
+        height: 20px;
+      }
+    }
+  }
+  .anytimer-description {
+    font-size: 16px;
+  }
+
+  .anytimer-names,
+  .anytimer-description {
+    margin: 0;
+  }
+}
