@@ -38,7 +38,7 @@ class App extends React.Component {
       })
 
       sr.reveal('.hero-ball', {
-        delay: 1000,
+        delay: 400,
         duration: 2200,
         distance: '40px',
         easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
