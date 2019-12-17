@@ -1,5 +1,7 @@
 import React from 'react'
 
+import peopleSVG from '../img/people.svg'
+
 class Hero extends React.Component {
   render() {
     return (
@@ -227,7 +229,7 @@ class Hero extends React.Component {
               <div className="hero-illustration-browser is-revealing">
                 <img
                   style={{ width: '800px', height: '450px' }}
-                  src="src/img/people.svg"
+                  src={peopleSVG}
                   alt=""
                 />
               </div>
