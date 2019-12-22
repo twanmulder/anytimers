@@ -1,4 +1,5 @@
 import React from 'react'
+import sr from './components/ScrollReveal'
 
 import Header from './components/Header'
 import Main from './components/Main'
@@ -9,8 +10,6 @@ class App extends React.Component {
     // Reveal animations
     if (document.body.classList.contains('has-animations')) {
       /* global ScrollReveal */
-      const sr = (window.sr = ScrollReveal())
-
       sr.reveal('.hero-title, .hero-paragraph, .newsletter-form', {
         duration: 1000,
         distance: '40px',
