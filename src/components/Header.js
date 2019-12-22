@@ -1,12 +1,34 @@
 import React from 'react'
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      headerHeight: 800,
+    }
+  }
+
+  // Fix hero background height on desktop
+  fixHeroBgHeight = () => {
+    const doc = document.documentElement
+    const bodyHeight = doc.getElementsByTagName('body')[0].offsetHeight
+    this.setState({ headerHeight: bodyHeight })
+  }
+
+  componentDidMount() {
+    const win = window
+    this.fixHeroBgHeight()
+    win.addEventListener('load', this.fixHeroBgHeight)
+    win.addEventListener('resize', this.fixHeroBgHeight)
+  }
+
   render() {
+    const headerHeight = this.state.headerHeight
     return (
       <header className="site-header">
         <div className="container">
           <div className="site-header-large-bg">
-            <span></span>
+            <span style={{ height: headerHeight }}></span>
           </div>
           <div className="site-header-inner">
             <div className="brand header-brand">

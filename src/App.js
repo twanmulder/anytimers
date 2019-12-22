@@ -6,24 +6,6 @@ import Footer from './components/Footer'
 
 class App extends React.Component {
   componentDidMount() {
-    const win = window
-    const doc = document.documentElement
-
-    doc.classList.remove('no-js')
-    doc.classList.add('js')
-
-    // Fix hero background height on desktop
-    const heroDesktopBg = document.querySelector('.site-header-large-bg span')
-
-    fixHeroBgHeight()
-    win.addEventListener('load', fixHeroBgHeight)
-    win.addEventListener('resize', fixHeroBgHeight)
-
-    function fixHeroBgHeight() {
-      const bodyHeight = doc.getElementsByTagName('body')[0].offsetHeight
-      heroDesktopBg.style.height = `${bodyHeight}px`
-    }
-
     // Reveal animations
     if (document.body.classList.contains('has-animations')) {
       /* global ScrollReveal */
