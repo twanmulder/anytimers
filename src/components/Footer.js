@@ -2,6 +2,7 @@ import React from 'react'
 
 class Footer extends React.Component {
   render() {
+    const currentYear = new Date().getFullYear()
     return (
       <footer className="site-footer text-light">
         <div className="container">
@@ -68,7 +69,7 @@ class Footer extends React.Component {
               </li>
             </ul>
             <div className="footer-copyright">
-              &copy; 2019 Twan Mulder, all rights reserved
+              &copy; {currentYear} Twan Mulder, all rights reserved
             </div>
           </div>
         </div>
