@@ -64,6 +64,7 @@ class Anytimers extends React.Component {
     fetch('https://service.anytimers.app/api/v1/anytimer/feed')
       .then(res => res.json())
       .then(data => {
+        // Shuffle array (REMOVE LATER)
         data = this.shuffle(data)
         this.setState({ mostRecentAnytimers: data })
       })
