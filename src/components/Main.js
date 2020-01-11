@@ -8,8 +8,17 @@ class Main extends React.Component {
     isMobile: false,
   }
 
-  componentDidMount() {
+  isViewportMobile = () => {
     this.setState({ isMobile: window.innerWidth <= 1024 })
+  }
+
+  componentDidMount() {
+    this.isViewportMobile()
+    window.addEventListener('resize', this.isViewportMobile)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.isViewportMobile)
   }
 
   render() {
