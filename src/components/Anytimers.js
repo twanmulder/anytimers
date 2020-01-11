@@ -1,11 +1,9 @@
 import React from 'react'
 
-import anytimers from '../content/anytimers'
-
 class Anytimer extends React.Component {
   render() {
     return (
-      <li className="anytimer-item is-revealing">
+      <li className="anytimer-item">
         <h4 className="anytimer-names">
           {this.props.from}
           <span className="anytimer-amount">{this.props.amount}</span>
@@ -35,19 +33,63 @@ class Anytimer extends React.Component {
 }
 
 class Anytimers extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = { mostRecentAnytimers: [] }
+  }
+
+  shuffle = array => {
+    var currentIndex = array.length,
+      temporaryValue,
+      randomIndex
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex)
+      currentIndex -= 1
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex]
+      array[currentIndex] = array[randomIndex]
+      array[randomIndex] = temporaryValue
+    }
+
+    return array
+  }
+
+  getMostRecentAnytimers = () => {
+    console.log('getting most recent anytimers')
+    fetch('https://service.anytimers.app/api/v1/anytimer/feed')
+      .then(res => res.json())
+      .then(data => {
+        data = this.shuffle(data)
+        this.setState({ mostRecentAnytimers: data })
+      })
+      .catch(console.log)
+  }
+
+  componentDidMount() {
+    this.getMostRecentAnytimers()
+    // Call API every 5 seconds
+    this.interval = setInterval(() => this.getMostRecentAnytimers(), 5000)
+  }
+
   render() {
+    const mostRecentAnytimers = this.state.mostRecentAnytimers
     return (
       <section className="hero hero-anytimers">
         <div className="container">
           <div className="hero-inner">
             <h4 className="anytimer-subtitle">Recent anytimers</h4>
             <ul className="anytimer-list">
-              {anytimers.map((any, i) => (
+              {mostRecentAnytimers.slice(0, 2).map((any, i) => (
                 <Anytimer
-                  to={any.to}
-                  from={any.from}
+                  to={any.user_to.username}
+                  from={any.user_from.username}
                   amount={any.amount}
-                  description={any.description}
+                  description={any.reason}
                   key={i}
                 />
               ))}
