@@ -10,10 +10,11 @@ class App extends React.Component {
     // Reveal animations
     if (document.body.classList.contains('has-animations')) {
       /* global ScrollReveal */
-      sr.reveal('.hero-title, .hero-paragraph, .newsletter-form', {
-        duration: 1000,
+      sr.reveal('.hero-title, .hero-paragraph, .text', {
+        duration: 600,
         distance: '40px',
-        easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
+        // easing: 'cubic-bezier(0.5, -0.01, 0, 1.005)',
+        easing: 'ease-in-out',
         origin: 'top',
         interval: 150,
       })

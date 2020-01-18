@@ -1,0 +1,82 @@
+.text {
+  margin-top: 4rem;
+
+  h5 {
+    @include font-family(base);
+    @include font-weight(bold);
+    @include font-size(5, mobile, true, true, true);
+    @if (get-font-size(5, desktop) != get-font-size(5, mobile)) {
+      @include media('>medium') {
+        @include font-size(5, desktop, true, true, true);
+      }
+    }
+  }
+}
+
+.newsletter-fields {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+input[type='email'] {
+  font-size: 0.8rem;
+  line-height: normal;
+  padding: 0.6rem 1rem;
+  border: none;
+  border: 1px solid #dddfe5;
+  border-radius: 0.125rem;
+  margin-right: 0.5rem;
+  transition: all 0.1s ease-in-out;
+  -webkit-appearance: none;
+
+  &:focus {
+    border-color: color(primary, 3);
+    outline: 0;
+  }
+}
+
+.newsletter.connected .email {
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+}
+
+.signup-button {
+  line-height: 1;
+  font-size: 0.8em;
+  padding: 0.75rem 2rem 0.7rem;
+  background-color: color(primary, 3);
+  border: none;
+  border-radius: 0.125rem;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: box-shadow 120ms, background-color 120ms;
+  box-shadow: 0 0.1rem 0.1rem transparent;
+  text-align: center;
+}
+
+@include media('>medium') {
+  .newsletter-fields {
+    flex-direction: row;
+  }
+
+  .newsletter.connected .email {
+    border-radius: 6px 0 0 6px;
+    margin-bottom: 0;
+  }
+
+  .newsletter.connected .signup-button {
+    margin-left: -1px;
+    border-radius: 0 6px 6px 0;
+  }
+}
+
+@include media('>large') {
+  .newsletter {
+    margin-top: 0.5rem;
+  }
+
+  .newsletter-fields {
+    justify-content: flex-start;
+  }
+}

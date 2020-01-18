@@ -1,5 +1,7 @@
 import React from 'react'
 
+import Form from './Form'
+
 import peopleSVG from '../img/people.svg'
 
 class Hero extends React.Component {
@@ -14,30 +16,10 @@ class Hero extends React.Component {
                   Anytimers.nl
                 </h1>
                 <p className="hero-paragraph is-revealing">
-                  THE website to track your anytimers. Add your friends, add
+                  The website to track your anytimers. Add your friends, add
                   your anytimers, and start drinking!
                 </p>
-                <div className="hero-form newsletter-form field field-grouped is-revealing">
-                  <div className="control">
-                    <a
-                      className="button button-primary button-block button-shadow"
-                      href="#"
-                    >
-                      Get it on the App Store
-                    </a>
-                  </div>
-                  <div>
-                    <p className="button-divider">or</p>
-                  </div>
-                  <div className="control">
-                    <a
-                      className="button button-primary button-block button-shadow"
-                      href="#"
-                    >
-                      Get it on the Play Store
-                    </a>
-                  </div>
-                </div>
+                <Form />
               </div>
             </div>
             <div className="hero-illustration">
