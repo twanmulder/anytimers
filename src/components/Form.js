@@ -1,23 +1,42 @@
 import React from 'react'
 
 class Form extends React.Component {
+  constructor() {
+    super()
+    this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  handleSubmit(event) {
+    event.preventDefault()
+    const data = new FormData(event.target)
+
+    console.log(data)
+
+    fetch('https://service.anytimers.app/api/v1/beta/signup', {
+      method: 'POST',
+      body: data,
+    })
+  }
+
   render() {
     return (
-      <div class="text is-revealing">
+      <div className="text is-revealing">
         <h5>Want to get early access and product updates?</h5>
         <form
-          class="newsletter newsletter-website connected"
+          className="newsletter newsletter-website connected"
           id="signup-form-top"
+          onSubmit={this.handleSubmit}
         >
-          <div class="newsletter-fields">
+          <div className="newsletter-fields">
             <input
-              class="email"
+              className="email"
               placeholder="Your Email"
               required=""
+              id="email"
+              name="email"
               type="email"
-              value=""
             />
-            <button class="signup-button">Sign up</button>
+            <button className="signup-button">Sign up</button>
           </div>
         </form>
       </div>
