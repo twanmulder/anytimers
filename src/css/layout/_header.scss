@@ -1,50 +1,53 @@
-.site-header {
-  position: relative;
-  padding: 24px 0;
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 10;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0 1.8rem transparent;
+  transition: box-shadow 0.3s, color 0.5s, background-color 0.5s;
 }
 
-.site-header-inner {
-  position: relative; /* To display all elements above the background color */
+header.scrolled {
+  box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.15);
+}
+
+nav {
+  max-width: 120rem;
+  height: 100%;
+  margin: 0 auto;
+  font-size: 1.6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
-.header-links {
-  display: inline-flex;
-
-  li {
-    display: inline-flex;
-  }
-
-  a:not(.button) {
-    @include font-family(heading);
-    @include font-size(7, mobile, true, true, true);
-    @if (get-font-size(7, desktop) != get-font-size(7, mobile)) {
-      @include media('>medium') {
-        @include font-size(7, desktop, true, true, true);
-      }
-    }
-    @include font-weight(bold);
-    @include anchor-aspect(header);
-    line-height: 16px;
-    padding: 8px 24px;
-  }
+nav a {
+  font-family: 'Montserrat';
+  color: color(typography, 1);
+  text-decoration: none;
 }
 
-@include media('>large') {
-  .site-header-large-bg {
-    position: relative;
+nav > a {
+  text-decoration: none;
+  font-weight: 800;
+  letter-spacing: 0.8px;
+}
 
-    span {
-      position: absolute;
-      top: -24px; /* header top padding */
-      bottom: 0;
-      left: 648px; /* .hero-copy width + offset */
-      width: 9999px;
-      height: 100vh;
-      background: color(typography, 1);
-      background-repeat: no-repeat;
-    }
-  }
+nav .logo {
+  font-weight: 600;
+  font-size: 0.8125rem;
+  margin-right: auto;
+}
+
+nav .signup-button {
+  margin: -0.7ch 0 -0.7ch auto;
+  padding: 0.7rem 1.2rem 0.7rem;
+  border-radius: 0.2rem;
+  font-size: 0.8125rem;
+  box-shadow: 0 0.1rem 0.25rem rgba(103, 110, 144, 0.2),
+    0 0 0 0.05rem rgba(103, 110, 144, 0.05);
 }

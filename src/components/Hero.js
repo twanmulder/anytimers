@@ -1,402 +1,127 @@
 import React from 'react'
 
-import Form from './Form'
-
-import peopleSVG from '../img/people.svg'
-
 class Hero extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      scaleAmount: '1',
+      heroUIOpacity: '0',
+    }
+
+    this.scaleHeroImages = this.scaleHeroImages.bind(this)
+  }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.scaleHeroImages)
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.scaleHeroImages)
+  }
+
+  scaleHeroImages() {
+    var transformTarget = document.querySelector('.hero-transform-target')
+    var maxScaleAmount
+
+    let transformTargetHeight = transformTarget.offsetHeight
+    let scrollPercentage =
+      document.documentElement.scrollTop / transformTargetHeight
+
+    // 1 => 0.55
+    let scaleAmount = 1 - scrollPercentage
+    // 0 => 11.5%
+    let translateXAmount = 11.5 * scrollPercentage * 1.9
+
+    if (window.innerWidth >= 1580) {
+      maxScaleAmount = 0.4
+    } else {
+      maxScaleAmount = 0.55
+    }
+
+    if (scaleAmount <= 1) {
+      if (scaleAmount >= maxScaleAmount) {
+        transformTarget.style.transform = `scale(${scaleAmount}) translate(${translateXAmount}%, 0)`
+      } else {
+        transformTarget.style.transform = `scale(${maxScaleAmount}) translate(11.5%, 0)`
+      }
+    }
+
+    if (scrollPercentage >= 0 && scrollPercentage <= 1) {
+      this.setState({ heroUIOpacity: scrollPercentage })
+    }
+  }
+
   render() {
+    const heroUIOpacity = this.state.heroUIOpacity
+
     return (
-      <section className="hero">
-        <div className="container">
-          <div className="hero-inner">
-            <div className="hero-copy">
-              <div className="container-sm">
-                <h1 className="hero-title h2-mobile mt-0 is-revealing">
-                  Anytimers.nl
-                </h1>
-                <p className="hero-paragraph is-revealing">
-                  The website to track your anytimers. Add your friends, add
-                  your anytimers, and start drinking!
-                </p>
-                <Form />
-              </div>
-            </div>
-            <div className="hero-illustration">
-              <div className="hero-squares hero-squares-1 is-revealing">
-                <svg
-                  width="124"
-                  height="64"
-                  viewBox="0 0 124 64"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <linearGradient
-                      x1="0%"
-                      y1="50%"
-                      x2="114.418%"
-                      y2="50%"
-                      id="squares-1-a"
-                    >
-                      <stop stopColor="#FEC105" offset="0%" />
-                      <stop stopColor="#FEC105" stopOpacity="0" offset="100%" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M0 0h4v4H0V0zm0 12h4v4H0v-4zm0 12h4v4H0v-4zm0 12h4v4H0v-4zm0 12h4v4H0v-4zm0 12h4v4H0v-4zM12 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zM24 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zM36 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zM48 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zM60 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zM72 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zM84 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zM96 0h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4V0zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4z"
-                    fill="url(#squares-1-a)"
-                    fillRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div className="hero-squares hero-squares-2 is-revealing">
-                <svg
-                  width="64"
-                  height="88"
-                  viewBox="0 0 64 88"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <linearGradient
-                      x1="0%"
-                      y1="50%"
-                      x2="114.418%"
-                      y2="50%"
-                      id="squares-2-a"
-                    >
-                      <stop stopColor="#FEC105" offset="0%" />
-                      <stop stopColor="#FEC105" stopOpacity="0" offset="100%" />
-                    </linearGradient>
-                  </defs>
-                  <path
-                    d="M80 574h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm12-60h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4zm0 12h4v4h-4v-4z"
-                    transform="rotate(90 359 279)"
-                    fill="url(#squares-2-a)"
-                    fillRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div className="hero-ball hero-ball-1 is-revealing">
-                <svg
-                  width="400"
-                  height="400"
-                  viewBox="0 0 400 400"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <radialGradient
-                      cx="56.15%"
-                      cy="27.43%"
-                      fx="56.15%"
-                      fy="27.43%"
-                      r="57.526%"
-                      gradientTransform="matrix(.5626 -.82673 .8022 .54591 .026 .589)"
-                      id="ball-1-a"
-                    >
-                      <stop stopColor="#F8F7FF" offset="0%" />
-                      <stop stopColor="#FEC105" offset="100%" />
-                    </radialGradient>
-                    <filter
-                      x="-500%"
-                      y="-500%"
-                      width="1000%"
-                      height="1000%"
-                      filterUnits="objectBoundingBox"
-                      id="dropshadow-ball-1"
-                    >
-                      <feOffset
-                        dx="24"
-                        dy="24"
-                        in="SourceAlpha"
-                        result="shadowOffsetOuter"
-                      />
-                      <feGaussianBlur
-                        stdDeviation="24"
-                        in="shadowOffsetOuter"
-                        result="shadowBlurOuter"
-                      />
-                      <feColorMatrix
-                        values="0 0 0 0 0.10 0 0 0 0 0.17 0 0 0 0 0.21 0 0 0 0.22 0"
-                        in="shadowBlurOuter"
-                      />
-                    </filter>
-                  </defs>
-                  <circle
-                    cx="200"
-                    cy="200"
-                    r="200"
-                    fill="#FFF"
-                    fillRule="evenodd"
-                    style={{ filter: 'url(#dropshadow-ball-1)' }}
-                  />
-                  <circle
-                    cx="200"
-                    cy="200"
-                    r="200"
-                    fill="url(#ball-1-a)"
-                    fillRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div className="hero-ball hero-ball-2 is-revealing">
-                <svg
-                  width="200"
-                  height="200"
-                  viewBox="0 0 200 200"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <radialGradient
-                      cx="56.15%"
-                      cy="27.43%"
-                      fx="56.15%"
-                      fy="27.43%"
-                      r="57.526%"
-                      gradientTransform="matrix(.5626 -.82673 .8022 .54591 .026 .589)"
-                      id="ball-2-a"
-                    >
-                      <stop stopColor="#F8F7FF" offset="0%" />
-                      <stop stopColor="#FEC105" offset="100%" />
-                    </radialGradient>
-                    <filter
-                      x="-500%"
-                      y="-500%"
-                      width="1000%"
-                      height="1000%"
-                      filterUnits="objectBoundingBox"
-                      id="dropshadow-ball-2"
-                    >
-                      <feOffset
-                        dx="24"
-                        dy="24"
-                        in="SourceAlpha"
-                        result="shadowOffsetOuter"
-                      />
-                      <feGaussianBlur
-                        stdDeviation="24"
-                        in="shadowOffsetOuter"
-                        result="shadowBlurOuter"
-                      />
-                      <feColorMatrix
-                        values="0 0 0 0 0.10 0 0 0 0 0.17 0 0 0 0 0.21 0 0 0 0.22 0"
-                        in="shadowBlurOuter"
-                      />
-                    </filter>
-                  </defs>
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="100"
-                    fill="#FFF"
-                    fillRule="evenodd"
-                    style={{ filter: 'url(#dropshadow-ball-2)' }}
-                  />
-                  <circle
-                    cx="100"
-                    cy="100"
-                    r="100"
-                    fill="url(#ball-2-a)"
-                    fillRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div className="hero-illustration-browser is-revealing">
+      <div className="container container-hero">
+        <div className="container-inner">
+          <div className="hero-scroll-container">
+            <div className="hero-transform-target">
+              <h1 className="hero-intro">
+                Keep track of all your anytimers.
+                <br />
+                Wherever you are, whenever you are.
+              </h1>
+
+              <h2 className="hero-headline">
+                <span className="hero-headline-text">
+                  Any Place,
+                  <br />
+                  Any Time.
+                </span>
                 <img
-                  style={{ width: '800px', height: '450px' }}
-                  src={peopleSVG}
                   alt=""
+                  className="hero-hand"
+                  height="540"
+                  sizes="(min-width: 80em) 100vw, 120vw"
+                  src="https://d33wubrfki0l68.cloudfront.net/be2a9e72f7d2bac82f9cbefd5a51018c261d0dab/7f9c0/images/home/hero-hands.png"
+                  srcSet="
+                  https://d33wubrfki0l68.cloudfront.net/fbe182a13e2e56bcd565095f16711152d6702bbc/999fb/images/home/hero-hands/hero-hands_480w.png   480w,
+                  https://d33wubrfki0l68.cloudfront.net/9d22355f1085ec8eeaab635e9da07b060e9d5534/4c14d/images/home/hero-hands/hero-hands_960w.png   960w,
+                  https://d33wubrfki0l68.cloudfront.net/b3f38af0531dd7d0f8f4e19bf21a7c39f8fc662c/d8213/images/home/hero-hands/hero-hands_1280w.png 1280w,
+                  https://d33wubrfki0l68.cloudfront.net/c7a197fc9b8ec87b6b55e0fab07269c7cabbca71/f2622/images/home/hero-hands/hero-hands_1440w.png 1440w,
+                  https://d33wubrfki0l68.cloudfront.net/f6ddaf6aabc16861cdcbcb46a99d30287cff6850/50220/images/home/hero-hands/hero-hands_1680w.png 1680w,
+                  https://d33wubrfki0l68.cloudfront.net/7dc35251f5ce29958087e97b70209262b1f330e4/b2ee2/images/home/hero-hands/hero-hands_1920w.png 1920w,
+                  https://d33wubrfki0l68.cloudfront.net/f4490df7c91771b71792745a7aaebf98c5342efd/7299c/images/home/hero-hands/hero-hands_2560w.png 2560w,
+                  https://d33wubrfki0l68.cloudfront.net/a047e2f1227f777d005b33fbca5a972a004b8229/dec43/images/home/hero-hands/hero-hands_2880w.png 2880w,
+                  https://d33wubrfki0l68.cloudfront.net/fa0b183ae137a2366bb178f45bc772bad3f9ee27/c30a4/images/home/hero-hands/hero-hands_3360w.png 3360w,
+                  https://d33wubrfki0l68.cloudfront.net/be2a9e72f7d2bac82f9cbefd5a51018c261d0dab/7f9c0/images/home/hero-hands.png                  3840w
+                "
+                  width="960"
                 />
-              </div>
-              <div className="hero-ball hero-ball-3 is-revealing">
-                <svg
-                  width="80"
-                  height="80"
-                  viewBox="0 0 80 80"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <radialGradient
-                      cx="56.15%"
-                      cy="27.43%"
-                      fx="56.15%"
-                      fy="27.43%"
-                      r="57.526%"
-                      gradientTransform="matrix(.5626 -.82673 .8022 .54591 .026 .589)"
-                      id="ball-3-a"
-                    >
-                      <stop stopColor="#F8F7FF" offset="0%" />
-                      <stop stopColor="#FEC105" offset="100%" />
-                    </radialGradient>
-                    <filter
-                      x="-500%"
-                      y="-500%"
-                      width="1000%"
-                      height="1000%"
-                      filterUnits="objectBoundingBox"
-                      id="dropshadow-ball-3"
-                    >
-                      <feOffset
-                        dx="24"
-                        dy="24"
-                        in="SourceAlpha"
-                        result="shadowOffsetOuter"
-                      />
-                      <feGaussianBlur
-                        stdDeviation="24"
-                        in="shadowOffsetOuter"
-                        result="shadowBlurOuter"
-                      />
-                      <feColorMatrix
-                        values="0 0 0 0 0.10 0 0 0 0 0.17 0 0 0 0 0.21 0 0 0 0.22 0"
-                        in="shadowBlurOuter"
-                      />
-                    </filter>
-                  </defs>
-                  <circle
-                    cx="40"
-                    cy="40"
-                    r="40"
-                    fill="#FFF"
-                    fillRule="evenodd"
-                    style={{ filter: 'url(#dropshadow-ball-3)' }}
-                  />
-                  <circle
-                    cx="40"
-                    cy="40"
-                    r="40"
-                    fill="url(#ball-3-a)"
-                    fillRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div className="hero-ball hero-ball-4 is-revealing">
-                <svg
-                  width="40"
-                  height="40"
-                  viewBox="0 0 40 40"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <radialGradient
-                      cx="56.15%"
-                      cy="27.43%"
-                      fx="56.15%"
-                      fy="27.43%"
-                      r="57.526%"
-                      gradientTransform="matrix(.5626 -.82673 .8022 .54591 .026 .589)"
-                      id="ball-4-a"
-                    >
-                      <stop stopColor="#F8F7FF" offset="0%" />
-                      <stop stopColor="#FEC105" offset="100%" />
-                    </radialGradient>
-                    <filter
-                      x="-500%"
-                      y="-500%"
-                      width="1000%"
-                      height="1000%"
-                      filterUnits="objectBoundingBox"
-                      id="dropshadow-ball-4"
-                    >
-                      <feOffset
-                        dx="24"
-                        dy="24"
-                        in="SourceAlpha"
-                        result="shadowOffsetOuter"
-                      />
-                      <feGaussianBlur
-                        stdDeviation="24"
-                        in="shadowOffsetOuter"
-                        result="shadowBlurOuter"
-                      />
-                      <feColorMatrix
-                        values="0 0 0 0 0.10 0 0 0 0 0.17 0 0 0 0 0.21 0 0 0 0.22 0"
-                        in="shadowBlurOuter"
-                      />
-                    </filter>
-                  </defs>
-                  <circle
-                    cx="20"
-                    cy="20"
-                    r="20"
-                    fill="#FFF"
-                    fillRule="evenodd"
-                    style={{ filter: 'url(#dropshadow-ball-4)' }}
-                  />
-                  <circle
-                    cx="20"
-                    cy="20"
-                    r="20"
-                    fill="url(#ball-4-a)"
-                    fillRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div className="hero-ball hero-ball-5 is-revealing">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <defs>
-                    <radialGradient
-                      cx="56.15%"
-                      cy="27.43%"
-                      fx="56.15%"
-                      fy="27.43%"
-                      r="57.526%"
-                      gradientTransform="matrix(.5626 -.82673 .8022 .54591 .026 .589)"
-                      id="ball-5-a"
-                    >
-                      <stop stopColor="#F8F7FF" offset="0%" />
-                      <stop stopColor="#FEC105" offset="100%" />
-                    </radialGradient>
-                    <filter
-                      x="-500%"
-                      y="-500%"
-                      width="1000%"
-                      height="1000%"
-                      filterUnits="objectBoundingBox"
-                      id="dropshadow-ball-5"
-                    >
-                      <feOffset
-                        dx="24"
-                        dy="24"
-                        in="SourceAlpha"
-                        result="shadowOffsetOuter"
-                      />
-                      <feGaussianBlur
-                        stdDeviation="24"
-                        in="shadowOffsetOuter"
-                        result="shadowBlurOuter"
-                      />
-                      <feColorMatrix
-                        values="0 0 0 0 0.10 0 0 0 0 0.17 0 0 0 0 0.21 0 0 0 0.22 0"
-                        in="shadowBlurOuter"
-                      />
-                    </filter>
-                  </defs>
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="12"
-                    fill="#FFF"
-                    fillRule="evenodd"
-                    style={{ filter: 'url(#dropshadow-ball-5)' }}
-                  />
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="12"
-                    fill="url(#ball-5-a)"
-                    fillRule="evenodd"
-                  />
-                </svg>
-              </div>
+                <img
+                  alt="Presentation UI"
+                  className="hero-ui"
+                  style={{ opacity: heroUIOpacity }}
+                  height="567"
+                  sizes="(-webkit-min-device-pixel-ratio: 2) 107.25vw,
+           (-webkit-min-device-pixel-ratio: 2) and (min-width: 80em) 89.375vw,
+           (min-resolution: 2dppx) 107.25vw,
+           (min-resolution: 2dppx) and (min-width: 80em) 89.375vw,
+           (min-width: 80em) 162.5vw,
+           195vw"
+                  src="https://d33wubrfki0l68.cloudfront.net/79eec0e03f693f79b9a53f1134cba1d3cccb6d45/1a088/images/home/hero-ui.jpg"
+                  srcSet="
+                  https://d33wubrfki0l68.cloudfront.net/34eb8fc86f4241cd468889731ab0938d17b393df/c725a/images/home/hero-ui/hero-ui_468w.jpg   468w,
+                  https://d33wubrfki0l68.cloudfront.net/c0f937351da2d07adcf63b2f177d4af385df268e/d0832/images/home/hero-ui/hero-ui_936w.jpg   936w,
+                  https://d33wubrfki0l68.cloudfront.net/999cfe4fa1759905486bb46ad41e68a381949951/d917f/images/home/hero-ui/hero-ui_1248w.jpg 1248w,
+                  https://d33wubrfki0l68.cloudfront.net/43cf9185e4f1e4e00c138799e1cba7fa80c16fee/43fb7/images/home/hero-ui/hero-ui_1404w.jpg 1404w,
+                  https://d33wubrfki0l68.cloudfront.net/ce7f4a1b58da6c80b4e34280820359a2648eff79/f2423/images/home/hero-ui/hero-ui_1872w.jpg 1872w,
+                  https://d33wubrfki0l68.cloudfront.net/53582dee43ecc24d388ec9f4955b5a84f989e7a2/64cf1/images/home/hero-ui/hero-ui_2496w.jpg 2496w,
+                  https://d33wubrfki0l68.cloudfront.net/d7647791870ff3b6a6f4ebb2fea661b37b7460c2/2517e/images/home/hero-ui/hero-ui_2808w.jpg 2808w,
+                  https://d33wubrfki0l68.cloudfront.net/aaef2156f9e54e410bb4701bb0a415949e78a13d/07111/images/home/hero-ui/hero-ui_3276w.jpg 3276w,
+                  https://d33wubrfki0l68.cloudfront.net/79eec0e03f693f79b9a53f1134cba1d3cccb6d45/1a088/images/home/hero-ui.jpg               3744w
+                "
+                  width="936"
+                  title=""
+                />
+              </h2>
             </div>
           </div>
         </div>
-      </section>
+      </div>
     )
   }
 }

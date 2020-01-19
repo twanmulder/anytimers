@@ -1,13 +1,13 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import Hero from './Hero'
 
 class Main extends React.Component {
   render() {
     return (
-      <main style={{ flexDirection: 'column' }}>
+      <Fragment>
         <Hero></Hero>
-      </main>
+      </Fragment>
     )
   }
 }
