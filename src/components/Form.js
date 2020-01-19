@@ -16,12 +16,14 @@ class Form extends React.Component {
   handleSubmit(event) {
     event.preventDefault()
 
-    const email = JSON.stringify(this.state.email)
+    const email = this.state.email
     fetch('https://service.anytimers.app/api/v1/beta/signup', {
       method: 'POST',
-      body: email,
-    }).catch(error => {
-      console.error('Error:', error)
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email: email }),
     })
   }
 
