@@ -1,20 +1,27 @@
 import React from 'react'
 
 class Form extends React.Component {
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
+    this.state = { email: '' }
+
+    this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
+  }
+
+  handleChange(event) {
+    this.setState({ email: event.target.value })
   }
 
   handleSubmit(event) {
     event.preventDefault()
-    const data = new FormData(event.target)
 
-    console.log(data)
-
+    const email = JSON.stringify(this.state.email)
     fetch('https://service.anytimers.app/api/v1/beta/signup', {
       method: 'POST',
-      body: data,
+      body: email,
+    }).catch(error => {
+      console.error('Error:', error)
     })
   }
 
@@ -29,6 +36,8 @@ class Form extends React.Component {
         >
           <div className="newsletter-fields">
             <input
+              value={this.state.email}
+              onChange={this.handleChange}
               className="email"
               placeholder="Your Email"
               required=""
