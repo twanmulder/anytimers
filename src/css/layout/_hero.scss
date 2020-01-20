@@ -47,7 +47,7 @@
   line-height: 1.85;
   left: 50%;
   margin: 0 0 1rem;
-  margin-top: 16vw;
+  margin-top: 12vw;
   max-width: 42ch;
   padding: 1rem;
   position: absolute;
@@ -105,9 +105,9 @@ img {
   z-index: -1;
 }
 
-@include media('>large') {
-  .hero-headline {
-    margin-top: -2rem;
+@include media('>medium') {
+  .hero-intro {
+    margin-top: 18vw;
   }
 }
 
