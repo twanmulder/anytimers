@@ -30,7 +30,7 @@ class Form extends React.Component {
   render() {
     return (
       <div className="text is-revealing">
-        <h5>Want to get early access and product updates?</h5>
+        <h5>Want to get early access to the private beta?</h5>
         <form
           className="newsletter newsletter-website connected"
           id="signup-form-top"

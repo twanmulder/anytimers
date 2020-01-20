@@ -106,6 +106,12 @@ img {
 }
 
 @include media('>large') {
+  .hero-headline {
+    margin-top: -2rem;
+  }
+}
+
+@include media('>large') {
   .hero-intro {
     margin-top: 22vw;
     font-size: calc(0.08em + 1rem);
