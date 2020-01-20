@@ -47,7 +47,7 @@ class Hero extends React.Component {
     }
 
     if (scrollPercentage >= 0 && scrollPercentage <= 1) {
-      this.setState({ heroUIOpacity: scrollPercentage })
+      this.setState({ heroUIOpacity: scrollPercentage * 1.7 })
     }
   }
 

@@ -8,7 +8,7 @@
 
 .container-hero {
   background: #fff;
-  height: calc(100vh + 60rem + 5vw);
+  height: calc(100vh + 40rem + 5vw);
   margin-bottom: calc(12vw - 40vh);
   padding: 0;
   text-align: center;
@@ -22,7 +22,6 @@
 }
 
 .hero-scroll-container {
-  animation: fadein 0.5s;
   height: calc(100vh + 5vw);
   margin-top: -7rem;
   margin-bottom: 0;
@@ -37,18 +36,18 @@
   height: 100%;
   transform-origin: 50% 40%;
   will-change: transform;
-  font-size: 11vw;
+  font-size: 10.5vw;
   transform: scale(1) translate(0%, 0px);
 }
 
 .hero-intro {
   font: inherit;
   color: #545465;
-  font-size: calc(0.1em + 1.1rem);
+  font-size: calc(0.1em + 0.5rem);
   line-height: 1.85;
   left: 50%;
   margin: 0 0 1rem;
-  margin-top: 22vw;
+  margin-top: 16vw;
   max-width: 42ch;
   padding: 1rem;
   position: absolute;
@@ -56,12 +55,6 @@
   transform: translate(-50%, 0);
   width: 100vw;
   z-index: 1;
-}
-
-@media (min-width: 80em) {
-  .hero-intro {
-    font-size: calc(0.08em + 1rem);
-  }
 }
 
 .hero-headline {
@@ -79,8 +72,8 @@
 }
 
 .hero-headline span {
-  font-weight: 600;
-  font-size: 8.1vw;
+  font-weight: 800;
+  font-size: 7.5vw;
 }
 
 img {
@@ -110,4 +103,11 @@ img {
   width: 16.25em;
   will-change: opacity;
   z-index: -1;
+}
+
+@include media('>large') {
+  .hero-intro {
+    margin-top: 22vw;
+    font-size: calc(0.08em + 1rem);
+  }
 }
