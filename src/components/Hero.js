@@ -56,7 +56,7 @@ class Hero extends React.Component {
 
     return (
       <section className="container container-hero">
-        <artile className="container-inner">
+        <article className="container-inner">
           <div className="hero-scroll-container">
             <div className="hero-transform-target">
               <h1 className="hero-intro">
@@ -120,7 +120,7 @@ class Hero extends React.Component {
               </h2>
             </div>
           </div>
-        </artile>
+        </article>
       </section>
     )
   }

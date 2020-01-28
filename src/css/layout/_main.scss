@@ -17,10 +17,6 @@
   @include shadow;
 }
 
-main {
-  flex: 1 0 auto;
-}
-
 .section-inner {
   position: relative; /* To always display inner elements above pseudo decorative stuff */
   padding-top: 48px;
@@ -36,11 +32,6 @@ main {
 
 /* Align the page content vertically */
 @include media('>large') {
-  main {
-    display: flex;
-    align-items: center;
-  }
-
   .hero {
     width: 100%;
   }
