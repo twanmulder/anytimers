@@ -1,12 +1,14 @@
 import React from 'react'
 
 import Hero from './Hero'
+import Form from './Form'
 
 class Main extends React.Component {
   render() {
     return (
-      <main style={{ flexDirection: 'column' }}>
+      <main>
         <Hero></Hero>
+        <Form></Form>
       </main>
     )
   }

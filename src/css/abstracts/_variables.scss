@@ -41,7 +41,7 @@ $font__family: (
     code: 'Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace',
   // font-family(code)
     pre: '"Courier 10 Pitch", Courier, monospace',
-  // font-family(pre),,
+  // font-family(pre),,,,
 );
 
 $font__sizes: (
@@ -72,7 +72,7 @@ $font__scale: (
     // Text small
       7: map-get($font__sizes, eta),
     // Text smaller, buttons
-      8: map-get($font__sizes, theta) // Footer area,,,,,,,,,,,,,,,,,,,,,,,,,,
+      8: map-get($font__sizes, theta) // Footer area,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
   mobile: (
     // i.e. $breakpoint__xs + $breakpoint__s (up to 600)
@@ -90,18 +90,21 @@ $font__scale: (
     // Text small
       7: map-get($font__sizes, eta),
     // Text smaller, buttons
-      8: map-get($font__sizes, theta) // Footer area,,,,,,,,,,,,,,,,,,,,,,,,,,
+      8: map-get($font__sizes, theta) // Footer area,,,,,,,,,,,,,,,,,,,,,,,,,,,,
   ),
 );
 
 $font__weight: (
-  regular: 400,
   // font__weight(regular)
-    medium: 500,
+    regular: 400,
   // font__weight(medium)
-    semibold: 600,
+    medium: 500,
   // font__weight(semibold)
-    bold: 700 // font__weight(bold),,,,,,,,,,,,,,,,,,,,,,,,,,
+    semibold: 600,
+  // font__weight(bold)
+    bold: 700,
+  // font__weight(black)
+    black: 900
 );
 
 // --------------------------------------------
