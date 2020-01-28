@@ -6,10 +6,10 @@ import Form from './Form'
 class Main extends React.Component {
   render() {
     return (
-      <Fragment>
+      <main>
         <Hero></Hero>
         <Form></Form>
-      </Fragment>
+      </main>
     )
   }
 }
