@@ -9,7 +9,6 @@
   text-align: center;
 
   h5 {
-    @include font-family(base);
     @include font-weight(bold);
     @include font-size(5, mobile, true, true, true);
     font-size: 16px;
@@ -89,7 +88,6 @@
 
     h5 {
       @include font-size(4, desktop, true, true, true);
-      @include font-family(heading);
       margin-bottom: 2rem;
     }
   }
