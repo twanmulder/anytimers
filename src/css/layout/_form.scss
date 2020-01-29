@@ -25,13 +25,9 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
-
-  .signup-button:active {
-    text-decoration: underline;
-  }
 }
 
-input[type='email'] {
+.newsletter-fields .email {
   font-size: 0.8rem;
   line-height: normal;
   padding: 0.6rem 1rem;
@@ -41,21 +37,24 @@ input[type='email'] {
   margin-right: 0.5rem;
   transition: all 0.1s ease-in-out;
   -webkit-appearance: none;
+  margin-right: 0;
+  margin-bottom: 0.5rem;
+  color: color(typography, 1);
 
   &:focus {
     border-color: color(primary, 3);
     outline: 0;
   }
-}
 
-.newsletter.connected .email {
-  margin-right: 0;
-  margin-bottom: 0.5rem;
+  &::placeholder {
+    color: color(typography, 1);
+  }
 }
 
 .signup-button {
   line-height: 1;
   font-size: 0.8em;
+  color: color(typography, 1);
   padding: 0.75rem 2rem 0.7rem;
   background-color: color(primary, 3);
   border: none;
@@ -67,7 +66,7 @@ input[type='email'] {
   text-align: center;
 
   &:active {
-    background-color: color(primary, 5);
+    text-decoration: underline;
   }
 }
 
@@ -81,6 +80,20 @@ input[type='email'] {
 }
 
 @include media('>medium') {
+  .text {
+    background-color: color(primary, 3);
+    margin: 0 auto 4rem;
+    padding: 4rem 0;
+    max-width: 40rem;
+    border-radius: 1rem;
+
+    h5 {
+      @include font-size(4, desktop, true, true, true);
+      @include font-family(heading);
+      margin-bottom: 2rem;
+    }
+  }
+
   .newsletter {
     width: auto;
   }
@@ -90,17 +103,25 @@ input[type='email'] {
   }
 
   .newsletter.connected .email {
+    background: transparent;
     border-radius: 6px 0 0 6px;
+    border-color: color(typography, 1);
     margin-bottom: 0;
   }
 
   .newsletter.connected .signup-button {
+    background-color: color(typography, 1);
+    color: color(primary, 3);
     margin-left: -1px;
     border-radius: 0 6px 6px 0;
   }
 }
 
 @include media('>large') {
+  .text {
+    max-width: 60rem;
+  }
+
   .newsletter {
     margin-top: 0.5rem;
   }
