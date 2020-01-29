@@ -44,7 +44,7 @@ class Form extends React.Component {
   render() {
     const { errorMessage, successMessage } = this.state
     return (
-      <section className="text is-revealing">
+      <section id="form-section" className="text is-revealing">
         <h5>Want to get early access to the private beta?</h5>
         <form
           className="newsletter newsletter-website connected"

@@ -35,12 +35,13 @@ class Header extends React.Component {
           <a className="logo" href="#">
             Anytimers
           </a>
-          <button
+          <a
+            href="#form-section"
             className="signup-button light header-signup"
             data-show="signup"
           >
             Get early access
-          </button>
+          </a>
         </nav>
       </header>
     )
