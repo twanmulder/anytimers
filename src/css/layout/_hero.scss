@@ -63,7 +63,8 @@
   color: color(primary, 3);
   font-size: inherit;
   left: 0;
-  line-height: 0.95;
+  line-height: 1.13;
+  // line-height: 0.95;
   margin: 0 auto;
   max-width: 8ch;
   position: absolute;
@@ -74,6 +75,12 @@
 .hero-headline span {
   font-weight: 800;
   font-size: 7.5vw;
+}
+
+.word-container {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
 }
 
 img {
@@ -116,4 +123,57 @@ img {
     margin-top: 22vw;
     font-size: calc(0.08em + 1rem);
   }
+}
+
+// HERO ANIMATIONS
+@keyframes up {
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.word {
+  animation: up 0.8s;
+  animation-delay: 1.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: translateY(115%);
+}
+
+.word-container:nth-child(2) .word {
+  animation-delay: 1.35s;
+}
+.word-container:nth-child(3) .word {
+  animation-delay: 1.5s;
+}
+.word-container:nth-child(5) .word {
+  animation-delay: 1.65s;
+}
+.word-container:nth-child(6) .word {
+  animation-delay: 1.8s;
+}
+.word-container:nth-child(7) .word {
+  animation-delay: 1.95s;
+}
+
+@keyframes fadein {
+  100% {
+    opacity: 1;
+  }
+}
+
+.hero-intro {
+  animation: fadein 0.8s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
+}
+
+.hero-hand {
+  animation: fadein 0.8s;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  opacity: 0;
 }

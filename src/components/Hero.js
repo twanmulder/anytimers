@@ -67,9 +67,25 @@ class Hero extends React.Component {
 
               <h2 className="hero-headline">
                 <span className="hero-headline-text">
-                  Any Place,
+                  <div className="word-container">
+                    <div className="word">Any&nbsp;</div>
+                  </div>
+                  <div className="word-container">
+                    <div className="word">Place</div>
+                  </div>
+                  <div className="word-container">
+                    <div className="word">,</div>
+                  </div>
                   <br />
-                  Any Time.
+                  <div className="word-container">
+                    <div className="word">Any&nbsp;</div>
+                  </div>
+                  <div className="word-container">
+                    <div className="word">Time</div>
+                  </div>
+                  <div className="word-container">
+                    <div className="word">.</div>
+                  </div>
                 </span>
                 <img
                   alt=""
