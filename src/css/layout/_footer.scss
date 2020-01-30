@@ -11,30 +11,17 @@ footer {
     max-width: 60rem;
     text-align: center;
 
-    .footer-copyright {
+    li {
       line-height: 1.5rem;
 
       span {
         display: block;
+        color: color(typography, 1);
 
         &:first-child {
           @include font-weight(black);
           color: color(typography, 1);
           font-size: 1rem;
-        }
-      }
-    }
-
-    li {
-      span {
-        color: color(typography, 2);
-      }
-      a {
-        text-decoration: none;
-        transition: 0.125s color ease-in-out;
-
-        &:hover {
-          color: color(typography, 1);
         }
       }
     }
