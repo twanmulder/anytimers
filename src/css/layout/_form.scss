@@ -1,4 +1,4 @@
-.text {
+.form-wrapper {
   margin-bottom: 4rem;
   padding: 0 0.7rem;
   position: relative;
@@ -79,11 +79,15 @@
 }
 
 @include media('>medium') {
-  .text {
+  .form-section {
+    padding: 0 1.5rem;
+  }
+
+  .form-wrapper {
     background-color: color(primary, 3);
     margin: 0 auto 4rem;
     padding: 4rem 0;
-    max-width: 40rem;
+    max-width: 60rem;
     border-radius: 1rem;
 
     h5 {
@@ -116,10 +120,6 @@
 }
 
 @include media('>large') {
-  .text {
-    max-width: 60rem;
-  }
-
   .newsletter {
     margin-top: 0.5rem;
   }
