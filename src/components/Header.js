@@ -32,7 +32,7 @@ class Header extends React.Component {
     return (
       <header className={scrolled ? 'scrolled' : ''}>
         <nav>
-          <a className="logo" href="#">
+          <a className="logo" href="/">
             Anytimers
           </a>
           <a
