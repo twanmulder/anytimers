@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Logo from '../media/logo'
+import Logo from '../media/Logo'
 
 class Header extends React.Component {
   constructor(props) {
