@@ -3,7 +3,7 @@ import React from 'react'
 class About extends React.Component {
   render() {
     return (
-      <div className="container section about">
+      <div id="about" className="container section about">
         <div className="container-inner">
           <div className="text">
             <h2>Effortlessly tracking your anyimers.</h2>
