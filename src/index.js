@@ -3,16 +3,19 @@ import ReactDOM from 'react-dom'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 
 import './css/style.scss'
-import App from './App'
 import * as serviceWorker from './serviceWorker'
 
 import GA from './utils/GoogleAnalytics'
+
+import Home from './pages/Home'
+import Roadmap from './pages/Roadmap'
 
 ReactDOM.render(
   <BrowserRouter>
     {GA.init() && <GA.RouteTracker />}
     <Switch>
-      <Route path="/" exact component={App} />
+      <Route path="/" exact component={Home} />
+      <Route path="/roadmap" exact component={Roadmap} />
       <Redirect from="*" to="/" />
     </Switch>
   </BrowserRouter>,
