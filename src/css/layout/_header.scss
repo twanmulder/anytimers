@@ -49,6 +49,7 @@ nav .navigation-link {
   @include font-weight(bold);
   position: relative;
   margin: 0 1.5rem 0 0;
+  display: none;
 
   &::after {
     left: 0;
@@ -92,5 +93,9 @@ nav .signup-button {
 
   nav .logo svg {
     margin-right: 0.75rem;
+  }
+
+  nav .navigation-link {
+    display: block;
   }
 }
