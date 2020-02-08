@@ -1,24 +1,48 @@
-import React from 'react'
+import React, { Fragment } from 'react'
+import { HashLink as Link } from 'react-router-hash-link'
 
 class About extends React.Component {
   render() {
     return (
-      <section id="about" className="container section about">
-        <div className="container-inner">
-          <div className="text">
-            <h2>Effortlessly tracking your anyimers.</h2>
-            <p>
-              No more arguments, no more bickering. Just one simple solution
-              which you can carry around in your pocket.
-            </p>
-            <p>
-              Whether you're a well-trained veteran or you're just starting out,
-              Anytimers brings you and your friends clarity.
-            </p>
+      <Fragment>
+        <section id="about" className="container section about">
+          <div className="container-inner">
+            <div className="text">
+              <h2>Effortlessly tracking your anyimers.</h2>
+              <p>
+                No more arguments, no more bickering. Just one simple solution
+                which you can carry around in your pocket.
+              </p>
+              <p>
+                Whether you're a well-trained veteran or you're just starting
+                out, Anytimers brings you and your friends clarity.
+              </p>
+            </div>
+            <img src="https://via.placeholder.com/971/FFFFFF/333333" />
           </div>
-          <img src="https://via.placeholder.com/971/FFFFFF/333333" />
-        </div>
-      </section>
+        </section>
+
+        <section id="roadmap" className="container section roadmap">
+          <div className="container-inner">
+            <div className="text">
+              <h2>Continuous and clear updates.</h2>
+              <p>
+                Anytimers is constantly working on improving its experience.
+                Feedback from
+                <strong> YOU </strong> is the most important way to do this.
+              </p>
+              <p>
+                To keep you informed of the progress and updates, we've created
+                a roadmap of all up-and-coming features.
+              </p>
+              <Link to="/roadmap" className="button">
+                See Roadmap
+              </Link>
+            </div>
+            <img src="https://via.placeholder.com/971/FFFFFF/333333" />
+          </div>
+        </section>
+      </Fragment>
     )
   }
 }

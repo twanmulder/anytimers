@@ -48,6 +48,10 @@
 
     .text {
       max-width: 25rem;
+
+      .button {
+        align-self: flex-start;
+      }
     }
 
     img {

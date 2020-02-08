@@ -1,2 +1,28 @@
 .button {
+  @include font-weight(black);
+  @include font-family(heading);
+  color: color(typography, 1);
+  line-height: 1;
+  font-size: 0.65rem;
+  padding: 0.7rem 1.2rem 0.7rem;
+  background-color: color(primary, 3);
+  border-radius: 0.2rem;
+  box-shadow: 0 0.1rem 0.25rem rgba(103, 110, 144, 0.2),
+    0 0 0 0.05rem rgba(103, 110, 144, 0.05);
+  text-decoration: none;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    background-color: lighten(color(primary, 3), 6%);
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+@include media('>medium') {
+  nav .button {
+    font-size: 0.75rem;
+  }
 }
