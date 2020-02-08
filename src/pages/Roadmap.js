@@ -38,12 +38,19 @@ class Roadmap extends React.Component {
             <h3>Anytimers Roadmap</h3>
 
             <div className="timeline">
-              {roadmapItems.map(item => <RoadmapItem title={item.title} description={item.description} key={item.title} />)}
+              {roadmapItems.map(item => (
+                <RoadmapItem
+                  title={item.title}
+                  description={item.description}
+                  key={item.title}
+                />
+              ))}
             </div>
           </section>
+
+          <Form />
         </main>
 
-        <Form />
         <Footer />
       </Fragment>
     )

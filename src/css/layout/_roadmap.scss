@@ -20,13 +20,13 @@
       background-color: rgba(color(typography, 3), 0.1);
       top: 0;
       bottom: 0;
-      left: 31px;
+      left: 16px;
       margin-left: -3px;
     }
   }
 
   .container {
-    padding: 10px 25px 10px 70px;
+    padding: 10px 0px 10px 50px;
     position: relative;
     background-color: inherit;
     width: 100%;
@@ -40,8 +40,7 @@
       position: absolute;
       width: 25px;
       height: 25px;
-      right: -12.5px;
-      left: 19px;
+      left: 4px;
       background-color: white;
       border: 4px solid color(primary, 3);
       top: 50%;
@@ -56,10 +55,6 @@
 
     &:nth-child(even) {
       left: 0%;
-
-      &::after {
-        left: 19px;
-      }
     }
   }
 
@@ -106,6 +101,7 @@
       padding: 10px 40px;
 
       &::after {
+        right: -12.5px;
         left: auto;
       }
 
