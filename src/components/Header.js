@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Logo from '../media/Logo'
+import { HashLink as Link } from 'react-router-hash-link'
 
 class Header extends React.Component {
   constructor(props) {
@@ -38,12 +39,12 @@ class Header extends React.Component {
             <Logo />
             Anytimers
           </a>
-          <a className="navigation-link" href="/#about">
+          <Link to="/#about" className="navigation-link">
             About
-          </a>
-          <a className="navigation-link" href="roadmap">
+          </Link>
+          <Link to="/roadmap" className="navigation-link">
             Roadmap
-          </a>
+          </Link>
           <a href="/#form-section" className="signup-button">
             Get early access
           </a>
