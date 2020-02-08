@@ -3,7 +3,7 @@ import React from 'react'
 class About extends React.Component {
   render() {
     return (
-      <div id="about" className="container section about">
+      <section id="about" className="container section about">
         <div className="container-inner">
           <div className="text">
             <h2>Effortlessly tracking your anyimers.</h2>
@@ -18,7 +18,7 @@ class About extends React.Component {
           </div>
           <img src="https://via.placeholder.com/971/FFFFFF/333333" />
         </div>
-      </div>
+      </section>
     )
   }
 }

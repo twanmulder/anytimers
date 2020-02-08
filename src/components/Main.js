@@ -9,8 +9,8 @@ class Main extends React.Component {
     return (
       <main>
         <Hero />
-        <Form />
         <About />
+        <Form />
       </main>
     )
   }

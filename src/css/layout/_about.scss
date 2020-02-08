@@ -1,5 +1,5 @@
 .section.about {
-  padding: 0 0.8rem;
+  padding: 0 0.8rem 2rem;
 
   .container-inner {
     align-items: center;
@@ -30,7 +30,7 @@
 
 @include media('>medium') {
   .section.about {
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 6rem;
 
     .container-inner {
       flex-direction: row;
