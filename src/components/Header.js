@@ -35,10 +35,10 @@ class Header extends React.Component {
     return (
       <header className={scrolled ? 'scrolled' : ''}>
         <nav>
-          <a className="logo" href="/">
+          <Link to="/" className="logo">
             <Logo />
             Anytimers
-          </a>
+          </Link>
           <Link to="/#about" className="navigation-link">
             About
           </Link>
