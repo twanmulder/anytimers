@@ -20,7 +20,7 @@ export default [
       'After polishing V2, we intend upon releasing the Anytimers app publicly. This way, a mostly polished app will be launched.',
   },
   {
-    title: 'and then...',
+    title: 'And then...',
     description:
       "As soon as the app is publicly launched, our intention is to keep working on improving its experience. Next to that, we'll also keep creating new features, based on your feedback.",
   },
