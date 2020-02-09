@@ -36,7 +36,7 @@ class About extends React.Component {
                 a roadmap of all up-and-coming features.
               </p>
               <Link to="/roadmap" className="button">
-                See Roadmap
+                See roadmap
               </Link>
             </div>
             <img src="https://via.placeholder.com/971/FFFFFF/333333" />

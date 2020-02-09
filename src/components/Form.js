@@ -46,30 +46,29 @@ class Form extends React.Component {
     return (
       <section id="form-section" className="form-section">
         <div className="form-wrapper">
-        <h5>Want to get early access to the private beta?</h5>
-        <form
-          className="newsletter newsletter-website connected"
-          id="signup-form-top"
-          onSubmit={this.handleSubmit}
-        >
-          <div className="newsletter-fields">
-            <input
-              value={this.state.email}
-              onChange={this.handleChange}
-              className="email"
-              placeholder="Your Email"
-              required="required"
-              id="email"
-              name="email"
-              type="email"
-            />
-            <button className="signup-button">Sign up</button>
-          </div>
-          <div className="message error-message">{errorMessage}</div>
-          <div className="message success-message">{successMessage}</div>
-        </form>
+          <h5>Want to get early access to the private beta?</h5>
+          <form
+            className="newsletter newsletter-website connected"
+            id="signup-form-top"
+            onSubmit={this.handleSubmit}
+          >
+            <div className="newsletter-fields">
+              <input
+                value={this.state.email}
+                onChange={this.handleChange}
+                className="email"
+                placeholder="Your email"
+                required="required"
+                id="email"
+                name="email"
+                type="email"
+              />
+              <button className="signup-button">Sign up</button>
+            </div>
+            <div className="message error-message">{errorMessage}</div>
+            <div className="message success-message">{successMessage}</div>
+          </form>
         </div>
-        
       </section>
     )
   }
