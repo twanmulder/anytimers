@@ -45,6 +45,7 @@ class Roadmap extends React.Component {
                   className="button"
                   href="https://twitter.com/AnytimersApp"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   Give us feedback
                 </a>
