@@ -41,6 +41,7 @@
     margin-bottom: 6rem;
 
     .container-inner {
+      max-width: 60rem;
       flex-direction: row;
       text-align: left;
     }
@@ -63,7 +64,6 @@
 
   .section.roadmap {
     .container-inner {
-      max-width: 60rem;
       justify-content: center;
     }
 
