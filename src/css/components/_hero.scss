@@ -15,12 +15,6 @@
   z-index: 1;
 }
 
-.container-inner {
-  margin: 0 auto;
-  height: 100%;
-  max-width: none;
-}
-
 .hero-scroll-container {
   height: calc(100vh + 5vw);
   margin-top: -7rem;
@@ -115,6 +109,9 @@ img {
 @include media('>medium') {
   .hero-intro {
     margin-top: 18vw;
+  }
+  .container-hero .container-inner {
+    max-width: none;
   }
 }
 

@@ -23,10 +23,20 @@
   padding-bottom: 48px;
 }
 
+.container-inner {
+  margin: 0 auto;
+  height: 100%;
+  max-width: none;
+}
+
 @include media('>medium') {
   .section-inner {
     padding-top: 80px;
     padding-bottom: 80px;
+  }
+
+  .container-inner {
+    max-width: 60rem;
   }
 }
 
