@@ -1,32 +1,27 @@
 export default [
   {
-    title: '2012',
+    title: 'Private Beta',
     description:
-      'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quisiuvaret expetendis his, te elit voluptua dignissim per, habeo iustoprimis ea eam.',
+      'Anytimers will first become available as a private beta release. A select amount of users will be allowed to download/use the app.',
   },
   {
-    title: '2013',
+    title: 'User Feedback',
     description:
-      'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quisiuvaret expetendis his, te elit voluptua dignissim per, habeo iustoprimis ea eam.',
+      'We hope to receive feedback from these users regarding problems they encounter, and possibly provide advice for new features.',
   },
   {
-    title: '2014',
+    title: 'Anytimers V2',
     description:
-      'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quisiuvaret expetendis his, te elit voluptua dignissim per, habeo iustoprimis ea eam.',
+      "Using this feedback, we'll create a revamped version of the Anytimers app. This app will contain useful new features, a modernized style, and a greatly improved user experience.",
   },
   {
-    title: '2015',
+    title: 'Public Release!',
     description:
-      'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quisiuvaret expetendis his, te elit voluptua dignissim per, habeo iustoprimis ea eam.',
+      'After polishing V2, we intend upon releasing the Anytimers app publicly. This way, a mostly polished app will be launched.',
   },
   {
-    title: '2016',
+    title: 'and then...',
     description:
-      'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quisiuvaret expetendis his, te elit voluptua dignissim per, habeo iustoprimis ea eam.',
-  },
-  {
-    title: '2017',
-    description:
-      'Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quisiuvaret expetendis his, te elit voluptua dignissim per, habeo iustoprimis ea eam.',
+      "As soon as the app is publicly launched, our intention is to keep working on improving its experience. Next to that, we'll also keep creating new features, based on your feedback.",
   },
 ]
