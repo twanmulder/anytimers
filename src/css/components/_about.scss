@@ -10,11 +10,13 @@
     margin: 0 auto;
     text-align: center;
   }
+
   .text {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 0.5rem;
     max-width: 64rem;
 
     h2 {
@@ -48,6 +50,7 @@
 
     .text {
       max-width: 25rem;
+      margin-bottom: 0;
 
       .button {
         align-self: flex-start;
