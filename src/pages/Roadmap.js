@@ -14,13 +14,7 @@ class RoadmapItem extends React.Component {
       <div className="container">
         <div className="content">
           <h2>{title}</h2>
-          <p>
-            {description}
-            Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec
-            admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis
-            iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto
-            primis ea eam.
-          </p>
+          <p>{description}</p>
         </div>
       </div>
     )
@@ -35,16 +29,36 @@ class Roadmap extends React.Component {
 
         <main>
           <section className="section section-roadmap">
-            <h3>Anytimers Roadmap</h3>
+            <div class="container-inner">
+              <article>
+                <h2>Anytimers Roadmap</h2>
+                <p>
+                  Anytimers is a continuous work in progress. To keep improving
+                  its experience, we want to be open about future updates.
+                </p>
+                <p>
+                  By sharing our roadmap, we want to enable you to communicate
+                  with us. If you have any feedback, or run into any problems
+                  using Anytimers, don't hesitate to let us know.
+                </p>
+                <a
+                  className="button"
+                  href="https://twitter.com/AnytimersApp"
+                  target="_blank"
+                >
+                  Give us feedback
+                </a>
+              </article>
 
-            <div className="timeline">
-              {roadmapItems.map(item => (
-                <RoadmapItem
-                  title={item.title}
-                  description={item.description}
-                  key={item.title}
-                />
-              ))}
+              <div className="timeline">
+                {roadmapItems.map(item => (
+                  <RoadmapItem
+                    title={item.title}
+                    description={item.description}
+                    key={item.title}
+                  />
+                ))}
+              </div>
             </div>
           </section>
 
