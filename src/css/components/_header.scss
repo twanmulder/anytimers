@@ -64,18 +64,8 @@ nav .navigation-link {
   }
 }
 
-nav .signup-button {
-  font-size: 0.65rem;
+nav .button {
   margin: -0.7ch 0 -0.7ch 0;
-  padding: 0.7rem 1.2rem 0.7rem;
-  border-radius: 0.2rem;
-  box-shadow: 0 0.1rem 0.25rem rgba(103, 110, 144, 0.2),
-    0 0 0 0.05rem rgba(103, 110, 144, 0.05);
-  transition: all 0.1s ease-in-out;
-
-  &:active {
-    transform: translateY(1px);
-  }
 }
 
 @include media('>medium') {
@@ -83,7 +73,6 @@ nav .signup-button {
     padding: 1rem 1.5rem;
   }
 
-  nav .signup-button,
   nav .logo {
     font-size: 0.75rem;
   }

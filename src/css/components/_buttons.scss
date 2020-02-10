@@ -1,6 +1,7 @@
 .button {
   @include font-weight(black);
   @include font-family(heading);
+  display: inline-block;
   color: color(typography, 1);
   line-height: 1;
   font-size: 0.65rem;
@@ -18,6 +19,7 @@
 
   &:active {
     transform: translateY(1px);
+    text-decoration: underline;
   }
 }
 
