@@ -128,3 +128,31 @@
     justify-content: flex-start;
   }
 }
+
+// ALTERNATE SECTION
+.form-section--alternate {
+  .signup-button {
+    text-decoration: none;
+  }
+}
+
+@include media('>medium') {
+  .form-section.form-section--alternate {
+    h5 {
+      line-height: inherit;
+      margin-bottom: 0;
+    }
+
+    h6 {
+      font-size: 18px;
+      letter-spacing: -0.1px;
+      margin-top: 0.25rem;
+      font-weight: 600;
+    }
+
+    .signup-button {
+      border-radius: 6px;
+      margin: 0 1rem;
+    }
+  }
+}

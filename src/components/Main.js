@@ -2,6 +2,7 @@ import React from 'react'
 
 import Hero from './Hero'
 import Form from './Form'
+import AlternateButtons from './AlternateButtons'
 import About from './About'
 
 class Main extends React.Component {
@@ -11,6 +12,7 @@ class Main extends React.Component {
         <Hero />
         <About />
         <Form />
+        <AlternateButtons />
       </main>
     )
   }
