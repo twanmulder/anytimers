@@ -87,6 +87,10 @@
       border-radius: 6px;
       font-weight: 600;
       box-shadow: none;
+
+      &:hover {
+        background-color: darken(color(typography, 1), 6%);
+      }
     }
   }
 }
