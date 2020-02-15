@@ -1,0 +1,92 @@
+.form-wrapper {
+  margin-bottom: 4rem;
+  padding: 0 0.7rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  h5 {
+    @include font-weight(black);
+    @include font-size(7, mobile, true, true, true);
+  }
+
+  h6 {
+    @include font-size(7, mobile, true, true, true);
+    font-weight: 600;
+    color: color(typography, 2);
+    margin-top: 0;
+  }
+}
+
+.appstore-wrapper {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0 0.125rem;
+}
+
+.appstore-fields {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.button--appstore:not(:first-child) {
+  margin-top: 1rem;
+}
+
+.message {
+  margin-top: 0.5em;
+  font-size: 0.8em;
+
+  &.error-message {
+    color: #f71414;
+  }
+}
+
+@include media('>medium') {
+  .form-section {
+    padding: 0 1.5rem;
+  }
+
+  .form-wrapper {
+    background-color: color(primary, 3);
+    margin: 0 auto 2rem;
+    padding: 4rem 0;
+    max-width: 60rem;
+    border-radius: 1rem;
+
+    h5 {
+      @include font-size(4, desktop, true, true, true);
+      line-height: inherit;
+    }
+
+    h6 {
+      color: color(typography, 1);
+      font-size: 18px;
+      letter-spacing: -0.1px;
+      margin-top: 0.25rem;
+      font-weight: 600;
+    }
+  }
+
+  .appstore-wrapper {
+    width: auto;
+    margin-top: 0.5rem;
+  }
+
+  .appstore-fields {
+    flex-direction: row;
+
+    .button {
+      background-color: color(typography, 1);
+      color: color(primary, 3);
+      margin: 0.5rem 1rem 0;
+      border-radius: 6px;
+      font-weight: 600;
+      box-shadow: none;
+    }
+  }
+}

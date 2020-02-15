@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
-import Form from '../components/Form'
+import AppStoreButtons from '../components/AppStoreButtons'
 
 import roadmapItems from '../content/roadmapItems'
 
@@ -63,7 +63,7 @@ class Roadmap extends React.Component {
             </div>
           </section>
 
-          <Form />
+          <AppStoreButtons />
         </main>
 
         <Footer />
