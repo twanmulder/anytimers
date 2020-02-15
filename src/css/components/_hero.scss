@@ -1,125 +1,58 @@
-.container {
-  padding: 0 1.5rem;
-}
-
 .section {
   position: relative;
-}
 
-.container-hero {
-  background: #fff;
-  height: calc(100vh + 40rem + 5vw);
-  margin-bottom: calc(12vw - 40vh);
-  padding: 0;
-  text-align: center;
-  z-index: 1;
-}
+  &.hero {
+    height: 100vh;
+    height: calc(100vh - 72px);
+    margin-bottom: 0;
 
-.hero-scroll-container {
-  height: calc(100vh + 5vw);
-  margin-top: -7rem;
-  margin-bottom: 0;
-  overflow: hidden;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  transform: translateZ(0);
-}
+    .container-inner {
+      justify-content: center;
+    }
 
-.hero-transform-target {
-  height: 100%;
-  transform-origin: 50% 40%;
-  will-change: transform;
-  font-size: 10.5vw;
-  transform: scale(1) translate(0%, 0px);
-}
-
-.hero-intro {
-  font: inherit;
-  color: #545465;
-  font-size: calc(0.1em + 0.5rem);
-  line-height: 1.85;
-  left: 50%;
-  margin: 0 0 1rem;
-  margin-top: 12vw;
-  max-width: 42ch;
-  padding: 1rem;
-  position: absolute;
-  top: 32vh;
-  transform: translate(-50%, 0);
-  width: 100vw;
-  z-index: 1;
+    article {
+      margin-top: -4rem;
+      text-align: center;
+    }
+  }
 }
 
 .hero-headline {
   font-family: 'Montserrat';
-  font-size: inherit;
   color: color(primary, 3);
-  font-size: inherit;
   left: 0;
   line-height: 1.13;
-  // line-height: 0.95;
-  margin: 0 auto;
-  max-width: 8ch;
-  position: absolute;
-  right: 0;
-  top: 26vh;
+  margin-top: 0;
+
+  span {
+    font-weight: 800;
+    font-size: 10vw;
+  }
+
+  .word-container {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
 }
 
-.hero-headline span {
-  font-weight: 800;
-  font-size: 7.5vw;
-}
-
-.word-container {
-  display: inline-block;
-  overflow: hidden;
-  vertical-align: top;
-}
-
-img {
-  height: auto;
-  vertical-align: middle;
-}
-
-.hero-hand {
-  top: -1.05em;
-  left: 50%;
-  max-width: none;
-  pointer-events: none;
-  position: absolute;
-  margin-left: -5em;
-  width: 10em;
-}
-
-.hero-ui {
-  display: block;
-  left: 50%;
-  margin-left: -8.75em;
-  margin-top: -3.75em;
-  max-width: none;
-  opacity: 0;
-  position: absolute;
-  top: 0.6em;
-  width: 16.25em;
-  will-change: opacity;
-  z-index: -1;
+.hero-intro {
+  color: color(typography, 2);
+  font-size: 0.8rem;
 }
 
 @include media('>medium') {
-  .hero-intro {
-    margin-top: 18vw;
+  .section.hero {
+    margin-bottom: 0;
   }
-  .container-hero .container-inner {
-    max-width: none;
+
+  .hero-intro {
+    font-size: 2.5vw;
+    line-height: 4vw;
   }
 }
 
 @include media('>large') {
-  .hero-intro {
-    margin-top: 22vw;
-    font-size: calc(0.08em + 1rem);
-  }
 }
 
 // HERO ANIMATIONS
@@ -131,26 +64,26 @@ img {
 
 .word {
   animation: up 0.8s;
-  animation-delay: 1.2s;
+  animation-delay: 0.3s;
   animation-fill-mode: forwards;
   animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   transform: translateY(115%);
 }
 
 .word-container:nth-child(2) .word {
-  animation-delay: 1.35s;
+  animation-delay: 0.45s;
 }
 .word-container:nth-child(3) .word {
-  animation-delay: 1.5s;
+  animation-delay: 0.6s;
 }
 .word-container:nth-child(5) .word {
-  animation-delay: 1.65s;
+  animation-delay: 0.75s;
 }
 .word-container:nth-child(6) .word {
-  animation-delay: 1.8s;
+  animation-delay: 0.9s;
 }
 .word-container:nth-child(7) .word {
-  animation-delay: 1.95s;
+  animation-delay: 1.05s;
 }
 
 @keyframes fadein {
@@ -160,17 +93,9 @@ img {
 }
 
 .hero-intro {
-  animation: fadein 0.8s;
-  animation-delay: 2s;
+  opacity: 0;
+  animation: fadein 0.5s;
+  animation-delay: 1.15s;
   animation-fill-mode: forwards;
   animation-timing-function: ease-in-out;
-  opacity: 0;
-}
-
-.hero-hand {
-  animation: fadein 0.8s;
-  animation-delay: 2.5s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-in-out;
-  opacity: 0;
 }

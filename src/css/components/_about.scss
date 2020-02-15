@@ -1,3 +1,4 @@
+.section.hero,
 .section.about,
 .section.roadmap {
   padding: 0 0.8rem;
@@ -37,6 +38,7 @@
 }
 
 @include media('>medium') {
+  .section.hero,
   .section.about,
   .section.roadmap {
     padding: 0 1.5rem;
