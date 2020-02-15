@@ -1,7 +1,7 @@
 import React from 'react'
 
 import Hero from './Hero'
-import Form from './Form'
+import AppStoreButtons from './AppStoreButtons'
 import About from './About'
 
 class Main extends React.Component {
@@ -10,7 +10,7 @@ class Main extends React.Component {
       <main>
         <Hero />
         <About />
-        <Form />
+        <AppStoreButtons />
       </main>
     )
   }
