@@ -9,8 +9,22 @@ class AppStoreButtons extends React.Component {
           <h6>Find it on your favorite app store.</h6>
           <div className="appstore-wrapper">
             <div className="appstore-fields">
-              <a className="button button--appstore">Play Store</a>
-              <a className="button button--appstore">App Store</a>
+              <a
+                href="https://play.google.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button button--appstore"
+              >
+                Play Store
+              </a>
+              <a
+                href="https://www.apple.com/nl/ios/app-store/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="button button--appstore"
+              >
+                App Store
+              </a>
             </div>
           </div>
         </div>
