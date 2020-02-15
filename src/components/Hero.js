@@ -1,59 +1,7 @@
 import React from 'react'
 
 class Hero extends React.Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = {
-  //     scaleAmount: '1',
-  //     heroUIOpacity: '0',
-  //   }
-
-  //   this.scaleHeroImages = this.scaleHeroImages.bind(this)
-  // }
-
-  // componentDidMount() {
-  //   window.addEventListener('scroll', this.scaleHeroImages)
-  // }
-
-  // componentWillUnmount() {
-  //   window.removeEventListener('scroll', this.scaleHeroImages)
-  // }
-
-  // scaleHeroImages() {
-  //   var transformTarget = document.querySelector('.hero-transform-target')
-  //   var maxScaleAmount
-
-  //   let transformTargetHeight = transformTarget.offsetHeight
-  //   let scrollPercentage =
-  //     document.documentElement.scrollTop / transformTargetHeight
-
-  //   // 1 => 0.55
-  //   let scaleAmount = 1 - scrollPercentage
-  //   // 0 => 11.5%
-  //   let translateXAmount = 11.5 * scrollPercentage * 1.9
-
-  //   if (window.innerWidth >= 1580) {
-  //     maxScaleAmount = 0.4
-  //   } else {
-  //     maxScaleAmount = 0.55
-  //   }
-
-  //   if (scaleAmount <= 1) {
-  //     if (scaleAmount >= maxScaleAmount) {
-  //       transformTarget.style.transform = `scale(${scaleAmount}) translate(${translateXAmount}%, 0)`
-  //     } else {
-  //       transformTarget.style.transform = `scale(${maxScaleAmount}) translate(11.5%, 0)`
-  //     }
-  //   }
-
-  //   if (scrollPercentage >= 0 && scrollPercentage <= 1) {
-  //     this.setState({ heroUIOpacity: scrollPercentage * 1.7 })
-  //   }
-  // }
-
   render() {
-    // const heroUIOpacity = this.state.heroUIOpacity
-
     return (
       <section className="section hero">
         <div className="container-inner">
