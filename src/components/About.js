@@ -18,7 +18,10 @@ class About extends React.Component {
                 out, Anytimers brings you and your friends clarity.
               </p>
             </div>
-            <img src="https://via.placeholder.com/971/FFFFFF/333333" />
+            <img
+              alt="placeholder image"
+              src="https://via.placeholder.com/971/FFFFFF/333333"
+            />
           </div>
         </section>
 
@@ -39,7 +42,10 @@ class About extends React.Component {
                 See roadmap
               </Link>
             </div>
-            <img src="https://via.placeholder.com/971/FFFFFF/333333" />
+            <img
+              alt="placeholder image"
+              src="https://via.placeholder.com/971/FFFFFF/333333"
+            />
           </div>
         </section>
       </Fragment>
