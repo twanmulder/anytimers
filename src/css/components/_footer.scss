@@ -2,14 +2,13 @@ footer {
   @include font-size(8, mobile, true, true);
   position: relative;
   padding: 1rem 1.5rem;
-  color: color(typography, 3);
+  display: flex;
+  flex-direction: column;
 
   ul {
     list-style: none;
-    margin: 0 auto;
     padding: 0;
     max-width: 60rem;
-    text-align: center;
 
     li {
       line-height: 1.5rem;
@@ -17,12 +16,33 @@ footer {
       span {
         display: block;
         color: color(typography, 1);
+      }
+    }
+  }
 
-        &:first-child {
-          @include font-weight(black);
-          color: color(typography, 1);
-          font-size: 1rem;
-        }
+  .footer-social-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+
+    a {
+      color: color(typography, 2);
+      text-decoration: none;
+      transition: 0.1s color ease-in-out;
+
+      &:hover {
+        color: color(typography, 1);
+      }
+    }
+  }
+
+  .footer-copyright-wrapper {
+    text-align: center;
+
+    li {
+      &:first-child {
+        @include font-weight(black);
+        color: color(typography, 1);
+        font-size: 1rem;
       }
     }
   }
@@ -31,9 +51,24 @@ footer {
 @include media('>medium') {
   footer {
     @include font-size(7, desktop, true, true);
+    max-width: 60rem;
+    margin: 0 auto;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
 
     ul {
+      margin-bottom: 0;
+    }
+
+    .footer-copyright-wrapper {
       text-align: right;
+    }
+
+    .footer-social-wrapper {
+      li:not(:first-child) {
+        margin-left: 1rem;
+      }
     }
   }
 }
