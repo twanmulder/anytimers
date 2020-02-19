@@ -45,7 +45,7 @@ class Header extends React.Component {
           <Link to="/roadmap" className="navigation-link">
             Roadmap
           </Link>
-          <Link to="/#form-section" className="button">
+          <Link to="/#app-store" className="button">
             Get early access
           </Link>
         </nav>
