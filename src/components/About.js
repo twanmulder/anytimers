@@ -19,7 +19,7 @@ class About extends React.Component {
               </p>
             </div>
             <img
-              alt="placeholder image"
+              alt="placeholder"
               src="https://via.placeholder.com/971/FFFFFF/333333"
             />
           </div>
@@ -43,7 +43,7 @@ class About extends React.Component {
               </Link>
             </div>
             <img
-              alt="placeholder image"
+              alt="placeholder"
               src="https://via.placeholder.com/971/FFFFFF/333333"
             />
           </div>
