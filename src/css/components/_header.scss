@@ -7,10 +7,6 @@ header {
   transition: box-shadow 0.3s, color 0.5s, background-color 0.5s;
 }
 
-header.scrolled {
-  box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.15);
-}
-
 nav {
   max-width: 60rem;
   height: 100%;
@@ -70,7 +66,13 @@ nav .button {
 
 @include media('>medium') {
   header {
+    position: fixed;
+    width: 100%;
     padding: 1rem 1.5rem;
+
+    &.scrolled {
+      box-shadow: 0 0 1.8rem rgba(0, 0, 0, 0.15);
+    }
   }
 
   nav .logo {

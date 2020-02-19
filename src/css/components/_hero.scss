@@ -43,6 +43,7 @@
 
 @include media('>medium') {
   .section.hero {
+    height: 100vh;
     margin-bottom: 0;
   }
 
