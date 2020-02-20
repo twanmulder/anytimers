@@ -1,48 +1,51 @@
 footer {
   @include font-size(8, mobile, true, true);
-  position: relative;
   padding: 1rem 1.5rem;
-  display: flex;
-  flex-direction: column;
 
-  ul {
-    list-style: none;
-    padding: 0;
-    max-width: 60rem;
-
-    li {
-      line-height: 1.5rem;
-
-      span {
-        display: block;
-        color: color(typography, 1);
-      }
-    }
-  }
-
-  .footer-social-wrapper {
+  section {
+    position: relative;
     display: flex;
-    justify-content: space-evenly;
+    flex-direction: column;
 
-    a {
-      color: color(typography, 2);
-      text-decoration: none;
-      transition: 0.1s color ease-in-out;
+    ul {
+      list-style: none;
+      padding: 0;
+      max-width: 60rem;
 
-      &:hover {
-        color: color(typography, 1);
+      li {
+        line-height: 1.5rem;
+
+        span {
+          display: block;
+          color: color(typography, 1);
+        }
       }
     }
-  }
 
-  .footer-copyright-wrapper {
-    text-align: center;
+    .footer-social-wrapper {
+      display: flex;
+      justify-content: space-evenly;
 
-    li {
-      &:first-child {
-        @include font-weight(black);
-        color: color(typography, 1);
-        font-size: 1rem;
+      a {
+        color: color(typography, 2);
+        text-decoration: none;
+        transition: 0.1s color ease-in-out;
+
+        &:hover {
+          color: color(typography, 1);
+        }
+      }
+    }
+
+    .footer-copyright-wrapper {
+      text-align: center;
+
+      li {
+        &:first-child {
+          @include font-weight(black);
+          color: color(typography, 1);
+          font-size: 1rem;
+        }
       }
     }
   }
@@ -51,23 +54,27 @@ footer {
 @include media('>medium') {
   footer {
     @include font-size(7, desktop, true, true);
-    max-width: 60rem;
-    margin: 0 auto;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
+    padding: 0 1.5rem;
 
-    ul {
-      margin-bottom: 0;
-    }
+    section {
+      max-width: 60rem;
+      margin: 0 auto;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
 
-    .footer-copyright-wrapper {
-      text-align: right;
-    }
+      ul {
+        margin-bottom: 0;
+      }
 
-    .footer-social-wrapper {
-      li:not(:first-child) {
-        margin-left: 1rem;
+      .footer-copyright-wrapper {
+        text-align: right;
+      }
+
+      .footer-social-wrapper {
+        li:not(:first-child) {
+          margin-left: 1rem;
+        }
       }
     }
   }
