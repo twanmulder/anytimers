@@ -7,22 +7,25 @@ class Footer extends React.Component {
         <section>
           <ul className="footer-social-wrapper">
             <li className="footer-social">
-              <a
-                href="https://twitter.com/AnytimersApp"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Twitter
-              </a>
-            </li>
-            <li className="footer-social">
-              <a
-                href="mailto:info@anytimers.app"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Email
-              </a>
+              <p>
+                You can
+                <a
+                  href="https://twitter.com/AnytimersApp"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  &nbsp;tweet at us
+                </a>
+                , or
+                <a
+                  href="mailto:info@anytimers.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  &nbsp;send us an email
+                </a>
+                .
+              </p>
             </li>
           </ul>
 

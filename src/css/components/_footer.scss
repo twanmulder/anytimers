@@ -14,11 +14,6 @@ footer {
 
       li {
         line-height: 1.5rem;
-
-        span {
-          display: block;
-          color: color(typography, 1);
-        }
       }
     }
 
@@ -26,13 +21,28 @@ footer {
       display: flex;
       justify-content: space-evenly;
 
-      a {
-        color: color(typography, 2);
-        text-decoration: none;
-        transition: 0.1s color ease-in-out;
+      p {
+        margin: 0;
+      }
 
-        &:hover {
-          color: color(typography, 1);
+      a {
+        position: relative;
+        color: color(typography, 1);
+        text-decoration: none;
+
+        &::after {
+          left: 0;
+          right: 0;
+          height: 0;
+          content: '';
+          display: block;
+          position: absolute;
+          background: color(primary, 3);
+          transition: height 0.1s ease-in-out;
+        }
+
+        &:hover::after {
+          height: 0.125rem;
         }
       }
     }
@@ -54,7 +64,7 @@ footer {
 @include media('>medium') {
   footer {
     @include font-size(7, desktop, true, true);
-    padding: 0 1.5rem;
+    padding: 0 1.5rem 1rem;
 
     section {
       max-width: 60rem;
