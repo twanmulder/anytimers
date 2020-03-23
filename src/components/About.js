@@ -1,6 +1,9 @@
 import React, { Fragment } from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 
+import welcome from '../media/welcome.png'
+import overview from '../media/overview.png'
+
 class About extends React.Component {
   render() {
     return (
@@ -18,10 +21,7 @@ class About extends React.Component {
                 out, Anytimers brings you and your friends clarity.
               </p>
             </div>
-            <img
-              alt="placeholder"
-              src="https://via.placeholder.com/971/FFFFFF/333333"
-            />
+            <img alt="placeholder" src={welcome} />
           </div>
         </section>
 
@@ -42,10 +42,7 @@ class About extends React.Component {
                 See roadmap
               </Link>
             </div>
-            <img
-              alt="placeholder"
-              src="https://via.placeholder.com/971/FFFFFF/333333"
-            />
+            <img alt="placeholder" src={overview} />
           </div>
         </section>
       </Fragment>
