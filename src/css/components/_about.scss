@@ -37,6 +37,17 @@
   background: linear-gradient(180deg, #fff 0%, #fbfbfb 20%);
 }
 
+.section.about::after,
+.section.roadmap::after {
+  content: '';
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  height: 22px;
+  box-shadow: 0 -3px 4px inset rgba(0, 0, 0, 0.03);
+}
+
 @include media('>medium') {
   .section.hero,
   .section.about,
