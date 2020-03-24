@@ -1,10 +1,25 @@
 import React, { Fragment } from 'react'
 import { HashLink as Link } from 'react-router-hash-link'
 
+import ScrollReveal from 'scrollreveal'
+
 import welcome from '../media/welcome.png'
 import overview from '../media/overview.png'
 
 class About extends React.Component {
+  componentDidMount() {
+    // Animations for all devices
+    ScrollReveal().reveal('img', {
+      opacity: 0.7,
+      distance: '100px',
+      duration: 650,
+      origin: 'bottom',
+      easing: 'ease-in-out',
+      cleanup: true,
+      interval: 10,
+    })
+  }
+
   render() {
     return (
       <Fragment>
