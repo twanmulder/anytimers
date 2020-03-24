@@ -14,9 +14,8 @@ class About extends React.Component {
       distance: '100px',
       duration: 650,
       origin: 'bottom',
-      easing: 'ease-in-out',
+      easing: 'ease-out',
       cleanup: true,
-      interval: 10,
     })
   }
 
