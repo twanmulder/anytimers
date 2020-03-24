@@ -79,6 +79,10 @@
     }
   }
 
+  .section.hero .container-inner {
+    max-width: none;
+  }
+
   .section.roadmap {
     .container-inner {
       justify-content: center;
