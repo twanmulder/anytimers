@@ -1,6 +1,6 @@
 header {
   position: relative;
-  background-color: #fff;
+  background-color: color(bg, 2);
   z-index: 10;
   padding: 1rem 0.5rem;
   box-shadow: 0 0 1.8rem transparent;
@@ -19,7 +19,6 @@ nav {
 }
 
 nav a {
-  font-family: 'Montserrat';
   color: color(typography, 1);
   text-decoration: none;
 }
@@ -27,10 +26,9 @@ nav a {
 nav .logo {
   display: flex;
   align-items: center;
-  font-weight: 600;
   margin-right: auto;
   text-decoration: none;
-  font-weight: 800;
+  font-weight: 900;
   letter-spacing: 0.8px;
 
   svg {
@@ -39,9 +37,9 @@ nav .logo {
 }
 
 nav .navigation-link {
-  @include font-weight(bold);
+  @include font-weight(medium);
   position: relative;
-  margin: 0 1.5rem 0 0;
+  margin: 0 2rem 0 0;
   display: none;
 
   &::after {

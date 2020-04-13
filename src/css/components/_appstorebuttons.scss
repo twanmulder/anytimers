@@ -1,6 +1,14 @@
+.form-section {
+  padding: 0 0.8rem;
+}
+
 .form-wrapper {
-  margin-bottom: 4rem;
-  padding: 0 0.7rem;
+  margin: 4rem 0;
+  padding: 2rem 1rem 2.5rem 1rem;
+  border-radius: 1.25rem;
+  background-color: color(primary, 3);
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+
   position: relative;
   display: flex;
   flex-direction: column;
@@ -10,13 +18,12 @@
 
   h5 {
     @include font-weight(black);
-    @include font-size(7, mobile, true, true, true);
   }
 
   h6 {
+    @include font-weight(regular);
     @include font-size(7, mobile, true, true, true);
-    font-weight: 600;
-    color: color(typography, 2);
+    color: rgba(color(typography, 2), 0.85);
     margin-top: 0;
   }
 }
@@ -31,6 +38,19 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+
+  .button {
+    background-color: color(typography, 1);
+    color: color(primary, 3);
+    margin: 0.5rem 1rem 0;
+    border-radius: 6px;
+    font-weight: 600;
+    box-shadow: none;
+
+    &:hover {
+      background-color: darken(color(typography, 1), 6%);
+    }
+  }
 }
 
 .button--appstore:not(:first-child) {
@@ -52,8 +72,7 @@
   }
 
   .form-wrapper {
-    background-color: color(primary, 3);
-    margin: 0 auto 2rem;
+    margin: 0 auto 4rem;
     padding: 4rem 0;
     max-width: 60rem;
     border-radius: 1rem;
@@ -64,33 +83,22 @@
     }
 
     h6 {
-      color: color(typography, 1);
       font-size: 18px;
       letter-spacing: -0.1px;
       margin-top: 0.25rem;
-      font-weight: 600;
     }
   }
 
   .appstore-wrapper {
     width: auto;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
   }
 
   .appstore-fields {
     flex-direction: row;
 
     .button {
-      background-color: color(typography, 1);
-      color: color(primary, 3);
-      margin: 0.5rem 1rem 0;
-      border-radius: 6px;
-      font-weight: 600;
-      box-shadow: none;
-
-      &:hover {
-        background-color: darken(color(typography, 1), 6%);
-      }
+      margin-top: 0;
     }
   }
 }

@@ -64,7 +64,7 @@ footer {
 @include media('>medium') {
   footer {
     @include font-size(7, desktop, true, true);
-    padding: 0 1.5rem 1rem;
+    padding: 0 1.5rem 1.5rem;
 
     section {
       max-width: 60rem;

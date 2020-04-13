@@ -32,11 +32,8 @@
   }
 }
 
-.section.about,
-.section.roadmap {
+.section.about {
   overflow: hidden;
-  background: #fbfbfb;
-  background: linear-gradient(180deg, #fff 0%, #fbfbfb 20%);
 
   &::after {
     content: '';
@@ -54,7 +51,7 @@
   .section.about,
   .section.roadmap {
     padding: 0 1.5rem;
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 
     .container-inner {
       max-width: 60rem;

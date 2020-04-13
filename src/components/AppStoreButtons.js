@@ -5,7 +5,7 @@ class AppStoreButtons extends React.Component {
     return (
       <section id="app-store" className="form-section">
         <div className="form-wrapper">
-          <h5>Want to get early access to the private beta?</h5>
+          <h5>Get started with Anytimers today</h5>
           <h6>Find it on your favorite app store.</h6>
           <div className="appstore-wrapper">
             <div className="appstore-fields">
